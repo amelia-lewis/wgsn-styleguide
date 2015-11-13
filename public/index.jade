@@ -4,27 +4,33 @@ include partials/card
   #intro-view.display-box
     .intro-content.text-center
       .intro-logo: include partials/logo
+      .block-top-md: p.tight Hover and click to copy the color codes!
 
   #content-view
-    .grid.grid-pad
-      .block-bot-md.text-center: p.tight Hover and click to copy the color codes!
-      +product("group", "Group", "282c", "4, 30, 66", "041e42")(class="group")
-      +product("fashion", "Fashion", "165C", "255, 103, 31", "FF671f")(class="fashion")
-      +product("lifestyle-and-interiors", "Lifestyle & Interiors", "364C", "74, 119, 41", "4a7729")(class="interiors")
-      +product("instock", "INstock", "7697C", "78, 135, 160", "4e87a0")(class="instock")
-      +product("styletrial", "Styletrial", "2727C", "48, 127, 226", "307fe2")(class="styletrial")
-      +product("mindset", "Mindset", "Cool gray 9C", "117, 120, 123", "75787b")(class="mindset")
-      +product("lifestyle", "Lifestyle", "7677C", "111, 80, 145", "6f5091")(class="lifestyle")
-      +product("intelligence", "Intelligence", "1815C", "124, 37, 41", "7c2529")(class="intelligence")
-      +product("thinktank", "Thinktank", "7511C", "183, 119, 41", "b77729")(class="thinktank")
-      +product("insight", "Insight", "7606C", "214, 147, 138", "d6938a")(class="insight")
-      +product("product", "Product", "620C", "138, 123, 25", "8a7b19")(class="product")
+    .block-bot-md
+      .grid.grid-pad
+        +product("group", "", "282c", "4, 30, 66", "041e42", "yes")(class="group")
+        +product("fashion", "Fashion", "165C", "255, 103, 31", "FF671f", "yes")(class="fashion")
+        +product("lifestyle-and-interiors", "Lifestyle & Interiors", "364C", "74, 119, 41", "4a7729", "yes")(class="interiors")
+        +product("instock", "INstock", "7697C", "78, 135, 160", "4e87a0", "yes")(class="instock")
+        +product("styletrial", "Styletrial", "2727C", "48, 127, 226", "307fe2", "yes")(class="styletrial")
+        +product("mindset", "Mindset", "Cool gray 9C", "117, 120, 123", "75787b", "yes")(class="mindset")
+        +product("website", "Website", "", "248, 189, 52", "f8bd34", "")(class="website")
+      
+    .block-bot-md
+      .grid.grid-pad
+        .block-bot-md: h3.tight Future Products
+        +product("lifestyle", "Lifestyle", "7677C", "111, 80, 145", "6f5091", "yes")(class="lifestyle")
+        +product("intelligence", "Intelligence", "1815C", "124, 37, 41", "7c2529", "yes")(class="intelligence")
+        +product("thinktank", "Thinktank", "7511C", "183, 119, 41", "b77729", "yes")(class="thinktank")
+        +product("insight", "Insight", "7606C", "214, 147, 138", "d6938a", "yes")(class="insight")
+        +product("product", "Product", "620C", "138, 123, 25", "8a7b19", "yes")(class="product")
 
   #footer-view
     .grid.grid-pad
       .col-1-1
         .block-ver-sm.text-center.text-grey.text-italic
-            p Made by 
-              a.text-grey.text-italic(href="mailto:amelia.lewis@wgsn.com") Amelia Lewis
-              |  &mdash; let me know if there's any other things you'd like added 
-              i.fa.fa-hand-peace-o
+          p Made by 
+            a.text-grey.text-italic(href="mailto:amelia.lewis@wgsn.com") Amelia Lewis
+            |  &mdash; let me know if there's any other things you'd like added 
+            i.fa.fa-hand-peace-o

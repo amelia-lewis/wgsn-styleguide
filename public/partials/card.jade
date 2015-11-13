@@ -1,32 +1,34 @@
-mixin product(id, title, pantone, rgb, hex)
+mixin product(id, title, pantone, rgb, hex, hasdownloads)
   .col-1-3
     .content
       .card(class!=attributes.class)
         h2 
           span WG
           span.highlight-color S
-          span N 
-          span.sans-serif | 
+          span N
+          span.sans-serif.divider-bar  | 
           span.sans-serif.highlight-color= title
         .color-codes.display-box.absolute-full
           ul.text-center
-            li.clipboard(data-clipboard-text=pantone) Pantone 
-              span= pantone
+            if pantone
+              li.clipboard(data-clipboard-text=pantone) Pantone 
+                span= pantone
             li.clipboard(data-clipboard-text=rgb) rgb (
               span= rgb
               | )
             li.clipboard(data-clipboard-text=hex) Hex #
               span= hex
 
-      .btn-container.text-center
-        a.btn(href="/downloads/png-sm/wgsn-" + id + ".png" download="wgsn-" + id)
-          i.fa.fa-download
-          | PNG (sm)
+      if hasdownloads
+        .btn-container.text-center
+          a.btn(href="/downloads/png-sm/wgsn-" + id + ".png" download="wgsn-" + id)
+            i.fa.fa-download
+            | PNG (sm)
 
-        a.btn(href="/downloads/png-lg/wgsn-" + id + ".png" download="wgsn-" + id)
-          i.fa.fa-download
-          | PNG (lg)
+          a.btn(href="/downloads/png-lg/wgsn-" + id + ".png" download="wgsn-" + id)
+            i.fa.fa-download
+            | PNG (lg)
 
-        a.btn(href="/downloads/svg/wgsn-" + id + ".svg" download="wgsn-" + id)
-          i.fa.fa-download
-          | SVG
+          a.btn(href="/downloads/svg/wgsn-" + id + ".svg" download="wgsn-" + id)
+            i.fa.fa-download
+            | SVG
