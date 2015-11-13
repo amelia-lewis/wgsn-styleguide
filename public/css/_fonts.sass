@@ -1,0 +1,67 @@
+@font-face
+  font-family: "WGSN Headline"
+  src: url("../fonts/WGSNHeadline.otf")
+
+.serif
+  font-family: "PT Serif", "Georgia", serif
+
+p, li
+  @extend .serif
+
+.sans-serif
+  font-family: "WGSN Headline", "Futura", sans-serif
+  text-transform: uppercase
+  letter-spacing: 0.05em
+
+h1, h2, h3, h4
+  @extend .sans-serif
+
+
+// WEIGHT
+.text-normal
+  font-weight: normal
+
+.text-bold
+  font-weight: bold
+
+
+// STYLE
+.text-italic
+  font-style: italic
+
+
+// ALIGNMENT
+.text-left
+  text-align: left
+
+.text-center
+  text-align: center
+
+.text-right
+  text-align: right
+
+.text-justify
+  text-align: justify
+
+
+// TRANSFORMATION
+.text-lowercase
+  text-transform: lowercase
+
+.text-uppercase
+  text-transform: uppercase
+
+.text-capitalize
+  text-transform: capitalize
+
+
+// MARGINS
+h1, h2, h3, h4, ul, ol, p, li
+  margin: 0 0 0.5em
+
+p:last-of-type,
+li:last-of-type
+  margin: 0
+
+.tight
+  margin: 0

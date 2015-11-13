@@ -1,0 +1,14 @@
+mixin card(title, pantone, rgb, hex)
+  .col-1-3
+    .content
+      .card.display-box(class!=attributes.class)
+        h2= title
+        .color-codes.display-box.absolute-full
+          ul.text-center
+            li.text-uppercase.sans-serif(data-clipboard-text=pantone) Pantone 
+              span.text-uppercase= pantone
+            li.text-uppercase.sans-serif(data-clipboard-text=rgb) rgb(
+              span.text-uppercase= rgb
+              | )
+            li.text-uppercase.sans-serif(data-clipboard-text=hex) #
+              span.text-uppercase= hex
