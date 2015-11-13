@@ -4,10 +4,10 @@ include partials/card
   #intro-view.display-box
     .intro-content.text-center
       .intro-logo: include partials/logo
-      .block-top-md: p.text-italic.tight Color Guide
 
   #content-view
     .grid.grid-pad
+      .block-bot-md.text-center: p.tight Hover and click to copy the color codes!
       +product("group", "Group", "282c", "4, 30, 66", "041e42")(class="group")
       +product("fashion", "Fashion", "165C", "255, 103, 31", "FF671f")(class="fashion")
       +product("lifestyle-and-interiors", "Lifestyle & Interiors", "364C", "74, 119, 41", "4a7729")(class="interiors")
@@ -19,3 +19,12 @@ include partials/card
       +product("thinktank", "Thinktank", "7511C", "183, 119, 41", "b77729")(class="thinktank")
       +product("insight", "Insight", "7606C", "214, 147, 138", "d6938a")(class="insight")
       +product("product", "Product", "620C", "138, 123, 25", "8a7b19")(class="product")
+
+  #footer-view
+    .grid.grid-pad
+      .col-1-1
+        .block-ver-sm.text-center.text-grey.text-italic
+            p Made by 
+              a.text-grey.text-italic(href="mailto:amelia.lewis@wgsn.com") Amelia Lewis
+              |  &mdash; let me know if there's any other things you'd like added 
+              i.fa.fa-hand-peace-o

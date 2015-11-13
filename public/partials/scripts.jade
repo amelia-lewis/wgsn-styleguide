@@ -1,2 +1,14 @@
+script(src='js/wow.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js')
+
 script.
   new WOW().init();
+
+script.
+  var clipboard = new Clipboard('.clipboard');
+    clipboard.on('success', function(e) {
+    console.log(e);
+  });
+  clipboard.on('error', function(e) {
+    console.log(e);
+  });

@@ -10,12 +10,12 @@ mixin product(id, title, pantone, rgb, hex)
           span.sans-serif.highlight-color= title
         .color-codes.display-box.absolute-full
           ul.text-center
-            li(data-clipboard-text=pantone) Pantone 
+            li.clipboard(data-clipboard-text=pantone) Pantone 
               span= pantone
-            li(data-clipboard-text=rgb) rgb (
+            li.clipboard(data-clipboard-text=rgb) rgb (
               span= rgb
               | )
-            li(data-clipboard-text=hex) Hex #
+            li.clipboard(data-clipboard-text=hex) Hex #
               span= hex
 
       .btn-container.text-center

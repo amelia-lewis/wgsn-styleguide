@@ -1,13 +1,14 @@
 .card
   background: white
   color: $group
-  margin: 0 0 20px
   height: 300px
   position: relative
   overflow: hidden
   border: 1px solid $lt-grey
   +transition(all 500ms)
   @extend .display-box
+  @extend .block-md
+  @extend .text-center
 
   &:before,
   &:after
