@@ -8,7 +8,18 @@ script.
   var clipboard = new Clipboard('.clipboard');
     clipboard.on('success', function(e) {
     console.log(e);
+    document.getElementById("alert-success").classList.add('show');
+
+    setTimeout(function(){
+      document.getElementById("alert-success").classList.remove('show');
+    }, 600);
   });
+  
   clipboard.on('error', function(e) {
     console.log(e);
+    document.getElementById("alert-error").classList.add('show');
+
+    setTimeout(function(){
+      document.getElementById("alert-error").classList.remove('show');
+    }, 600);
   });
