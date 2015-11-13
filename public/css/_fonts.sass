@@ -2,6 +2,16 @@
   font-family: "WGSN Headline"
   src: url("../fonts/WGSNHeadline.otf")
 
+@font-face
+  font-family: "DH Sans"
+  src: url("../fonts/DHSansLight.ttf")
+  font-weight: normal
+
+@font-face
+  font-family: "DH Sans"
+  src: url("../fonts/DHSansMedium.ttf")
+  font-weight: bold
+
 .serif
   font-family: "PT Serif", "Georgia", serif
 
@@ -9,12 +19,17 @@ p, li
   @extend .serif
 
 .sans-serif
+  font-family: "DH Sans", "Futura", sans-serif
+  text-transform: uppercase
+  font-weight: normal
+
+.wgsn-font
   font-family: "WGSN Headline", "Futura", sans-serif
   text-transform: uppercase
   letter-spacing: 0.05em
 
 h1, h2, h3, h4
-  @extend .sans-serif
+  @extend .wgsn-font
 
 
 // WEIGHT
@@ -65,3 +80,8 @@ li:last-of-type
 
 .tight
   margin: 0
+
+
+a
+  color: inherit
+  text-decoration: none
