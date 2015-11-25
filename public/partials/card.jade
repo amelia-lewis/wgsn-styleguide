@@ -1,13 +1,9 @@
 mixin product(id, title, pantone, rgb, hex, hasdownloads)
-  .col-1-3
+  .card-container
     .content
-      .card(class!=attributes.class)
-        h2 
-          span WG
-          span.highlight-color S
-          span N
-          span.sans-serif.divider-bar  | 
-          span.sans-serif.highlight-color= title
+      .card(class!=attributes.class style="background-image: url('/downloads/png-sm/wgsn-" + id + ".png')")
+        if !hasdownloads
+          h2.highlight-color= id
         .color-codes.display-box.absolute-full
           ul.text-center
             if pantone

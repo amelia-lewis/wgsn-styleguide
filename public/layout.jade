@@ -1,0 +1,40 @@
+doctype
+html
+  head
+    title WGSN Style Guide
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="./css/main.css")
+    link(rel="stylesheet", href="./css/animate.css")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+    link(rel="shortcut icon", type="image/x-icon", href="./img/favicon.ico")
+  
+  body
+    include partials/card
+
+    header
+      .block-hor-lg.block-ver-md
+        .grid.grid-pad
+          .col-1-1
+            include partials/logo
+    
+    #content: block content
+
+    footer.block-ver-lg
+      .grid.grid-pad
+        .col-1-1
+          .block-ver-sm.text-center.text-grey.text-italic
+            p All logos and branding owned by 
+              a.text-grey.text-italic(href="http://wgsn.com", target="_blank") WGSN
+            p Made with 
+              i.fa.fa-heart
+              |  by 
+              a.text-grey.text-italic(href="mailto:amelia.lewis@wgsn.com") Amelia Lewis
+            p
+              a.text-grey.text-italic(href="https://github.com/amelia-lewis/wgsn-styleguide/issues", target="_blank") Let me know
+              |  if there's any other things you'd like added 
+              i.fa.fa-hand-peace-o
+            br
+            br
+            p p.s. not much good on mobile or browsers other than Chrome (yet)
+    
+    include partials/scripts

@@ -1,0 +1,24 @@
+header
+  position: fixed
+  background: $xdk-grey
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 200
+
+  .wgsn-logo
+    stroke: white
+    stroke-width: 5px
+    fill: white
+    width: 140px
+    stroke-dasharray: 4000
+    stroke-dashoffset: -4000
+    +transition(all 800ms)
+
+    @media (max-width: 1100px)
+      width: 100px
+
+  &:hover
+    .wgsn-logo
+      fill: rgba(white, 0.1)
+      stroke-dashoffset: 0

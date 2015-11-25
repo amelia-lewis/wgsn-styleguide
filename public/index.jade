@@ -1,14 +1,9 @@
-include partials/card
+extends layout
 
-.block-lg
-  #intro-view.display-box
-    .intro-content.text-center
-      .intro-logo: include partials/logo
-      .block-top-md: p.tight Hover and click to copy the color codes!
-
-  #content-view
-    .block-bot-md
-      .grid.grid-pad
+block content
+  .block-top-lg.block-hor-lg
+    #content-view
+      .block-bot-md
         +product("group", "", "282c", "4, 30, 66", "041e42", "yes")(class="group")
         +product("fashion", "Fashion", "165C", "255, 103, 31", "FF671f", "yes")(class="fashion")
         +product("lifestyle-and-interiors", "Lifestyle & Interiors", "364C", "74, 119, 41", "4a7729", "yes")(class="interiors")
@@ -16,9 +11,10 @@ include partials/card
         +product("styletrial", "Styletrial", "2727C", "48, 127, 226", "307fe2", "yes")(class="styletrial")
         +product("mindset", "Mindset", "Cool gray 9C", "117, 120, 123", "75787b", "yes")(class="mindset")
         +product("website", "Website", "", "248, 189, 52", "f8bd34", "")(class="website")
-      
-    .block-bot-md
-      .grid.grid-pad
+
+      br
+        
+      .block-bot-md
         .block-bot-md: h3.tight Future Products
         +product("lifestyle", "Lifestyle", "7677C", "111, 80, 145", "6f5091", "yes")(class="lifestyle")
         +product("intelligence", "Intelligence", "1815C", "124, 37, 41", "7c2529", "yes")(class="intelligence")
@@ -26,24 +22,6 @@ include partials/card
         +product("insight", "Insight", "7606C", "214, 147, 138", "d6938a", "yes")(class="insight")
         +product("product", "Product", "620C", "138, 123, 25", "8a7b19", "yes")(class="product")
 
-  #footer-view
-    .grid.grid-pad
-      .col-1-1
-        .block-ver-sm.text-center.text-grey.text-italic
-          p All logos and branding owned by 
-            a.text-grey.text-italic(href="http://wgsn.com", target="_blank") WGSN
-          p Made with 
-            i.fa.fa-heart
-            |  by 
-            a.text-grey.text-italic(href="mailto:amelia.lewis@wgsn.com") Amelia Lewis
-          p
-            a.text-grey.text-italic(href="https://github.com/amelia-lewis/wgsn-styleguide/issues", target="_blank") Let me know
-            |  if there's any other things you'd like added 
-            i.fa.fa-hand-peace-o
-          br
-          br
-          p p.s. not much good on mobile or browsers other than Chrome (yet)
-
-.alert-container
-  .alert#alert-success Code copied to clipboard
-  .alert#alert-error Oops... copying didn't work :/
+  .alert-container
+    .alert#alert-success Code copied to clipboard
+    .alert#alert-error Oops... copying didn't work :/
