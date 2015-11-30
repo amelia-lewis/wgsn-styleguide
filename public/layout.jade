@@ -1,4 +1,7 @@
 doctype
+block vars
+  - var bodyclass = null
+
 html
   head
     title WGSN Style Guide
@@ -8,16 +11,21 @@ html
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
     link(rel="shortcut icon", type="image/x-icon", href="./img/favicon.ico")
   
-  body
+  body(class=bodyclass)
     include partials/card
 
     header
-      .block-hor-lg.block-ver-md
+      .content-wrap
         .grid.grid-pad
-          .col-1-1
+          .col-4-12
             include partials/logo
+
+          .col-8-12.text-right
+            ul#nav
+              li: a(href="") Colors &amp; Logos
+              li: a(href="") Fonts
     
-    #content: block content
+    .content-wrap.spacer: block content
 
     footer.block-ver-lg
       .grid.grid-pad
@@ -35,6 +43,6 @@ html
               i.fa.fa-hand-peace-o
             br
             br
-            p p.s. not much good on mobile or browsers other than Chrome (yet)
+            p p.s. only really tested on Chrome, on desktop screens
     
     include partials/scripts
