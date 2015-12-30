@@ -2,7 +2,7 @@ mixin product-card(id, pantone, rgb, hex, hasdownloads)
   //- .product-card(class!=attributes.class style="background-image: url('/downloads/png-sm/wgsn-" + id + ".png')")
   .product-card(class!=attributes.class)
     if hasdownloads
-      .block-bot-md: img(src="/downloads/png-sm/wgsn-" + id + ".png" height="30" alt=id)
+      .block-bot-md: img(src="/downloads/png-sm/wgsn-" + id + ".png" height="30" alt="wgsn " + id)
     else  
       h1= id
     
