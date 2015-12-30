@@ -1,19 +1,20 @@
 @import "vars"
 @import "mixins"
-@import "fonts"
+@import "typography"
 @import "common-styles"
-@import "grid"
+// @import "grid"
 @import "blocks"
 @import "cards"
+@import "card-colors"
+@import "header"
 @import "buttons"
 @import "alert"
 @import "logo"
 
-@import "header"
-@import "intro-view"
-@import "colors-view"
-
 // ==============================
+
+*
+  box-sizing: border-box
 
 html
   width: 100%
@@ -31,9 +32,3 @@ body
   width: 90%
   max-width: 1800px
   margin: 0 auto
-
-  &.spacer
-    margin-top: 120px
-
-    @media (max-width: 1100px)
-      margin-top: 80px

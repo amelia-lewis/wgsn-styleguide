@@ -1,0 +1,15 @@
+mixin color-card(id, pantone, rgb, hex, hasdownloads)
+  .card-container
+    .card(class!=attributes.class style="background-image: url('/downloads/png-sm/wgsn-" + id + ".png')")
+      if !hasdownloads
+        h2.highlight-color= id
+      .info.display-box.absolute-full
+        ul.text-center
+          if pantone
+            li.clipboard(data-clipboard-text=pantone) Pantone 
+              span= pantone
+          li.clipboard(data-clipboard-text=rgb) rgb (
+            span= rgb
+            | )
+          li.clipboard(data-clipboard-text=hex) Hex #
+            span= hex

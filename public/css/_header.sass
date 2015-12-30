@@ -19,8 +19,7 @@ header
     @media (max-width: 1100px)
       width: 100px
 
-  &:hover
-    .wgsn-logo
+    &:hover
       fill: rgba(white, 0.1)
       stroke-dashoffset: 0
 
@@ -38,9 +37,43 @@ header
         font-size: 0.8em
         padding: 8px 0
         display: block
+        position: relative
         color: rgba(white, 0.5)
         +transition(all 300ms)
 
-      &:hover
+        &:after
+          content: ""
+          display: block
+          position: absolute
+          background: rgba(white, 0.75)
+          top: 1px
+          left: 50%
+          width: 100%
+          height: 3px
+          z-index: -1
+          +transform(translate3d(-50%, 0, 0) scale(1, 0))
+          +transform-origin(center bottom)
+          +transition(all 300ms)
+
+      &.active
         a
           color: white
+
+          &:after
+            background: $website
+            +transform(translate3d(-50%, 0, 0) scale(1, 1))
+
+      &:hover
+        @extend .active
+
+.colors-view
+  #nav-colors
+    @extend .active
+
+.logos-view
+  #nav-logos
+    @extend .active
+
+.fonts-view
+  #nav-fonts
+    @extend .active

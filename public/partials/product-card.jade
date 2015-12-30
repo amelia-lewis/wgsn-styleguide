@@ -1,0 +1,29 @@
+mixin product-card(id, pantone, rgb, hex, hasdownloads)
+  //- .product-card(class!=attributes.class style="background-image: url('/downloads/png-sm/wgsn-" + id + ".png')")
+  .product-card(class!=attributes.class)
+    if hasdownloads
+      .block-bot-md: img(src="/downloads/png-sm/wgsn-" + id + ".png" height="30" alt=id)
+    else  
+      h1= id
+    
+    .info
+      .block-bot-md.product-colors
+        h3 Colours  
+          span click to copy
+        ul
+          if pantone
+            li.btn.clipboard(data-clipboard-text=pantone) Pantone 
+              span= pantone
+          li.btn.clipboard(data-clipboard-text=rgb)  RGB(
+            span= rgb
+            | )
+          li.btn.clipboard(data-clipboard-text=hex) HEX #
+            span= hex
+
+      .block.product-logos
+        h3 Logos  
+          span click to download
+        ul
+          li.btn: a(href="/downloads/png-sm/wgsn-" + id + ".png" download="wgsn-" + id) PNG (sm)
+          li.btn: a(href="/downloads/png-lg/wgsn-" + id + ".png" download="wgsn-" + id) PNG (lg)
+          li.btn: a(href="/downloads/svg/wgsn-" + id + ".svg" download="wgsn-" + id) SVG

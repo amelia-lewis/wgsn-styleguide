@@ -9,40 +9,35 @@ html
     link(rel="stylesheet", href="./css/main.css")
     link(rel="stylesheet", href="./css/animate.css")
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
-    link(rel="shortcut icon", type="image/x-icon", href="./img/favicon.ico")
+    link(rel="shortcut icon", type="image/x-icon", href="./assets/img/favicon.ico")
   
   body(class=bodyclass)
-    include partials/card
+    //- header
+    //-   .content-wrap
+    //-     .grid.grid-pad
+    //-       .col-4-12
+    //-         a(href="/")
+    //-           include partials/logo
 
-    header
-      .content-wrap
-        .grid.grid-pad
-          .col-4-12
-            include partials/logo
-
-          .col-8-12.text-right
-            ul#nav
-              li: a(href="") Colors &amp; Logos
-              li: a(href="") Fonts
+    //-       .col-8-12.text-right
+    //-         ul#nav
+    //-           li#nav-colors: a(href="/colors") Colours
+    //-           li#nav-logos: a(href="/logos") Logos
+    //-           li#nav-fonts: a(href="/fonts") Fonts
     
-    .content-wrap.spacer: block content
+    .content-wrap: block content
 
     footer.block-ver-lg
-      .grid.grid-pad
-        .col-1-1
-          .block-ver-sm.text-center.text-grey.text-italic
-            p All logos and branding owned by 
-              a.text-grey.text-italic(href="http://wgsn.com", target="_blank") WGSN
-            p Made with 
-              i.fa.fa-heart
-              |  by 
-              a.text-grey.text-italic(href="mailto:amelia.lewis@wgsn.com") Amelia Lewis
-            p
-              a.text-grey.text-italic(href="https://github.com/amelia-lewis/wgsn-styleguide/issues", target="_blank") Let me know
-              |  if there's any other things you'd like added 
-              i.fa.fa-hand-peace-o
-            br
-            br
-            p p.s. only really tested on Chrome, on desktop screens
+      .block-ver-sm.text-center.text-grey.text-italic
+        p All logos and branding owned by 
+          a.text-grey.text-italic(href="http://wgsn.com", target="_blank") WGSN
+        p Made with 
+          i.fa.fa-heart
+          |  by 
+          a.text-grey.text-italic(href="mailto:amelia.lewis@wgsn.com") Amelia Lewis
+        p
+          a.text-grey.text-italic(href="https://github.com/amelia-lewis/wgsn-styleguide/issues", target="_blank") Let me know
+          |  if there's any other things you'd like added 
+          i.fa.fa-hand-peace-o
     
     include partials/scripts

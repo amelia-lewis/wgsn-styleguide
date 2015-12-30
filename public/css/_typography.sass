@@ -1,15 +1,15 @@
 @font-face
   font-family: "WGSN Headline"
-  src: url("../fonts/WGSNHeadline.otf")
+  src: url("../assets/fonts/WGSNHeadline.otf")
 
 @font-face
   font-family: "DH Sans"
-  src: url("../fonts/DHSansLight.ttf")
+  src: url("../assets/fonts/DHSansLight.ttf")
   font-weight: normal
 
 @font-face
   font-family: "DH Sans"
-  src: url("../fonts/DHSansMedium.ttf")
+  src: url("../assets/fonts/DHSansMedium.ttf")
   font-weight: bold
 
 .serif
@@ -19,7 +19,7 @@ p, li
   @extend .serif
 
 .sans-serif
-  font-family: "DH Sans", "Futura", sans-serif
+  font-family: "DH Sans", "Futura", "Helvetica", sans-serif
   text-transform: uppercase
   font-weight: normal
 
@@ -38,6 +38,9 @@ h1, h2, h3, h4
 
 .text-bold
   font-weight: bold
+
+h1, h2, h3, h4
+  @extend .text-normal
 
 
 // STYLE
@@ -82,11 +85,22 @@ li:last-of-type
   margin: 0
 
 
+// SIZING
+h1
+  font-size: 1.6em
+
+h2
+  font-size: 1.4em
+
+
 a
   color: inherit
   text-decoration: none
   border-bottom: 1px solid
   +transition(all 300ms)
+
+.clipboard
+  cursor: pointer
 
 .text-brand
   color: $group

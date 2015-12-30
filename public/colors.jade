@@ -1,0 +1,31 @@
+extends layout
+
+block append vars
+  - bodyclass = 'colors-view'
+
+block content
+  include partials/color-card
+  
+  .grid.grid-pad
+    .col-1-1
+      .block: .card-container: h1 Colours
+      .block-bot-md
+        +color-card("group", "282c", "4, 30, 66", "041e42", "yes")(class="group")
+        +color-card("fashion", "165C", "255, 103, 31", "FF671f", "yes")(class="fashion")
+        +color-card("lifestyle-and-interiors", "364C", "74, 119, 41", "4a7729", "yes")(class="interiors")
+        +color-card("instock", "7697C", "78, 135, 160", "4e87a0", "yes")(class="instock")
+        +color-card("styletrial", "2727C", "48, 127, 226", "307fe2", "yes")(class="styletrial")
+        +color-card("mindset", "Cool gray 9C", "117, 120, 123", "75787b", "yes")(class="mindset")
+        +color-card("website", "", "248, 189, 52", "f8bd34", "")(class="website")
+        
+      .block-ver-md: .card-container: h3.tight Future Products
+      .block-bot-md
+        +color-card("lifestyle", "7677C", "111, 80, 145", "6f5091", "yes")(class="lifestyle")
+        +color-card("intelligence", "1815C", "124, 37, 41", "7c2529", "yes")(class="intelligence")
+        +color-card("thinktank", "7511C", "183, 119, 41", "b77729", "yes")(class="thinktank")
+        +color-card("insight", "7606C", "214, 147, 138", "d6938a", "yes")(class="insight")
+        +color-card("product", "620C", "138, 123, 25", "8a7b19", "yes")(class="product")
+
+    .alert-container
+      .alert#alert-success Code copied to clipboard
+      .alert#alert-error Oops... copying didn't work :/
