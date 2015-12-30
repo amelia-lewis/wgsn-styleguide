@@ -8,7 +8,7 @@ mixin product-card(id, pantone, rgb, hex, hasdownloads)
     
     .info
       .block-bot-md.product-colors
-        h3 Colours  
+        h3 Colour  
           span.instructions.serif.text-lowercase.text-grey.text-italic.text-normal click to copy
         ul
           if pantone
@@ -21,7 +21,7 @@ mixin product-card(id, pantone, rgb, hex, hasdownloads)
             span= hex
 
       .block.product-logos
-        h3 Logos  
+        h3 Logo  
           span.instructions.serif.text-lowercase.text-grey.text-italic.text-normal click to download
         ul
           li.btn: a(href="/downloads/png-sm/wgsn-" + id + ".png" download="wgsn-" + id) PNG (sm)

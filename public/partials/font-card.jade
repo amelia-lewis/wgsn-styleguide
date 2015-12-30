@@ -1,4 +1,4 @@
-mixin font-card(name, description, example, example2, filename)
+mixin font-card(name, description, example, example2, example3, filename)
   .font-card.wow.fadeIn(class!=attributes.class)
     .block-bot-md
       h3= name
@@ -10,6 +10,10 @@ mixin font-card(name, description, example, example2, filename)
       br
       if example2
         for letter, i in example2.split("")
+          span.char(class="char-#{i + 1}")= letter
+      br
+      if example3
+        for letter, i in example3.split("")
           span.char(class="char-#{i + 1}")= letter
 
     if filename
