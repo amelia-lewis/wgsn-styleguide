@@ -24,6 +24,6 @@ mixin product-card(id, pantone, rgb, hex, hasdownloads)
         h3 Logo  
           span.instructions.serif.text-lowercase.text-grey.text-italic.text-normal click to download
         ul
-          li.btn: a(href="/downloads/png-sm/wgsn-" + id + ".png" download="wgsn-" + id) PNG (sm)
-          li.btn: a(href="/downloads/png-lg/wgsn-" + id + ".png" download="wgsn-" + id) PNG (lg)
-          li.btn: a(href="/downloads/svg/wgsn-" + id + ".svg" download="wgsn-" + id) SVG
+          li: a.btn(href="/downloads/png-sm/wgsn-" + id + ".png" download="wgsn-" + id) PNG (sm)
+          li: a.btn(href="/downloads/png-lg/wgsn-" + id + ".png" download="wgsn-" + id) PNG (lg)
+          li: a.btn(href="/downloads/svg/wgsn-" + id + ".svg" download="wgsn-" + id) SVG
