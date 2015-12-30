@@ -1,0 +1,16 @@
+mixin font-card(name, description, example, example2, filename)
+  .font-card.wow.fadeIn(class!=attributes.class)
+    .block-bot-md
+      h3= name
+      .description: p=description
+  
+    .example
+      for letter, i in example.split("")
+        span.char(class="char-#{i + 1}")= letter
+      br
+      if example2
+        for letter, i in example2.split("")
+          span.char(class="char-#{i + 1}")= letter
+
+    if filename
+      .block-top-md: a.btn(href="/downloads/fonts/" + filename download=filename) Download

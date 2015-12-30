@@ -3,9 +3,10 @@
 @import "typography"
 @import "common-styles"
 @import "blocks"
+@import "masthead"
 @import "cards"
 @import "card-colors"
-@import "header"
+// @import "header"
 @import "buttons"
 @import "alert"
 @import "logo"
@@ -25,9 +26,18 @@ body
   margin: 0
   padding: 0
   background: $xlt-grey
-  color: $xdk-grey
+  color: $group
 
 .content-wrap
   width: 90%
   max-width: 1800px
   margin: 0 auto
+
+section
+  @extend .clearfix
+
+hr
+  outline: none
+  border: none
+  background: $lt-grey
+  height: 1px
