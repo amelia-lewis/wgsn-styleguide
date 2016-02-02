@@ -1,4 +1,4 @@
-mixin product-card(id, pantone, rgb, hex, hasdownloads)
+mixin product-card(id, pantone, rgb, cmyk, hex, hasdownloads)
   //- .product-card(class!=attributes.class style="background-image: url('/downloads/png-sm/wgsn-" + id + ".png')")
   .product-card.wow.fadeIn(class!=attributes.class)
     if hasdownloads
@@ -17,6 +17,10 @@ mixin product-card(id, pantone, rgb, hex, hasdownloads)
           li.btn.clipboard(data-clipboard-text=rgb)  RGB(
             span= rgb
             | )
+          if cmyk
+            li.btn.clipboard(data-clipboard-text=rgb)  CMYK(
+              span= cmyk
+              | )
           li.btn.clipboard(data-clipboard-text=hex) HEX #
             span= hex
 
