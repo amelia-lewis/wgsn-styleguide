@@ -7,7 +7,7 @@ mixin product-card(id, pantone, rgb, cmyk, hex, hasdownloads)
       h1= id
     
     .info
-      .block-bot-md.product-colors
+      .block.product-colors
         h3 Colour  
           span.instructions.serif.text-lowercase.text-grey.text-italic.text-normal click to copy
         ul
@@ -24,10 +24,11 @@ mixin product-card(id, pantone, rgb, cmyk, hex, hasdownloads)
           li.btn.clipboard(data-clipboard-text=hex) HEX #
             span= hex
 
-      .block.product-logos
-        h3 Logo  
-          span.instructions.serif.text-lowercase.text-grey.text-italic.text-normal click to download
-        ul
-          li: a.btn(href="/downloads/png-sm/wgsn-" + id + ".png" download="wgsn-" + id) PNG (sm)
-          li: a.btn(href="/downloads/png-lg/wgsn-" + id + ".png" download="wgsn-" + id) PNG (lg)
-          li: a.btn(href="/downloads/svg/wgsn-" + id + ".svg" download="wgsn-" + id) SVG
+      if hasdownloads
+        .block-top-md.product-logos
+          h3 Logo  
+            span.instructions.serif.text-lowercase.text-grey.text-italic.text-normal click to download
+          ul
+            li: a.btn(href="/downloads/png-sm/wgsn-" + id + ".png" download="wgsn-" + id) PNG (sm)
+            li: a.btn(href="/downloads/png-lg/wgsn-" + id + ".png" download="wgsn-" + id) PNG (lg)
+            li: a.btn(href="/downloads/svg/wgsn-" + id + ".svg" download="wgsn-" + id) SVG
