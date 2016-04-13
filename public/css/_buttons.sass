@@ -2,7 +2,8 @@
 // BUTTONS
 // ========================================
 
-button
+button,
+.btn
   display: inline-block
   margin: 0 10px 0 0
   padding: 11px 20px
@@ -27,7 +28,7 @@ button
     background: $website
     color: white
 
-    &:not(.disabled):hover
+    &:not(.btn-disabled):hover
       background: lighten($website, 10)
 
   // black
@@ -36,7 +37,7 @@ button
     background: $xdk-grey
     color: white
 
-    &:not(.disabled):hover
+    &:not(.btn-disabled):hover
       background: lighten($xdk-grey, 10)
 
   // white
@@ -45,8 +46,17 @@ button
     background: white
     color: $md-grey
 
-    &:not(.disabled):hover
+    &:not(.btn-disabled):hover
       background: darken(white, 2)
+
+  // clear
+  &.btn-clear
+    border: 1px solid white
+    background: transparent
+    color: white
+
+    &:not(.btn-disabled):hover
+      background: rgba(black, 0.2)
 
   // disabled
   &.btn-disabled

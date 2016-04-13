@@ -10,29 +10,23 @@ mixin product-card(id, pantone, rgb, cmyk, hex, hasdownloads)
       .block.product-colors
         h3 Colour  
           span.instructions.serif.text-lowercase.text-grey.text-italic.text-normal click to copy
-        ul
-          if pantone
-            li
-              .btn.btn-white.clipboard(data-clipboard-text=pantone) Pantone 
-                span= pantone
-          li
-            .btn.btn-white.clipboard(data-clipboard-text=rgb) RGB(
-              span= rgb
-              | )
-          if cmyk
-            li
-              .btn.btn-white.clipboard(data-clipboard-text=rgb) CMYK(
-                span= cmyk
-                | )
-          li
-            .btn.btn-white.clipboard(data-clipboard-text=hex) HEX #
-              span= hex
+        if pantone
+          button.btn-white.clipboard(data-clipboard-text=pantone) Pantone 
+            span= pantone
+        button.btn-white.clipboard(data-clipboard-text=rgb) RGB(
+          span= rgb
+          | )
+        if cmyk
+          button.btn-white.clipboard(data-clipboard-text=rgb) CMYK(
+            span= cmyk
+            | )
+        button.btn-white.clipboard(data-clipboard-text=hex) HEX #
+          span= hex
 
       if hasdownloads
         .block-top-md.product-logos
           h3 Logo  
             span.instructions.serif.text-lowercase.text-grey.text-italic.text-normal click to download
-          ul
-            li: a.btn.btn-white(href="/downloads/png-sm/wgsn-" + id + ".png" download="wgsn-" + id) PNG (sm)
-            li: a.btn.btn-white(href="/downloads/png-lg/wgsn-" + id + ".png" download="wgsn-" + id) PNG (lg)
-            li: a.btn.btn-white(href="/downloads/svg/wgsn-" + id + ".svg" download="wgsn-" + id) SVG
+          a.btn.btn-white(href="/downloads/png-sm/wgsn-" + id + ".png" download="wgsn-" + id) PNG (sm)
+          a.btn.btn-white(href="/downloads/png-lg/wgsn-" + id + ".png" download="wgsn-" + id) PNG (lg)
+          a.btn.btn-white(href="/downloads/svg/wgsn-" + id + ".svg" download="wgsn-" + id) SVG
