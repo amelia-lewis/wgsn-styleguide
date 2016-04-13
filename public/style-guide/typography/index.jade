@@ -1,0 +1,19 @@
+extends ../../layout
+
+block append vars
+  - bodyclass = 'style-guide-typography'
+
+block content
+  .sub-header
+    .row
+      .col-xs-12.text-right
+        include ../../partials/style-guide-sub-nav
+  
+  section
+    .row
+      .col-xs-12.col-sm-9
+        h2 Typography
+      
+      .col-xs-12.col-sm-3
+        ul#sidebar-nav
+          li: a(href="") Typography

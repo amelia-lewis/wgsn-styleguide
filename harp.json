@@ -1,5 +1,6 @@
 {
-  "globals": {
-    "name"  : "Minimal Harp Project"
+  "globals" : {
+    "name" : "Minimal Harp Project",
+    "url"  : "http://wgsn-styleguide.amelia-lewis.com"
   }
 }

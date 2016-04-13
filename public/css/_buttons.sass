@@ -1,23 +1,60 @@
 .btn-container
-  margin: 10px 0 60px
+  margin: 0 0 20px
 
 .btn
-  @extend .sans-serif
-  border: 1px solid $md-grey
-  color: $md-grey
-  +border-radius(5px)
-  padding: 18px 24px 14px
   display: inline-block
-  margin: 0 10px 10px 0
+  margin: 0 10px 0 0
+  padding: 11px 20px
+  height: 36px
+  @extend .wgsn-font
+  font-size: 10px
+  line-height: 13px
+  @extend .text-center
+  +border-radius(3px)
   +transition(all 300ms)
-  font-size: 0.8em
-  letter-spacing: 0.1em
-
-  i
-    margin: 0 6px 0 0
-
-  &:hover
-    background: rgba($md-grey, 0.15)
+  cursor: pointer
 
   &:active
-    +transform(scale(0.9))
+    +transform(scale(0.96))
+
+  // coloured
+  &.btn-coloured
+    border: 1px solid $website
+    background: $website
+    color: white
+
+    &:not(.disabled):hover
+      background: lighten($website, 10)
+
+  // black
+  &.btn-black
+    border: 1px solid $xdk-grey
+    background: $xdk-grey
+    color: white
+
+    &:not(.disabled):hover
+      background: lighten($xdk-grey, 10)
+
+  // white
+  &.btn-white
+    border: 1px solid $md-grey
+    background: white
+    color: $md-grey
+
+    &:not(.disabled):hover
+      background: darken(white, 2)
+
+  // disabled
+  &.disabled
+    opacity: 0.5
+    cursor: default
+
+  // block
+  &.btn-full
+    display: block
+    margin: 0
+
+  // big
+  &.btn-big
+    height: 48px
+    padding: 17px 20px

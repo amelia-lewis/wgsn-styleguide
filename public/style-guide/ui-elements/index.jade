@@ -1,0 +1,149 @@
+extends ../../layout
+
+block append vars
+  - bodyclass = 'style-guide-ui-elements'
+
+block content
+  .sub-header
+    .row
+      .col-xs-12.text-right
+        include ../../partials/style-guide-sub-nav
+  
+  section
+    .row
+      .col-xs-12.col-sm-9
+        .block-bot-md#section-banners
+          h2.inline-block Banners
+          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
+          
+          .block-top-sm
+            .card: p Lorem ipsum
+
+        hr
+        
+        //- =======================================================
+
+        .block-ver-md#section-buttons
+          h2.inline-block Buttons
+          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
+
+          .block-top-sm
+            p Buttons come in three styles. 
+            ul
+              li Coloured (primary)
+              li Black
+              li White
+            p Buttons 
+              strong must 
+              | use a modifier class to select a button type.
+
+            .card
+              .btn-container
+                .btn.btn-coloured Coloured Button
+                .btn.btn-black Black Button
+                .btn.btn-white White Button
+              .btn-container
+                .btn.btn-coloured.disabled Disabled Coloured Button
+                .btn.btn-black.disabled Disabled Black Button
+                .btn.btn-white.disabled Disabled White Button
+              .btn-container
+                .btn.btn-coloured.btn-full A Full-Width Button
+              .btn-container
+                .btn.btn-coloured.btn-big A Big Button
+              .btn-container
+                .btn.btn-white.btn-big.btn-full A Big, White, Full-Width Button
+
+        hr
+
+        //- =======================================================
+
+        .block-ver-md#section-badges
+          h2.inline-block Badges
+          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
+          
+          .block-top-sm
+            .card: p Lorem ipsum
+
+        hr
+
+        //- =======================================================
+
+        .block-ver-md#section-cards
+          h2.inline-block Cards
+          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
+          
+          .block-top-sm
+            .card: p Lorem ipsum
+
+        hr
+
+        //- =======================================================
+
+        .block-ver-md#section-inputs
+          h2.inline-block Inputs
+          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
+          
+          .block-top-sm
+            .card: p Lorem ipsum
+
+        hr
+
+        //- =======================================================
+
+        .block-ver-md#section-avatars
+          h2.inline-block Avatars
+          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
+          
+          .block-top-sm
+            .card: p Lorem ipsum
+
+        hr
+
+        //- =======================================================
+
+        .block-ver-md#section-modals
+          h2.inline-block Modals
+          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
+          
+          .block-top-sm
+            .card: p Lorem ipsum
+
+        hr
+
+        //- =======================================================
+
+        .block-ver-md#section-title-bubble
+          h2.inline-block Title-bubble
+          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
+          
+          .block-ver-sm
+            .card: p Lorem ipsum
+
+        hr
+
+        //- =======================================================
+
+        .block-ver-md#section-tokens
+          h2.inline-block Tokens
+          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
+          
+          .block-ver-sm
+            .card: p Lorem ipsum
+
+        hr
+      
+      .col-xs-12.col-sm-3
+        ul#sidebar-nav
+          li: a(href="#banners") Banners
+          li: a(href="#buttons") Buttons
+          li: a(href="#badges") Badges
+          li: a(href="#cards") Cards
+          li: a(href="#inputs") Inputs
+          li: a(href="#avatars") Avatars
+          li: a(href="#modals") Modals
+          li: a(href="#title-bubble") Title-bubble
+          li: a(href="#tokens") Tokens
+          li: a(href="#loading-indicator") Loading-indicator
+          li: a(href="#tab-nav") Tab-nav
+          li: a(href="#calendar") Calendar
+          li: a(href="#tables") Tables

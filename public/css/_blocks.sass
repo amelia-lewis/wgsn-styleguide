@@ -24,15 +24,15 @@
   .block-#{$name}
     background: $color
 
-+make-block(xl, 100px)
++make-block(sm, 10px)
++make-block(md, 20px)
 +make-block(lg, 60px)
-+make-block(md, 30px)
-+make-block(sm, 8px)
++make-block(xl, 100px)
 
 @media (max-width: $screen-sm-min)
-  +make-block(xl, 60px)
-  +make-block(lg, 30px)
   +make-block(md, 15px)
+  +make-block(lg, 30px)
+  +make-block(xl, 60px)
 
 +make-block-variant("lt-grey", $lt-grey)
 +make-block-variant("white", white)

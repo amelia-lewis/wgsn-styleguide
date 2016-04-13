@@ -1,0 +1,49 @@
+extends layout
+
+block append vars
+  - bodyclass = 'index'
+
+block content
+  include partials/product-card
+  include partials/font-card
+
+  .masthead.block-ver-xl.text-center
+    .block-ver-xl
+      //- include partials/logo
+      img(src="/downloads/png-lg/wgsn-group.png" width="360")
+      .block-top-md: h3 Brand Resources
+
+  .product-card-container.block-bot-lg
+    section
+      +product-card("group", "282c", "4, 30, 66", "98, 87, 18, 66", "041e42", true)(class="group")
+      +product-card("fashion", "165C", "255, 103, 31", "0, 74, 95, 0", "FF671f", true)(class="fashion")
+      +product-card("lifestyle-and-interiors", "364C", "74, 119, 41", "73, 33, 100, 19", "4a7729", true)(class="interiors")
+      +product-card("instock", "7697C", "78, 135, 160", "72, 37, 27, 2", "4e87a0", true)(class="instock")
+      +product-card("styletrial", "2727C", "48, 127, 226", "76, 49, 0, 0", "307fe2", true)(class="styletrial")
+      +product-card("mindset", "Cool Gray 9C", "117, 120, 123", "55, 47, 44, 11", "75787b", true)(class="mindset")
+      +product-card("website", "", "248, 189, 52", "2, 27, 91, 0", "f8bd34", false)(class="website")
+
+    //- section
+    //-   .block-top-md.block-hor-sm: h3 Future Products
+    //-   +product-card("lifestyle", "7677C", "111, 80, 145", "", "6f5091", "yes")(class="lifestyle")
+    //-   +product-card("intelligence", "1815C", "124, 37, 41", "", "7c2529", "yes")(class="intelligence")
+    //-   +product-card("thinktank", "7511C", "183, 119, 41", "", "b77729", "yes")(class="thinktank")
+    //-   +product-card("insight", "7606C", "214, 147, 138", "", "d6938a", "yes")(class="insight")
+    //-   +product-card("product", "620C", "138, 123, 25", "", "8a7b19", "yes")(class="product")
+
+  hr
+
+  .fonts-container.block-ver-lg
+    section
+      .block-hor-sm: h2 Looking for fonts?
+      +font-card("WGSN Headline", "This is WGSN’s bespoke font. We always feature it in uppercase to give prominence when using it in page titling and marketing headline elements. Use glyphs sparingly when incorporating into marketing headline copy.", "ABCDEFGHIJKLM NOPQRSTUVWXYZ", "1234567980", "", "WGSNHeadline.otf")(class="wgsn-headline")
+      +font-card("DH Sans Light", "This is WGSN’s lighter font, used for the product names throughout the logo suite. This is primarily used alongside WGSN Headline for our logos, but can also be used for secondary titling for marketing purposes. Always use uppercase to give prominence.", "ABCDEFGHIJKLM NOPQRSTUVWXYZ", "1234567980", "", "DHSansLight.ttf")(class="dh-sans-light")
+      +font-card("PT Serif", "We use PT Serif for the WGSN Insider Blog. PT Serif is used in uppercase to give prominence when using it in page titling. It is used in standard case for secondary titling and body copy.", "ABCDEFGHIJKLM NOPQRSTUVWXYZ", "abcdefghijklm nopqrstuvwxyz", "1234567980", "PT_Serif-Web-Regular.ttf")(class="pt-serif")
+      +font-card("Helvetica", "We use Helvetica for all body copy and text heavy applications. We always use Helvetica regular, but can use bold for in page navigation or to show emphasis.", "ABCDEFGHIJKLM NOPQRSTUVWXYZ", "abcdefghijklm nopqrstuvwxyz", "1234567980", "")(class="helvetica")
+
+  
+
+  //- copy to clipboard alerts
+  .alert-container
+    .alert#alert-success Code copied to clipboard
+    .alert#alert-error Oops... copying didn't work :/

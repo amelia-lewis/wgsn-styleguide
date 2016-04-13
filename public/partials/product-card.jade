@@ -1,6 +1,6 @@
 mixin product-card(id, pantone, rgb, cmyk, hex, hasdownloads)
   //- .product-card(class!=attributes.class style="background-image: url('/downloads/png-sm/wgsn-" + id + ".png')")
-  .product-card.wow.fadeIn(class!=attributes.class)
+  .card.product-card.wow.fadeIn(class!=attributes.class)
     if hasdownloads
       .block-bot-md: img(src="/downloads/png-sm/wgsn-" + id + ".png" height="30" alt="wgsn " + id)
     else  
@@ -12,23 +12,27 @@ mixin product-card(id, pantone, rgb, cmyk, hex, hasdownloads)
           span.instructions.serif.text-lowercase.text-grey.text-italic.text-normal click to copy
         ul
           if pantone
-            li.btn.clipboard(data-clipboard-text=pantone) Pantone 
-              span= pantone
-          li.btn.clipboard(data-clipboard-text=rgb)  RGB(
-            span= rgb
-            | )
-          if cmyk
-            li.btn.clipboard(data-clipboard-text=rgb)  CMYK(
-              span= cmyk
+            li
+              .btn.btn-white.clipboard(data-clipboard-text=pantone) Pantone 
+                span= pantone
+          li
+            .btn.btn-white.clipboard(data-clipboard-text=rgb) RGB(
+              span= rgb
               | )
-          li.btn.clipboard(data-clipboard-text=hex) HEX #
-            span= hex
+          if cmyk
+            li
+              .btn.btn-white.clipboard(data-clipboard-text=rgb) CMYK(
+                span= cmyk
+                | )
+          li
+            .btn.btn-white.clipboard(data-clipboard-text=hex) HEX #
+              span= hex
 
       if hasdownloads
         .block-top-md.product-logos
           h3 Logo  
             span.instructions.serif.text-lowercase.text-grey.text-italic.text-normal click to download
           ul
-            li: a.btn(href="/downloads/png-sm/wgsn-" + id + ".png" download="wgsn-" + id) PNG (sm)
-            li: a.btn(href="/downloads/png-lg/wgsn-" + id + ".png" download="wgsn-" + id) PNG (lg)
-            li: a.btn(href="/downloads/svg/wgsn-" + id + ".svg" download="wgsn-" + id) SVG
+            li: a.btn.btn-white(href="/downloads/png-sm/wgsn-" + id + ".png" download="wgsn-" + id) PNG (sm)
+            li: a.btn.btn-white(href="/downloads/png-lg/wgsn-" + id + ".png" download="wgsn-" + id) PNG (lg)
+            li: a.btn.btn-white(href="/downloads/svg/wgsn-" + id + ".svg" download="wgsn-" + id) SVG

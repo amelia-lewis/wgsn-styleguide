@@ -1,15 +1,22 @@
+// core
 @import "vars"
 @import "mixins"
 @import "typography"
-@import "common-styles"
 @import "blocks"
+@import "grid"
+
+// components
 @import "masthead"
+@import "common-styles"
 @import "cards"
 @import "card-colors"
-// @import "header"
+@import "header"
 @import "buttons"
 @import "alert"
 @import "logo"
+
+// style guide
+@import "style-guide"
 
 // ==============================
 
@@ -26,15 +33,19 @@ body
   margin: 0
   padding: 0
   background: $xlt-grey
-  color: $group
+  color: $dk-grey
+
+#content
+  margin-top: 82px
 
 .content-wrap
   width: 90%
-  max-width: 1800px
+  max-width: 1000px
   margin: 0 auto
 
 section
   @extend .clearfix
+  @extend .block-ver-lg
 
 hr
   outline: none

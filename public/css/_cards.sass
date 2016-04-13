@@ -1,23 +1,14 @@
-// @media (min-width: $screen-sm-min)
-//   .product-card-container
-//     &:hover
-//       .product-card
-//         opacity: 0.3
-//         +transform(translate3d(0, 0, 0) scale(0.94))
-
-//         &:hover
-//           opacity: 1
-//           +transform(translate3d(0, 0, 0) scale(1))
+.card
+  @extend .block-md
+  width: 100%
+  background: white no-repeat center / auto 40px
+  border: 1px solid $lt-grey
+  margin: 0 0 20px
+  position: relative
+  overflow: hidden
 
 .product-card
   @extend .block-lg
-  width: calc(50% - 40px)
-  background: white no-repeat center / auto 40px
-  border: 1px solid $lt-grey
-  margin: 10px
-  position: relative
-  overflow: hidden
-  float: left
   opacity: 1
   +transition(all 300ms)
 
@@ -54,7 +45,6 @@
       margin: 0
 
       li
-        @extend .sans-serif
         +transition(all 300ms)
         display: inline-block
 
@@ -73,21 +63,10 @@
       +transform(translate3d(0, 0, 0))
       opacity: 1
 
-  @media (max-width: $screen-lg-min)
-    width: 100%
-    margin: 0 0 20px
-
 // ========================================================================================================================
 
 .font-card
   @extend .block-lg
-  width: calc(50% - 40px)
-  background: white no-repeat center / auto 40px
-  border: 1px solid $lt-grey
-  margin: 10px
-  position: relative
-  overflow: hidden
-  float: left
   opacity: 1
   +transition(all 300ms)
 
@@ -102,20 +81,16 @@
 
   &.wgsn-headline
     .example span
-      font-family: "WGSN Headline", "Futura", sans-serif
+      @extend .wgsn-font
 
   &.dh-sans-light
     .example span
-      font-family: "DH Sans", "Futura", "Helvetica", sans-serif
+      @extend .dh-sans-font
 
   &.pt-serif
     .example span
-      font-family: "PT Serif", "Georgia", serif
+      @extend .serif
 
   &.helvetica
     .example span
-      font-family: "Helvetica", sans-serif
-
-  @media (max-width: $screen-lg-min)
-    width: 100%
-    margin: 0 0 20px
+      @extend .sans-serif
