@@ -1,0 +1,76 @@
+.has-tooltip
+  position: relative
+  display: inline-block
+  cursor: pointer
+
+  &:before
+    content: ""
+    position: absolute
+    background: $xdk-grey
+    width: 8px
+    height: 8px
+    opacity: 0
+
+  &:after
+    content: "This is a tooltip"
+    position: absolute
+    background: $xdk-grey
+    color: white
+    padding: 4px 10px
+    font-size: 12px
+    white-space: nowrap
+    opacity: 0
+    +border-radius(2px)
+  
+  &.tooltip-up
+    &:before
+      top: -9px
+      left: 50%
+      +transform(translate3d(-50%, 0, 0) rotate(45deg))
+      +border-radius(0 0 2px 0)
+
+    &:after
+      top: -32px
+      left: 50%
+      +transform(translate3d(-50%, 0, 0))
+
+  &.tooltip-down
+    &:before
+      bottom: -9px
+      left: 50%
+      +transform(translate3d(-50%, 0, 0) rotate(45deg))
+      +border-radius(2px 0 0 0)
+    
+    &:after
+      bottom: -32px
+      left: 50%
+      +transform(translate3d(-50%, 0, 0))
+
+  &.tooltip-right
+    &:before
+      top: 50%
+      right: -14px
+      +transform(translate3d(0, -50%, 0) rotate(45deg))
+      +border-radius(0 0 0 2px)
+    
+    &:after
+      top: 50%
+      left: calc(100% + 10px)
+      +transform(translate3d(0, -50%, 0))
+
+  &.tooltip-left
+    &:before
+      top: 50%
+      left: -14px
+      +transform(translate3d(0, -50%, 0) rotate(45deg))
+      +border-radius(0 2px 0 0)
+    
+    &:after
+      top: 50%
+      right: calc(100% + 10px)
+      +transform(translate3d(0, -50%, 0))
+
+  &:hover
+    &:before,
+    &:after
+      opacity: 1
