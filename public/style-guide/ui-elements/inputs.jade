@@ -1,0 +1,52 @@
+.block-ver-md#section-inputs
+  h2.inline-block Inputs &amp; Labels
+  a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
+
+  p Inputs and labels are used in forms. But you knew that.
+  
+  .card
+    .row
+      .col-xs-12
+        label Email address
+          input(type='text' placeholder='amelia.lewis@wgsn.com')
+
+    .row
+      .col-xs-12
+        p Inputs take up the entire width of their parent, so you can and should use them in the grid.
+
+    .row
+      .col-xs-12.col-sm-6
+        label Password
+          input(type='password' placeholder='Keep it secret.')
+
+      .col-xs-12.col-sm-6
+        label Confirm Password
+          input(type='password' placeholder='Keep it safe.')
+
+    .row
+      .col-xs-12.col-sm-6
+        label Disabled field
+          input(type='text' placeholder='This is disabled.' disabled)
+
+      .col-xs-12.col-sm-6
+        label Textarea
+          textarea Edit me, yo.
+
+    .row
+      .col-xs-12.col-sm-4
+        label First name
+          span.error-message (Required)
+          input.has-error(type='text')
+
+      .col-xs-12.col-sm-4
+        label Last name
+          input.is-valid(type='text' value='Lewis')
+
+      .col-xs-12.col-sm-4
+        label Country
+          select
+            option United States
+            option United Kingdom
+            option Australia
+
+  pre: code // some code

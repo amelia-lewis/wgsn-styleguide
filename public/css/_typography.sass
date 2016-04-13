@@ -31,9 +31,9 @@ p, li, a
 .wgsn-font
   font-family: "WGSN Headline", "Futura", sans-serif
   text-transform: uppercase
-  letter-spacing: 0.05em
+  // font-size: 0.8em
 
-h1, h2, h3, h4
+h1, h2, h3, h4, label
   @extend .wgsn-font
 
 
@@ -44,7 +44,7 @@ h1, h2, h3, h4
 .text-bold
   font-weight: bold
 
-h1, h2, h3, h4
+h1, h2, h3, h4, label
   @extend .text-normal
 
 
@@ -79,8 +79,11 @@ h1, h2, h3, h4
 
 
 // MARGINS
-h1, h2, h3, h4, ul, ol, p, li
-  margin: 0 0 0.5em
+h1, h2, h3, h4, ul, ol, p
+  margin: 0 0 15px
+
+li
+  margin: 0 0 10px
 
 // p:last-of-type,
 li:last-of-type

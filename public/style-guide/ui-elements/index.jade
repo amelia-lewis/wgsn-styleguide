@@ -16,54 +16,13 @@ block content
           h2.inline-block Banners
           a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
           
-          .block-top-sm
-            .card: p Lorem ipsum
+          .card: p Lorem ipsum
 
         hr
         
         //- =======================================================
 
-        .block-ver-md#section-buttons
-          h2.inline-block Buttons
-          a.underlined.text-grey.text-smaller.inline-block(href="https://github.com/amelia-lewis/wgsn-styleguide/blob/master/public/css/_buttons.sass" target="_blank") View on Github
-
-          .block-top-sm
-            p Buttons come in four styles. 
-            ul
-              li Coloured (primary)
-              li Black
-              li White
-              li Clear
-            p Buttons 
-              strong must 
-              | use a modifier class to select a button type.
-
-            .card
-              .block-bot-md
-                button.btn-coloured Coloured Button
-                button.btn-black Black Button
-                button.btn-white White Button
-                .bg-dk-grey.block-xs.inline-block
-                  button.btn-clear.tight Clear Button
-              .block-bot-md
-                button.btn-coloured.btn-disabled(disabled) Disabled Button
-              .block-bot-md
-                button.btn-coloured.btn-full A Full-Width Button
-              .block-bot-md
-                button.btn-coloured.btn-big A Big Button
-              .block
-                button.btn-white.btn-big.btn-full A Big, White, Full-Width Button
-            pre
-              code testing some code
-
-            aside
-              h3 Disabling buttons
-              p.tight
-                | Note that buttons disabled via the 
-                code btn-disabled
-                |  class are only visually disabled. You should always opt to disable buttons via the 
-                code disabled
-                |  attribute to ensure they are functionally disabled.
+        include buttons
 
         hr
 
@@ -73,53 +32,25 @@ block content
           h2.inline-block Badges
           a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
           
-          .block-top-sm
-            .card: p Lorem ipsum
+          .card: p Lorem ipsum
 
         hr
 
         //- =======================================================
 
-        .block-ver-md#section-cards
-          h2.inline-block Cards
-          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
-          
-          .block-top-sm
-            .card
-              .row
-                .col-xs-12.col-sm-6
-                  .card
-                    h4 This is a card
-                    p.tight Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-                .col-xs-12.col-sm-6
-                  .card.img-card.tight
-                    .img-container(style="background-image: url('https://www.wgsn.com/storage/vol20/fo_image_store/cached/boards/65440/featured.jpg')")
-                    .text-container
-                      h4 This is a card with an image
-                      p.tight Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        include cards
 
         hr
 
         //- =======================================================
 
-        .block-ver-md#section-inputs
-          h2.inline-block Inputs
-          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
-          
-          .block-top-sm
-            .card: p Lorem ipsum
+        include inputs
 
         hr
 
         //- =======================================================
 
-        .block-ver-md#section-avatars
-          h2.inline-block Avatars
-          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
-          
-          .block-top-sm
-            .card: p Lorem ipsum
+        include avatars
 
         hr
 
@@ -129,8 +60,7 @@ block content
           h2.inline-block Modals
           a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
           
-          .block-top-sm
-            .card: p Lorem ipsum
+          .card: p Lorem ipsum
 
         hr
 
@@ -140,8 +70,7 @@ block content
           h2.inline-block Title-bubble
           a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
           
-          .block-ver-sm
-            .card: p Lorem ipsum
+          .card: p Lorem ipsum
 
         hr
 
@@ -151,8 +80,7 @@ block content
           h2.inline-block Tokens
           a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
           
-          .block-ver-sm
-            .card: p Lorem ipsum
+          .card: p Lorem ipsum
 
         hr
       

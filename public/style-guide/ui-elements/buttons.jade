@@ -1,0 +1,40 @@
+.block-ver-md#section-buttons
+  h2.inline-block Buttons
+  a.underlined.text-grey.text-smaller.inline-block(href="https://github.com/amelia-lewis/wgsn-styleguide/blob/master/public/css/_buttons.sass" target="_blank") View on Github
+
+  p Buttons come in four styles. 
+  ul
+    li Coloured (primary)
+    li Black
+    li White
+    li Clear
+  p Buttons 
+    strong must 
+    | use a modifier class to select a button type.
+
+  .card
+    .block-bot-md
+      button.btn-coloured Coloured Button
+      button.btn-black Black Button
+      button.btn-white White Button
+      .bg-dk-grey.block-xs.inline-block
+        button.btn-clear.tight Clear Button
+    .block-bot-md
+      button.btn-coloured.btn-disabled(disabled) Disabled Button
+    .block-bot-md
+      button.btn-coloured.btn-full A Full-Width Button
+    .block-bot-md
+      button.btn-coloured.btn-big A Big Button
+    .block
+      button.btn-white.btn-big.btn-full A Big, White, Full-Width Button
+  
+  pre: code // some code
+
+  aside
+    h3 Disabling buttons
+    p.tight
+      | Note that buttons disabled via the 
+      code btn-disabled
+      |  class are only visually disabled. You should always opt to disable buttons via the 
+      code disabled
+      |  attribute to ensure they are functionally disabled.
