@@ -3,16 +3,22 @@
   a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
   
   p Tooltips appear on hover. They are intended for non-vital information about a given element.
+  p A tooltip requires that the element has a 
+    code data-tooltip
+    |  attribute containing the tooltip content. By default, the tooltip appears above the element.
 
   .card
     .block-md.text-center
-      p.has-tooltip.tooltip-up Hover me.
+      p.has-tooltip(data-tooltip="I'm a tooltip") Hover me.
+
+  p There are a number of modifiers available to change the direction and behaviour of the tooltip:
+
+  .card  
+    .block-md.text-center
+      p.has-tooltip.tooltip-right(data-tooltip="I'm a tooltip") This one will appear to the right.
 
     .block-md.text-center
-      p.has-tooltip.tooltip-right This one will appear to the right.
+      p.has-tooltip.tooltip-down(data-tooltip="I'm a tooltip") This one will appear underneath.
 
     .block-md.text-center
-      p.has-tooltip.tooltip-down This one will appear underneath.
-
-    .block-md.text-center
-      p.has-tooltip.tooltip-left This one will appear to the left.
+      p.has-tooltip.tooltip-left(data-tooltip="I'm a tooltip") This one will appear to the left.
