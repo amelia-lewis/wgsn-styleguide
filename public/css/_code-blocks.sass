@@ -1,0 +1,19 @@
+pre
+  background: $xdk-grey
+  color: white
+  @extend .block-md
+  margin: 0 0 20px
+
+.card + pre
+  margin: -20px 0  20px
+
+code
+  background: $lt-grey
+  +border-radius(2px)
+  padding: 0 4px
+
+pre code
+  background: none
+
+aside code
+  background: darken($lt-grey, 5)

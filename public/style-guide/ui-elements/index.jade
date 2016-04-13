@@ -25,7 +25,7 @@ block content
 
         .block-ver-md#section-buttons
           h2.inline-block Buttons
-          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
+          a.underlined.text-grey.text-smaller.inline-block(href="https://github.com/amelia-lewis/wgsn-styleguide/blob/master/public/css/_buttons.sass" target="_blank") View on Github
 
           .block-top-sm
             p Buttons come in three styles. 
@@ -38,20 +38,31 @@ block content
               | use a modifier class to select a button type.
 
             .card
-              .btn-container
-                .btn.btn-coloured Coloured Button
-                .btn.btn-black Black Button
-                .btn.btn-white White Button
-              .btn-container
-                .btn.btn-coloured.disabled Disabled Coloured Button
-                .btn.btn-black.disabled Disabled Black Button
-                .btn.btn-white.disabled Disabled White Button
-              .btn-container
-                .btn.btn-coloured.btn-full A Full-Width Button
-              .btn-container
-                .btn.btn-coloured.btn-big A Big Button
-              .btn-container
-                .btn.btn-white.btn-big.btn-full A Big, White, Full-Width Button
+              .block-bot-md
+                button.btn-coloured Coloured Button
+                button.btn-black Black Button
+                button.btn-white White Button
+              .block-bot-md
+                button.btn-coloured.btn-disabled(disabled) Disabled Coloured Button
+                button.btn-black.btn-disabled(disabled) Disabled Black Button
+                button.btn-white.btn-disabled(disabled) Disabled White Button
+              .block-bot-md
+                button.btn-coloured.btn-full A Full-Width Button
+              .block-bot-md
+                button.btn-coloured.btn-big A Big Button
+              .block
+                button.btn-white.btn-big.btn-full A Big, White, Full-Width Button
+            pre
+              code testing some code
+
+            aside
+              h3 Disabling buttons
+              p.tight
+                | Note that buttons disabled via the 
+                code btn-disabled
+                |  class are only visually disabled. You should always opt to disable buttons via the 
+                code disabled
+                |  attribute to ensure they are functionally disabled.
 
         hr
 

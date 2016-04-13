@@ -1,7 +1,8 @@
-.btn-container
-  margin: 0 0 20px
+// ========================================
+// BUTTONS
+// ========================================
 
-.btn
+button
   display: inline-block
   margin: 0 10px 0 0
   padding: 11px 20px
@@ -16,6 +17,9 @@
 
   &:active
     +transform(scale(0.96))
+
+  &:focus
+    outline: none
 
   // coloured
   &.btn-coloured
@@ -45,13 +49,14 @@
       background: darken(white, 2)
 
   // disabled
-  &.disabled
+  &.btn-disabled
     opacity: 0.5
     cursor: default
 
   // block
   &.btn-full
     display: block
+    width: 100%
     margin: 0
 
   // big
