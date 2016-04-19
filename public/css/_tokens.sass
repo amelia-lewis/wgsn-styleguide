@@ -3,6 +3,7 @@
   border: 1px solid $md-grey
   display: inline-block
   padding: 2px 5px
+  margin: 0 5px 5px 0
   +border-radius(3px)
 
   .avatar
@@ -14,3 +15,40 @@
 
   .icon-cross
     cursor: pointer
+
+  &:hover
+    border-color: darken($md-grey, 20)
+
+    .icon-cross
+      color: darken($md-grey, 20)
+
+  &.token-warning
+    background: lighten($website, 36)
+    border-color: $website
+    color: $website
+
+    .icon-cross
+      color: $website
+
+    &:hover
+      border-color: darken($website, 15)
+
+      .icon-cross
+        color: darken($website, 15)
+
+  &.token-invalid
+    background: lighten($red, 36)
+    border-color: $red
+    color: $red
+
+    .icon-cross
+      color: $red
+
+    &:hover
+      border-color: darken($red, 15)
+
+      .icon-cross
+        color: darken($red, 15)
+
+  &.token-pending
+    opacity: 0.5
