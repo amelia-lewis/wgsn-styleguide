@@ -10,10 +10,11 @@ button,
   @extend .text-center
   +border-radius(3px)
   +transition(all 300ms)
+  +transform(translate3d(0, 0, 0))
   cursor: pointer
 
   &:active
-    +transform(scale(0.96))
+    +transform(translate3d(0, 2px, 0))
 
   &:focus
     outline: none
