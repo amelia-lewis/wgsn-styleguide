@@ -10,37 +10,37 @@
   position: relative
   border: 1px solid $lt-grey
 
-  .initials
+  &:after
+    content: attr(data-initials)
     font-size: 10px
-    position: absolute
-    top: 50%
-    left: 50%
-    +transform(translate3d(-50%, -50%, 0))
+    width: 100%
+    height: 100%
+    @extend .flex-center
 
   &.avatar-xs
     width: 16px
     height: 16px
 
-    .initials
-      display: none
+    &:after
+      opacity: 0
 
   &.avatar-sm
     width: 24px
     height: 24px
 
-    .initials
+    &:after
       font-size: 8px
 
   &.avatar-lg
     width: 48px
     height: 48px
 
-    .initials
+    &:after
       font-size: 14px
 
   &.avatar-xl
     width: 64px
     height: 64px
 
-    .initials
+    &:after
       font-size: 18px
