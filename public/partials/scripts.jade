@@ -1,9 +1,12 @@
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
 script(src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js')
 script(src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js')
 
+//- WOW
 script.
   new WOW().init();
 
+//- CLIPBOARD
 script.
   var clipboard = new Clipboard('.clipboard');
   clipboard.on('success', function(e) {
@@ -22,4 +25,10 @@ script.
     setTimeout(function(){
       document.getElementById("alert-error").classList.remove('show');
     }, 800);
+  });
+
+//- TABS
+script.
+  $('.tab-nav-tab').on('click', function() {
+    $(this).addClass('active').siblings().removeClass('active');
   });
