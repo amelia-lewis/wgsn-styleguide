@@ -1,0 +1,98 @@
+.block-ver-md#section-tables
+  h2.inline-block Tables
+  a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
+
+  p For basic table styling, add class 
+    code table
+    |  to your tables.
+  
+  .card
+    table.table
+      thead
+        th #
+        th Name
+        th Department
+
+      tbody
+        tr
+          td 1
+          td Amelia Lewis
+          td Product
+        tr
+          td 2
+          td Pathik Tanna
+          td Tech
+        tr
+          td 3
+          td Anna Glassman
+          td Creative Services
+        tr
+          td 4
+          td Nicky Ashwell
+          td Product
+
+  pre: code // some code
+
+  p Tables have two main additional modifiers/stylers—
+    code alternating-rows
+    |  for alternating striped rows, and 
+    code selectable
+    |  for hover and selected states on rows.
+
+  .card
+    table.table.table-alternating
+      thead
+        th #
+        th Name
+        th Department
+
+      tbody
+        tr
+          td 1
+          td Andrew Harris
+          td Product
+        tr
+          td 2
+          td Francis Wong
+          td Creative Services
+        tr
+          td 3
+          td Kim Schaefer
+          td Creative Services
+        tr
+          td 4
+          td Oleg Zolotnisky
+          td Tech
+        tr
+          td 5
+          td Emily Spiegel
+          td Marketing
+
+  pre: code // some code
+
+  .card
+    table.table.table-selectable
+      thead
+        th #
+        th Name
+        th Department
+
+      tbody
+        tr
+          td 1
+          td Hans Zhou
+          td Tech
+        tr.selected
+          td 2
+          td Sansan Chen
+          td Product
+        tr
+          td 3
+          td Parisa Vahdatinia
+          td QA
+        tr
+          td 4
+          td Peter Morrison
+          td Tech
+
+  pre: code // some code

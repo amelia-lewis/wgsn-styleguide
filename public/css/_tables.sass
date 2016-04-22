@@ -1,0 +1,40 @@
+table.table
+  @extend .sans-serif
+  @extend .text-left
+  border-collapse: collapse
+  width: 100%
+
+  thead
+    th
+      border-bottom: 2px solid $lt-grey
+      padding: 12px 5px
+      @extend .text-bold
+
+  tbody
+    tr
+      td
+        border-bottom: 1px solid $lt-grey
+        padding: 12px 5px
+        @extend .text-normal
+
+  &.table-alternating
+    tbody
+      tr:nth-of-type(even)
+        td
+          background: rgba($lt-grey, 0.5)
+
+  &.table-selectable
+    tbody
+      cursor: pointer
+      
+      tr.selected
+        td
+          background: rgba($website, 0.2)
+
+        &:hover
+          td
+            background: rgba($website, 0.25)
+
+      tr:hover
+        td
+          background: rgba($website, 0.05)
