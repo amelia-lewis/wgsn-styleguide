@@ -1,0 +1,42 @@
+extends ../../layout
+
+block append vars
+  - bodyclass = 'style-guide-icons'
+
+mixin icon-block(name)
+  .col-xs-6.col-sm-4
+    .icon-block
+      i.icon(class="icon-" + name)
+      span 
+        | .icon-
+        span= name
+
+block content
+  .sub-header
+    .row
+      .col-xs-12.text-right
+        include ../../partials/style-guide-sub-nav
+  
+  section
+    .row
+      .col-xs-12.col-sm-9
+        .block-bot-md#section-banners
+          h2.inline-block Arrows
+
+          .card
+            .row
+              +icon-block("arrow-down-circle")
+              +icon-block("angle-up")
+              +icon-block("angle-down")
+              +icon-block("angle-right")
+              +icon-block("angle-left")
+              +icon-block("double-angle-down")
+              +icon-block("caret-down")
+              +icon-block("caret-right")
+              +icon-block("arrow-left")
+              +icon-block("arrow-right")
+
+      
+      .col-xs-12.col-sm-3
+        ul#sidebar-nav
+          li: a(href="") Icons
