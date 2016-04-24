@@ -6,7 +6,14 @@
   li
     @extend .block-ver-sm
     @extend .tight
-    border-bottom: 1px solid $lt-grey
 
     &:first-of-type
-      border-top: 1px solid $lt-grey
+      padding-top: 0
+
+    a
+      display: block
+      @extend .wgsn-font
+      +transform(translate3d(0, 0, 0))
+
+      &:hover
+        +transform(translate3d(5px, 0, 0))

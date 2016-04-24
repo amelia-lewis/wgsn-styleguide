@@ -4,16 +4,13 @@ block append vars
   - bodyclass = 'style-guide-layout'
 
 block content
-  .sub-header
-    .row
-      .col-xs-12.text-right
-        include ../../partials/style-guide-sub-nav
+  include ../../partials/style-guide-sub-nav
 
-  section
+  section.block-top-xl
     .row
-      .col-xs-12.col-sm-9
-        h2 Layout
-      
       .col-xs-12.col-sm-3
         ul#sidebar-nav
           li: a(href="") Layout
+
+      .col-xs-12.col-sm-9
+        h2 Layout

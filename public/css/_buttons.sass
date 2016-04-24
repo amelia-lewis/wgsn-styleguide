@@ -2,16 +2,18 @@ button,
 .btn
   display: inline-block
   margin: 0 10px 0 0
-  padding: 11px 20px
+  padding: 9px 20px 10px
   height: 36px
   @extend .wgsn-font
-  font-size: 10px
-  line-height: 13px
   @extend .text-center
   +border-radius(3px)
   +transition(all 300ms)
   +transform(translate3d(0, 0, 0))
   cursor: pointer
+
+  span
+    @extend .wgsn-font
+    font-size: 1em
 
   &:active
     +transform(translate3d(0, 2px, 0))

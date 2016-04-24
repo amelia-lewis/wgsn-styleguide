@@ -4,15 +4,34 @@ block append vars
   - bodyclass = 'style-guide-ui-elements'
 
 block content
-  .sub-header
-    .row
-      .col-xs-12.text-right
-        include ../../partials/style-guide-sub-nav
+  include ../../partials/style-guide-sub-nav
   
-  section
+  section.block-top-xl
     .row
+      .col-xs-12.col-sm-3
+        ul#sidebar-nav
+          li: a(href="#section-avatars") Avatars
+          li: a(href="#section-banners") Banners
+          li: a(href="#section-buttons") Buttons
+          li: a(href="#section-badges") Badges
+          li: a(href="#section-cards") Cards
+          li: a(href="#section-inputs") Inputs
+          li: a(href="#section-loading-indicator") Loading indicator
+          li: a(href="#section-modals") Modals
+          li: a(href="#section-tooltips") Tooltips
+          li: a(href="#section-tokens") Tokens
+          li: a(href="#section-tab-nav") Tab nav
+          li: a(href="#section-calendar") Calendar
+          li: a(href="#section-tables") Tables
+
       .col-xs-12.col-sm-9
-        .block-bot-md#section-banners
+        
+        include avatars
+        hr
+
+        //- =======================================================
+
+        .block-ver-md#section-banners
           h2.inline-block Banners
           a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
           
@@ -47,10 +66,11 @@ block content
 
         //- =======================================================
 
-        include avatars
+        include loading-indicator
         hr
 
         //- =======================================================
+
 
         include modals
         hr
@@ -67,10 +87,6 @@ block content
 
         //- =======================================================
 
-        include loading-indicator
-        hr
-
-        //- =======================================================
 
         include tab-nav
         hr
@@ -88,19 +104,3 @@ block content
         //- =======================================================
 
         include tables
-      
-      .col-xs-12.col-sm-3
-        ul#sidebar-nav
-          li: a(href="#section-banners") Banners
-          li: a(href="#section-buttons") Buttons
-          li: a(href="#section-badges") Badges
-          li: a(href="#section-cards") Cards
-          li: a(href="#section-inputs") Inputs
-          li: a(href="#section-avatars") Avatars
-          li: a(href="#section-modals") Modals
-          li: a(href="#section-tooltips") Tooltips
-          li: a(href="#section-tokens") Tokens
-          li: a(href="#section-loading-indicator") Loading indicator
-          li: a(href="#section-tab-nav") Tab nav
-          li: a(href="#section-calendar") Calendar
-          li: a(href="#section-tables") Tables
