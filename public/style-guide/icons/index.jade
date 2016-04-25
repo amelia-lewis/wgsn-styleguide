@@ -5,11 +5,12 @@ block append vars
 
 mixin icon-block(name)
   .col-xs-6.col-sm-4
-    .icon-block
-      i.icon(class="icon-" + name)
-      span 
-        | .icon-
-        span= name
+    .icon-block.block-sm
+      .block-xs.pull-left: i.icon(class="icon-" + name)
+      .block-ver-xs
+        code.pull-left
+          | .icon-
+          code= name
 
 block content
   include ../../partials/style-guide-sub-nav
