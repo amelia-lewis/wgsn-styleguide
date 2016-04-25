@@ -41,7 +41,8 @@ h1, h2, h3, h4, label
 .text-normal
   font-weight: normal
 
-.text-bold
+.text-bold,
+strong
   font-weight: bold
 
 h1, h2, h3, h4, label
@@ -49,7 +50,8 @@ h1, h2, h3, h4, label
 
 
 // STYLE
-.text-italic
+.text-italic,
+em
   font-style: italic
 
 
@@ -77,17 +79,23 @@ h1, h2, h3, h4, label
 .text-capitalize
   text-transform: capitalize
 
+.text-no-transform
+  text-transform: none
+
 
 // MARGINS
 h1, h2, h3, h4, ul, ol, p
-  margin: 0 0 15px
+  margin: 0 0 0.5em
 
 li
   margin: 0 0 10px
 
-// p:last-of-type,
 li:last-of-type
   margin: 0
+
+ul,
+ol
+  padding-left: 20px
 
 .tight
   margin: 0 !important
@@ -106,7 +114,8 @@ h3
 h4
   font-size: 0.8em
 
-.text-smaller
+.text-smaller,
+small
   font-size: 0.8em
 
 
@@ -154,24 +163,3 @@ a.text-grey:hover
   &:before
     position: absolute
     top: 1px
-
-
-// .header-highlight
-//   display: inline-block
-//   position: relative
-  
-//   &:after
-//     content: ""
-//     position: absolute
-//     width: 100%
-//     height: 12px
-//     bottom: 4px
-//     left: 0
-//     background: $website
-//     z-index: -1
-//     +transition(all 400ms)
-//     +transform(scale(0, 1))
-//     +transform-origin(left center)
-
-//   &:hover:after
-//     +transform(scale(1, 1))

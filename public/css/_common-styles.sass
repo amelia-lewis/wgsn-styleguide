@@ -1,3 +1,4 @@
+// ALIGNMENT
 .flex-center
   display: flex
   align-items: center
@@ -21,3 +22,14 @@
 
 .pull-right
   float: right
+
+// BORDERS & SHADOWS
+.border
+  border: 1px solid $lt-grey
+
+@each $side in top, right, bottom, left
+  .border-#{$side}
+    border-#{$side}: 1px solid $lt-grey
+
+.box-shadow
+  box-shadow: 2px 2px 4px rgba(black, 0.15)

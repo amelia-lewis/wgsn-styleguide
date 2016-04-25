@@ -12,24 +12,24 @@ block content
         ul#sidebar-nav
           li: a(href="#section-headings") Headings
           li: a(href="#section-paragraphs") Paragraphs
+          li: a(href="#section-lists") Lists
+          li: a(href="#section-utilities") Typography Utilities
 
       .col-xs-12.col-sm-9
-        .block-ver-md#section-headings
-          h2.inline-block Headings
-          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
-          
-          .card: p Lorem ipsum
-
+        
+        include headings
         hr
         
         //- =======================================================
 
-        .block-ver-md#section-paragraphs
-          h2.inline-block Paragraphs
-          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
-          
-          .card: p Lorem ipsum
+        include paragraphs
+        hr
 
+        //- =======================================================
+
+        include lists
         hr
         
         //- =======================================================
+
+        include utilities
