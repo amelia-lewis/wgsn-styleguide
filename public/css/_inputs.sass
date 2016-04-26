@@ -1,6 +1,5 @@
 label
   display: block
-  margin-bottom: 20px
   line-height: 2em
   font-size: 10px
 
@@ -20,6 +19,7 @@ select
   height: 36px
   width: 100%
   padding: 10px
+  margin: 0 0 10px
   color: $dk-grey
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
   font-size: 14px
@@ -58,3 +58,119 @@ textarea
 
 :-ms-input-placeholder
    color: $md-grey
+
+// CHECKBOXES & RADIOS
+label.checkbox-radio
+  @extend .sans-serif
+  @extend .text-no-transform
+  font-size: 1em
+  line-height: 1.6em
+
+input[type="checkbox"],
+input[type="radio"]
+  appearance: none
+  -moz-appearance: none
+  -webkit-appearance: none
+  width: 14px
+  height: 14px
+  position: relative
+  @extend .hoverable
+  background: none
+  border: none
+  box-shadow: none
+
+  &:before
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: white
+    @extend .border
+    @extend .text-center
+    color: $xdk-grey
+
+  &:focus
+    outline: none
+
+  &:disabled
+    &:before
+      background: $xlt-grey
+
+input[type="checkbox"]
+  margin: 3px 8px 0 0
+  
+  &:before
+    +border-radius(3px)
+
+  &:checked
+    background: transparent
+    
+    &:before
+      content: "✓"
+
+input[type="radio"]
+  margin: 0 8px 0 0
+  
+  &:before
+    +border-radius(50%)
+
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    top: 4px
+    left: 4px
+    right: 4px
+    bottom: 4px
+    background: $xdk-grey
+    +border-radius(50%)
+    opacity: 0
+
+  &:checked
+    &:after
+      opacity: 1
+
+// TOGGLE
+.toggle
+  width: 20px
+  height: 12px
+  border-radius: 6px
+  position: relative
+  cursor: pointer
+
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    +border-radius(50%)
+    background: white
+    top: 1px
+    left: 1px
+    width: 10px
+    height: 10px
+    +transform(translate3d(0, 0, 0))
+    +transition(all 400ms)
+    // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2)
+
+  &.toggle-off
+    background: $md-grey
+
+    &:after
+      +transform(translate3d(0, 0, 0))
+
+  &.toggle-on
+    background: $yellow
+
+    &:after
+      +transform(translate3d(8px, 0, 0))
+
+body.product-fashion
+  .toggle.toggle-on
+    background: $fashion
+
+body.product-none
+  .toggle.toggle-on
+    background: $yellow

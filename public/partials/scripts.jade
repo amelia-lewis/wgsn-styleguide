@@ -53,8 +53,13 @@ script.
     });
   });
 
-
-//- headroom
+//- HEADROOM
 script.
   $("header").headroom();
   $(".sub-header").headroom();
+
+//- TOGGLES
+script.
+  $('.toggle').on('click', function() {
+    $(this).toggleClass('toggle-on toggle-off');
+  });
