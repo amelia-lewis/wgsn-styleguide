@@ -1,0 +1,69 @@
+mixin colour-block(id, colour)
+  .col-xs-6.col-sm-4.block-bot-md(class!=attributes.class)
+    .colour-block.border.text-center(id=id)
+      .block-md.border-bottom.text-white(style="background-color: #" + colour)
+        span #
+        span= colour
+      .block-xs
+        code $
+          code= id
+
+.block-ver-md#section-colours
+  h2.inline-block Colours
+  a.underlined.text-grey.text-smaller.inline-block(href="" target="_blank") View on Github
+
+  p Variables for those product colours you all know and love.
+
+  .card
+    .row
+      +colour-block("fashion", "FF671F")
+      +colour-block("li", "4A7729")
+      +colour-block("instock", "4E87A0")
+      +colour-block("styletrial", "307FE2")
+      +colour-block("mindset", "75787B")
+
+  p ...and some handy, dandy greys.
+    
+  .card
+    .row
+      +colour-block("xlt-grey", "fafafa")
+      +colour-block("lt-grey", "eee")
+      +colour-block("md-grey", "bbb")
+      +colour-block("dk-grey", "777")
+      +colour-block("xdk-grey", "222")
+
+  p There are also some nicely prepared 
+    code .bg
+    |  classes for you.
+
+  .card
+    .row
+      .col-xs-12.col-sm-6
+        .block-bot-md
+          .block-md.border.text-center.bg-white
+            .block-bot-sm: code .bg-white
+            p.tight Text will be dark grey
+      .col-xs-12.col-sm-6
+        .block-bot-md
+          .block-md.border.text-center.bg-xlt-grey
+            .block-bot-sm: code .bg-xlt-grey
+            p.tight Text will be dark grey
+      .col-xs-12.col-sm-6
+        .block-bot-md
+          .block-md.border.text-center.bg-lt-grey
+            .block-bot-sm: code .bg-lt-grey
+            p.tight Text will be dark grey
+      .col-xs-12.col-sm-6
+        .block-bot-md
+          .block-md.border.text-center.bg-md-grey
+            .block-bot-sm: code .bg-md-grey
+            p.tight Text will be white
+      .col-xs-12.col-sm-6
+        .block-bot-md
+          .block-md.border.text-center.bg-dk-grey
+            .block-bot-sm: code .dk-xlt-grey
+            p.tight Text will be white
+      .col-xs-12.col-sm-6
+        .block-md.border.text-center.bg-xdk-grey
+          .block-bot-sm: code .bg-xdk-grey
+          p.tight Text will be white
