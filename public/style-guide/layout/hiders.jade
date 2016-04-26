@@ -1,0 +1,47 @@
+.block-ver-md#section-hiders
+  h2.inline-block Hiders
+  a.underlined.text-grey.text-smaller.inline-block(href="" target="_blank") View on Github
+
+  p Use these to hide elements on different devices. These will only work when used in conjunction with 
+    a.underlined(href="http://matthewhudson.me/projects/device.js/" target="_blank") device.js
+    | .
+
+  .card
+    table.table
+      thead
+        th Class
+        th Mobile
+        th Tablet
+        th Desktop
+
+      tbody
+        tr
+          td: code .hidden-mobile
+          td: i.icon.icon-cross
+          td: i.icon.icon-tick
+          td: i.icon.icon-tick
+        tr
+          td: code .hidden-tablet
+          td: i.icon.icon-tick
+          td: i.icon.icon-cross
+          td: i.icon.icon-tick
+        tr
+          td: code .hidden-desktop
+          td: i.icon.icon-tick
+          td: i.icon.icon-tick
+          td: i.icon.icon-cross
+        tr
+          td: code .show-mobile
+          td: i.icon.icon-tick
+          td: i.icon.icon-cross
+          td: i.icon.icon-cross
+        tr
+          td: code .show-tablet
+          td: i.icon.icon-cross
+          td: i.icon.icon-tick
+          td: i.icon.icon-cross
+        tr
+          td: code .show-desktop
+          td: i.icon.icon-cross
+          td: i.icon.icon-cross
+          td: i.icon.icon-tick

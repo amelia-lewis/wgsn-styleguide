@@ -10,7 +10,20 @@ block content
     .row
       .col-xs-12.col-sm-3
         ul#sidebar-nav
-          li: a(href="") Layout
+          li: a(href="#section-blocks") Blocks
+          li: a(href="#section-helper-classes") Helper classes
+          li: a(href="#section-hiders") Hiders
 
       .col-xs-12.col-sm-9
-        h2 Layout
+        
+        include blocks
+        hr
+
+        //- =======================================================
+
+        include helper-classes
+        hr
+
+        //- =======================================================
+
+        include hiders

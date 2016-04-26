@@ -18,11 +18,10 @@ block content
           li: a(href="#section-inputs") Inputs
           li: a(href="#section-loading-indicator") Loading indicator
           li: a(href="#section-modals") Modals
-          li: a(href="#section-tooltips") Tooltips
-          li: a(href="#section-tokens") Tokens
           li: a(href="#section-tab-nav") Tab nav
-          li: a(href="#section-calendar") Calendar
           li: a(href="#section-tables") Tables
+          li: a(href="#section-tokens") Tokens
+          li: a(href="#section-tooltips") Tooltips
 
       .col-xs-12.col-sm-9
         
@@ -71,13 +70,17 @@ block content
 
         //- =======================================================
 
-
         include modals
         hr
 
         //- =======================================================
 
-        include tooltips
+        include tab-nav
+        hr
+
+        //- =======================================================
+
+        include tables
         hr
 
         //- =======================================================
@@ -87,20 +90,4 @@ block content
 
         //- =======================================================
 
-
-        include tab-nav
-        hr
-
-        //- =======================================================
-
-        .block-ver-md#section-calendar
-          h2.inline-block Calendar
-          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
-          
-          .card: p Lorem ipsum
-
-        hr
-
-        //- =======================================================
-
-        include tables
+        include tooltips

@@ -1,0 +1,33 @@
+.block-bot-md#section-blocks
+  h2.inline-block Blocks
+  a.underlined.text-grey.text-smaller.inline-block(href="https://github.com/amelia-lewis/wgsn-styleguide/blob/master/public/css/_blocks.sass" target="_blank") View on Github
+
+  p Blocks come in 5 sizes, to help out with spacing.
+  ul
+    li xs (5px)
+    li sm (10px)
+    li md (20px)
+    li lg (60px)
+    li xl (100px)
+  
+  .card
+    .block-bot-md: .block-xs.inline-block.border: code .block-xs
+    .block-bot-md: .block-sm.inline-block.border: code .block-sm
+    .block-bot-md: .block-md.inline-block.border: code .block-md
+    .block-bot-md: .block-lg.inline-block.border: code .block-lg
+    .block-xl.inline-block.border: code .block-xl
+
+  p You can also add the modifiers 
+    code hor
+    | , 
+    code ver
+    | , 
+    code bot
+    |  or 
+    code top
+    |  (e.g. 
+    code .block-ver-md
+    | ) to add the padding to just one or two of the sides.
+
+  .card
+    .block-ver-md.inline-block.border: code .block-ver-md
