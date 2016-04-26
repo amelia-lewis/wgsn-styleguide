@@ -3,14 +3,29 @@ pre
   color: white
   @extend .block-md
   margin: 0 0 20px
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
 
 .card + pre
-  margin: -20px 0  20px
+  margin: -20px 0  20px !important
+  +border-radius(0 0 2px 2px !important)
 
 code
-  background: $lt-grey
+  background: rgba($lt-grey, 0.75)
   +border-radius(2px)
   padding: 0 4px
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
+
+  .token
+    background: none
+    border: none
+    padding: 0
+    margin: 0
+    +border-radius(0)
+
+    span
+      float: none
+      margin: 0 1px
+      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
 
 pre code
   background: none

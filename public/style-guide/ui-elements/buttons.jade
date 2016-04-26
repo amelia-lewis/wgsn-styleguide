@@ -16,21 +16,24 @@
 
   .card
     .block-bot-md
-      button.btn-coloured Coloured Button
-      button.btn-black Black Button
-      button.btn-white White Button
-      .bg-dk-grey.block-xs.inline-block
-        button.btn-clear.tight Clear Button
+      button.btn-coloured Coloured button
+      button.btn-black Black button
+      button.btn-white White button
+      .bg-dk-grey.block-xs.inline-block: button.btn-clear.tight Clear button
+    
     .block-bot-md
-      button.btn-coloured.btn-disabled(disabled) Disabled Button
+      button.btn-coloured.btn-disabled(disabled) A disabled button
+    
     .block-bot-md
-      button.btn-coloured.btn-full A Full-Width Button
+      button.btn-coloured.btn-full A full-width button
+    
     .block-bot-md
-      button.btn-coloured.btn-big A Big Button
+      button.btn-coloured.btn-big A big button
+    
     .block
-      button.btn-white.btn-big.btn-full A Big, White, Full-Width Button
+      button.btn-white.btn-big.btn-full A big, white, full-width button
   
-  pre: code // some code
+  include:markdown buttons.md
 
   aside
     h3 Disabling buttons
