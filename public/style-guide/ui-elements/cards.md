@@ -1,5 +1,5 @@
 ```html
-<row>
+<div class="row">
   <div class="col-xs-12 col-sm-6">
     <div class="card">
       <h4>This is a card</h4>
@@ -16,5 +16,5 @@
       </div>
     </div>
   </div>
-</row>
+</div>
 ```
