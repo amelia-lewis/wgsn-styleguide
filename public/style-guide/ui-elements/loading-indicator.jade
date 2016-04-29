@@ -2,21 +2,22 @@
   h2.inline-block Loading Indicator
   a.underlined.text-grey.text-smaller.inline-block(href="https://github.com/amelia-lewis/wgsn-styleguide/blob/master/public/css/_loading-indicator.sass" target="_blank") View on Github
   
-  p The loading indicator component is a simple, center-aligned loading animation.
+  p The loading indicator component is a simple, center-aligned loading animation. The 
+    a.underlined(href='/') colour
+    |  of the loading indicator will reflect the product you're using when 
+    code body
+    |  has a product class, such as 
+    code .product-fashion
+    | , which it should always have.
 
   .card
     .loading-indicator
 
-  pre: code // some code
+  include:markdown loading-indicator-1.md
 
-  p The 
-    a.underlined(href='/') colour
-    |  of the loading indicator should reflect the product you're using.
+  p There is also a smaller (inline) loading indicator, to be used inside elements (as opposed to a whole page or section loading) and wherever else necessary.
 
   .card
-    .loading-indicator.loading-indicator-fashion
-    .loading-indicator.loading-indicator-li
-    .loading-indicator.loading-indicator-instock
-    .loading-indicator.loading-indicator-styletrial
+    .loading-indicator.loading-indicator-sm
 
-  pre: code // some code
+  include:markdown loading-indicator-2.md

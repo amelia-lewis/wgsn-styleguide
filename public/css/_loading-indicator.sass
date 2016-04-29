@@ -8,27 +8,31 @@
   border-radius: 50%
   animation: spCircRot 1s infinite linear
 
-  &.loading-indicator-fashion
-    border-color: rgba($fashion, 0.4)
-    border-top-color: $fashion
-
-  &.loading-indicator-li
-    border-color: rgba($li, 0.4)
-    border-top-color: $li
-
-  &.loading-indicator-instock
-    border-color: rgba($instock, 0.4)
-    border-top-color: $instock
-
-  &.loading-indicator-styletrial
-    border-color: rgba($styletrial, 0.4)
-    border-top-color: $styletrial
-
   &.loading-indicator-sm
     width: 16px
     height: 16px
     margin: 0
     border-width: 2px
+
+body.product-fashion
+  .loading-indicator
+    border-color: rgba($fashion, 0.4)
+    border-top-color: $fashion
+
+body.product-li
+  .loading-indicator
+    border-color: rgba($li, 0.4)
+    border-top-color: $li
+
+body.product-instock
+  .loading-indicator
+    border-color: rgba($instock, 0.4)
+    border-top-color: $instock
+
+body.product-styletrial
+  .loading-indicator
+    border-color: rgba($styletrial, 0.4)
+    border-top-color: $styletrial
 
 @-webkit-keyframes spCircRot
   from
