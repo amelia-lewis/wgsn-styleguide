@@ -10,9 +10,15 @@
     li Clear
   p Buttons 
     strong must 
-    | use a modifier class to select a button type. The coloured buttons are to take on the product's 
+    | use a modifier class to select a button colour. 
+    code .btn-coloured
+    |  will take on the product's 
     a.underlined(href='/') colour
-    | .
+    |  when 
+    code body
+    |  has a product class, such as 
+    code .product-fashion
+    | , which it should always have.
 
   .card
     .block-bot-md

@@ -5,83 +5,84 @@
   p Inputs and labels are used in forms. But you knew that.
   
   .card
-    .row
-      .col-xs-12
-        label Email address
-          input(type='text' placeholder='amelia.lewis@wgsn.com')
+    form
+      .row
+        .col-xs-12
+          label Email address
+            input(type='text' placeholder='amelia.lewis@wgsn.com')
 
-    .row.block-bot-md
-      .col-xs-12
-        p Inputs take up the entire width of their parent, so you can and should use them in the grid.
+      .row.block-bot-md
+        .col-xs-12
+          p Inputs take up the entire width of their parent, so you can and should use them in the grid.
 
-    .row
-      .col-xs-12.col-sm-6
-        label Password
-          input(type='password' placeholder='Keep it secret.')
+      .row
+        .col-xs-12.col-sm-6
+          label Password
+            input(type='password' placeholder='Keep it secret.')
 
-      .col-xs-12.col-sm-6
-        label Confirm Password
-          input(type='password' placeholder='Keep it safe.')
+        .col-xs-12.col-sm-6
+          label Confirm Password
+            input(type='password' placeholder='Keep it safe.')
 
-    .row.block-bot-md
-      .col-xs-12.col-sm-6
-        label Disabled field
-          input(type='text' placeholder='This is disabled.' disabled)
+      .row.block-bot-md
+        .col-xs-12.col-sm-6
+          label Disabled field
+            input(type='text' placeholder='This is disabled.' disabled)
 
-      .col-xs-12.col-sm-6
-        label Textarea
-          textarea Edit me, yo.
+        .col-xs-12.col-sm-6
+          label Textarea
+            textarea Edit me, yo.
 
-    .row.block-bot-md
-      .col-xs-12.col-sm-4
-        label First name
-          span.error-message (Required)
-          input.has-error(type='text')
+      .row.block-bot-md
+        .col-xs-12.col-sm-4
+          label First name
+            span.error-message (Required)
+            input.has-error(type='text')
 
-      .col-xs-12.col-sm-4
-        label Last name
-          input.is-valid(type='text' value='Lewis')
+        .col-xs-12.col-sm-4
+          label Last name
+            input.is-valid(type='text' value='Lewis')
 
-      .col-xs-12.col-sm-4
-        label Country
-          select
-            option United States
-            option United Kingdom
-            option Australia
+        .col-xs-12.col-sm-4
+          label Country
+            select
+              option United States
+              option United Kingdom
+              option Australia
 
-    .row
-      .col-xs-12.col-sm-4
-        label.checkbox-radio(for="checkbox-1")
-          input.pull-left#checkbox-1(type="checkbox" checked)
-          | Checkbox 1
+      .row
+        .col-xs-12.col-sm-4
+          label.checkbox-radio(for="checkbox-1")
+            input.pull-left#checkbox-1(type="checkbox" checked)
+            | Checkbox 1
 
-        label.checkbox-radio(for="checkbox-2")
-          input.pull-left#checkbox-2(type="checkbox")
-          | Checkbox 2
+          label.checkbox-radio(for="checkbox-2")
+            input.pull-left#checkbox-2(type="checkbox")
+            | Checkbox 2
 
-        label.checkbox-radio(for="checkbox-3")
-          input.pull-left#checkbox-3(type="checkbox" disabled)
-          | Checkbox 3 (disabled)
+          label.checkbox-radio(for="checkbox-3")
+            input.pull-left#checkbox-3(type="checkbox" disabled)
+            | Checkbox 3 (disabled)
 
-      .col-xs-12.col-sm-4
-        form
-          label.checkbox-radio(for="#radio-1")
-            input(type="radio" name="radio-example" value="radio-1" checked)
-            | Radio 1
-          
-          label.checkbox-radio(for="#radio-2")
-            input(type="radio" name="radio-example" value="radio-2")
-            | Radio 2
+        .col-xs-12.col-sm-4
+          form
+            label.checkbox-radio(for="#radio-1")
+              input(type="radio" name="radio-example" value="radio-1" checked)
+              | Radio 1
+            
+            label.checkbox-radio(for="#radio-2")
+              input(type="radio" name="radio-example" value="radio-2")
+              | Radio 2
 
-          label.checkbox-radio(for="#radio-3")
-            input(type="radio" name="radio-example" value="radio-3" disabled)
-            | Radio 3 (disabled)
+            label.checkbox-radio(for="#radio-3")
+              input(type="radio" name="radio-example" value="radio-3" disabled)
+              | Radio 3 (disabled)
 
-      .col-xs-12.col-sm-4
-        .row
-          .col-xs-2
-            .toggle.toggle-on
-          .col-xs-10
-            code .toggle
+        .col-xs-12.col-sm-4
+          .row
+            .col-xs-2
+              .toggle.toggle-on
+            .col-xs-10
+              code .toggle
 
   include:markdown inputs.md

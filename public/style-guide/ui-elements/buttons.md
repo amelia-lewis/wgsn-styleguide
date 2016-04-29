@@ -11,14 +11,14 @@
 </div>
 
 <div class="block-bot-md">
-  <button class="btn btn-coloured btn-full" disabled>A full-width button</btn>
+  <button class="btn btn-coloured btn-full">A full-width button</btn>
 </div>
 
 <div class="block-bot-md">
-  <button class="btn btn-coloured btn-big" disabled>A big button</btn>
+  <button class="btn btn-coloured btn-big">A big button</btn>
 </div>
 
 <div class="block">
-  <button class="btn btn-white btn-big btn-full" disabled>A big, white, full-width button</btn>
+  <button class="btn btn-white btn-big btn-full">A big, white, full-width button</btn>
 </div>
 ```
