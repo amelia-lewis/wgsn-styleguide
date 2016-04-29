@@ -70,23 +70,15 @@ header
       &:hover
         @extend .active
 
-  &.headroom--pinned
+  &.headroom--top
     transform: translate3d(0, 0, 0)
 
-  &.headroom--unpinned
+  &.headroom--not-top
     transform: translate3d(0, -100%, 0)
-
-body.index
-  #nav-products
-    @extend .active
-
-body.style-guide
-  #nav-style-guide
-    @extend .active
-
 
 
 // =============================================================
+
 
 .sub-header
   position: fixed
@@ -141,11 +133,15 @@ body.style-guide
       &:hover
         @extend .active
 
-  &.headroom--pinned
+  &.headroom--top
     transform: translate3d(0, 0, 0)
 
-  &.headroom--unpinned
+  &.headroom--not-top
     transform: translate3d(0, -76px, 0)
+
+
+// =============================================================
+
 
 body.index
   #nav-products
