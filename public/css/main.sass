@@ -9,7 +9,6 @@
 @import "logo"
 @import "header"
 @import "masthead"
-@import "cards"
 @import "code-blocks"
 @import "alert"
 @import "aside"
@@ -27,6 +26,8 @@
 @import "inputs"
 @import "avatars"
 @import "modals"
+@import "comments"
+@import "cards"
 @import "tooltips"
 @import "tokens"
 @import "loading-indicator"
@@ -55,8 +56,9 @@ body
   overflow-x: hidden
 
 #content
-  position: relative
-  top: 76px
+  // position: relative
+  // top: 76px
+  margin-top: 76px
   min-height: calc(100vh - 262px) // keep footer at the base of the screen
 
 .content-wrap
