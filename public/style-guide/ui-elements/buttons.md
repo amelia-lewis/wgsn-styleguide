@@ -15,7 +15,8 @@
 </div>
 
 <div class="block-bot-md">
-  <button class="btn btn-coloured btn-big">A big button</button>
+  <button class="btn btn-coloured btn-lg">A large button</button>
+  <button class="btn btn-coloured btn-sm">A small button</button>
 </div>
 
 <div class="block">
