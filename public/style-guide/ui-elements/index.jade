@@ -11,9 +11,7 @@ block content
       .col-xs-12.col-sm-3
         ul#sidebar-nav
           li: a(href="#section-avatars") Avatars
-          li: a(href="#section-banners") Banners
           li: a(href="#section-buttons") Buttons
-          li: a(href="#section-badges") Badges
           li: a(href="#section-cards") Cards
           li: a(href="#section-comments") Comments
           li: a(href="#section-inputs") Inputs
@@ -30,38 +28,19 @@ block content
           aside
             h3 On the to-do list...
             ul
-              li Comments
               li File type cards (reports, images, etc.)
               li Alerts
+              li Banners
+              li Badges
 
         //- =======================================================
         
         include avatars
         hr
-
-        //- =======================================================
-
-        .block-ver-md#section-banners
-          h2.inline-block Banners
-          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
-          
-          .card: p Lorem ipsum
-
-        hr
         
         //- =======================================================
 
         include buttons
-        hr
-
-        //- =======================================================
-
-        .block-ver-md#section-badges
-          h2.inline-block Badges
-          a.underlined.text-grey.text-smaller.inline-block(href="") View on Github
-          
-          .card: p Lorem ipsum
-
         hr
 
         //- =======================================================
