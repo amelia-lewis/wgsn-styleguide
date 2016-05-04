@@ -1,0 +1,7 @@
+```css
+=truncate-text($width)
+  max-width: $width
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+```

@@ -10,11 +10,40 @@ block content
     .row
       .col-xs-12.col-sm-3
         ul#sidebar-nav
-          li: a(href="#section-arrows") Mixins
+          li: a(href="#section-clearfix") Clearfix
+          li: a(href="#section-retina-images") Retina Images
+          li: a(href="#section-columns") Columns
+          li: a(href="#section-truncate-text") Truncate Text
 
       .col-xs-12.col-sm-9
-        .block-bot-md#section-arrows
-          h2.inline-block Mixins
+        .block-bot-md#section-clearfix
+          h2.inline-block Clearfix
 
-          .card
-            p Hello
+          p Referenced 
+            a.underlined(href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank") here
+            | .
+
+          include:markdown clearfix.md
+
+        hr
+
+        .block-ver-md#section-retina-images
+          h2.inline-block Retina Images
+
+          p A function to set high or low resolution images depending on the device pixel ratio.
+
+          include:markdown retina-images.md
+
+        hr
+
+        .block-ver-md#section-columns
+          h2.inline-block Columns
+
+          include:markdown columns.md
+
+        hr
+
+        .block-ver-md#section-truncate-text
+          h2.inline-block Truncate Text
+
+          include:markdown truncate-text.md
