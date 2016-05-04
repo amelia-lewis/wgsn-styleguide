@@ -12,7 +12,7 @@ mixin icon-block(name)
         .col-xs-10
           code.pull-left
             | .
-            code= name
+            span= name
 
 block content
   include ../../partials/style-guide-sub-nav
@@ -27,6 +27,7 @@ block content
           li: a(href="#section-view-options") View Options
           li: a(href="#section-file-types") File Types
           li: a(href="#section-navigational") Navigational
+          li: a(href="#section-instock") Instock
           li: a(href="#section-symbols") Symbols
           li: a(href="#section-social-media") Social Media
 
@@ -84,6 +85,7 @@ block content
               +icon-block("icon-fullscreen")
               +icon-block("icon-reset")
               +icon-block("icon-clone")
+              +icon-block("icon-sliders")
               +icon-block("icon-share-left")
               +icon-block("icon-share-right")
               +icon-block("icon-crop")
@@ -150,6 +152,34 @@ block content
               +icon-block("icon-minimise")
               +icon-block("icon-folder-shared")
               +icon-block("icon-comment-filled")
+
+        hr
+
+        .block-ver-md#section-instock
+          h2.inline-block Instock
+
+          .card
+            .row
+              +icon-block("icon-instock-in-stock")
+              +icon-block("icon-instock-out-of-stock-all-skus")
+              +icon-block("icon-instock-out-of-stock-some-skus")
+              +icon-block("icon-instock-restocked")
+              +icon-block("icon-instock-markdown-all-skus")
+              +icon-block("icon-instock-markdown-some-skus")
+              +icon-block("icon-instock-markup-all-skus")
+              +icon-block("icon-instock-markup-some-skus")
+              +icon-block("icon-instock-kpi")
+              +icon-block("icon-instock-date")
+              +icon-block("icon-instock-country")
+              +icon-block("icon-instock-retailer")
+              +icon-block("icon-instock-product")
+              +icon-block("icon-instock-age-range")
+              +icon-block("icon-instock-price")
+              +icon-block("icon-instock-colour")
+              +icon-block("icon-instock-print")
+              +icon-block("icon-instock-material")
+              +icon-block("icon-instock-download-xls")
+              +icon-block("icon-instock-download-pdf")
 
         hr
 
