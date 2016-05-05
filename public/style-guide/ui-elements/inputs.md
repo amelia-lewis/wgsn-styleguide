@@ -70,6 +70,16 @@
   </div>
 
   <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <input type="text" class="search-input" placeholder="Search Image Library">
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+      <textarea class="comment-input" placeholder="Enter your comment"></textarea>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-xs-12 col-sm-4">
       <label class="checkbox-radio" for="checkbox-1">
         <input type="checkbox" id="checkbox-1" checked>

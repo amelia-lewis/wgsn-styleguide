@@ -35,13 +35,13 @@ select
 
   &.has-error
     border-color: $red
-    background: white url('http://dropbox.github.io/scooter/assets/images/icon-form-invalid.svg') no-repeat right 10px center / 14px
+    background: white url('../assets/img/icon-font_error-circle.svg') no-repeat right 10px center / 14px
 
   &.is-valid
-    background: white url('http://dropbox.github.io/scooter/assets/images/icon-form-valid.svg') no-repeat right 10px center / 14px
+    background: white url('../assets/img/icon-font_tick-circle-filled.svg') no-repeat right 10px center / 14px
 
 select
-  background: white url('http://dropbox.github.io/scooter/assets/images/icon-form-dropdown.svg') no-repeat right 10px center / 7px 14px
+  background: white url('../assets/img/icon-font_dropdown-arrow.svg') no-repeat right 10px center / 14px
 
 textarea
   resize: vertical
@@ -50,14 +50,21 @@ textarea
 ::-webkit-input-placeholder
    color: $md-grey
 
-:-moz-placeholder
-   color: $md-grey
+input.search-input
+  background: white url('../assets/img/icon-font_search.svg') no-repeat 12px center / 12px 12px
+  padding-left: 36px
 
-::-moz-placeholder
-   color: $md-grey
+  &:focus
+    background-image: none
+    padding-left: 10px
 
-:-ms-input-placeholder
-   color: $md-grey
+textarea.comment-input
+  background: white url('../assets/img/icon-font_comment-filled.svg') no-repeat 12px 12px / 12px 12px
+  padding-left: 36px
+
+  &:focus
+    background-image: none
+    padding-left: 10px
 
 // CHECKBOXES & RADIO BUTTONS
 label.checkbox-radio
