@@ -10,21 +10,32 @@
 
 .bg-md-grey
   background: $md-grey
-  color: white
-
-  code
-    color: $dk-grey
 
 .bg-dk-grey
   background: $dk-grey
-  color: white
-
-  code
-    color: $dk-grey
 
 .bg-xdk-grey
   background: $xdk-grey
+
+.bg-md-grey,
+.bg-dk-grey,
+.bg-xdk-grey
   color: white
+
+  .text-underline
+    border-color: white
+
+  a
+    color: rgba(white, 0.8)
+
+    &.text-underline
+      border-color: rgba(white, 0.8)
+
+    &:hover
+      color: white
+
+      &.text-underline
+        border-color: white
 
   code
     color: $dk-grey

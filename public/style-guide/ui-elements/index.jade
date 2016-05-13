@@ -10,6 +10,7 @@ block content
     .row
       .col-xs-12.col-sm-3
         ul#sidebar-nav
+          li: a(href="#section-alerts") Alerts
           li: a(href="#section-avatars") Avatars
           li: a(href="#section-buttons") Buttons
           li: a(href="#section-cards") Cards
@@ -29,9 +30,13 @@ block content
             h3 On the to-do list...
             ul
               li File type cards (reports, images, etc.)
-              li Alerts
               li Banners
               li Badges
+
+        //- =======================================================
+        
+        include alerts
+        hr
 
         //- =======================================================
         

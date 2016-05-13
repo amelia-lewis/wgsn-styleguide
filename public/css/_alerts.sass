@@ -1,0 +1,36 @@
+.alert
+  position: fixed
+  bottom: 20px
+  left: 20px
+  @extend .inline-block
+  @extend .bg-xdk-grey
+  @extend .block-ver-sm
+  @extend .block-hor-md
+  @extend .overflow-auto
+  border-radius: 2px
+  transition: all 300ms
+  transform: translate3d(-50%, 0, 0)
+  opacity: 0
+
+  p
+    @extend .inline-block
+    @extend .tight
+
+    span
+      @extend .text-bold
+
+  a.alert-undo
+    margin-left: 40px
+    @extend .inline-block
+    @extend .wgsn-font
+
+  &.show
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+#section-alerts
+  .alert
+    position: relative
+    bottom: auto
+    left: auto
+    @extend .show
