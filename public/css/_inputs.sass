@@ -1,5 +1,6 @@
 label
   display: block
+  margin-bottom: 10px
   line-height: 2em
   font-size: 10px
 
@@ -41,7 +42,7 @@ select
     background: white url('../assets/img/icon-font_tick-circle-filled.svg') no-repeat right 10px center / 14px
 
 select
-  background: white url('../assets/img/icon-font_dropdown-arrow.svg') no-repeat right 10px center / 14px
+  background: white url('../assets/img/icon-font_caret-down.svg') no-repeat right 10px center / 14px
 
 textarea
   resize: vertical
@@ -71,21 +72,24 @@ label.checkbox-radio
   @extend .sans-serif
   @extend .text-no-transform
   font-size: 1em
-  line-height: 1.6em
+  line-height: 1.4em
   cursor: pointer
+  position: relative
+  padding-left: 24px
 
 input[type="checkbox"],
 input[type="radio"]
   appearance: none
-  -moz-appearance: none
-  -webkit-appearance: none
-  width: 14px
-  height: 14px
-  position: relative
+  width: 16px
+  height: 16px
+  position: absolute
+  top: 0
+  left: 0
   @extend .hoverable
   background: none
   border: none
   box-shadow: none
+  margin: 0 8px 0 0
 
   &:before
     content: ""
@@ -108,20 +112,13 @@ input[type="radio"]
       background: $xlt-grey
 
 input[type="checkbox"]
-  margin: 3px 8px 0 0
-  
-  &:before
-    border-radius: 2px
-
   &:checked
     background: transparent
     
     &:before
-      content: "✓"
+      background: white url('../img/icons/icon-font_tick.svg') no-repeat center center / 14px 14px
 
 input[type="radio"]
-  margin: 0 8px 0 0
-  
   &:before
     border-radius: 50%
 

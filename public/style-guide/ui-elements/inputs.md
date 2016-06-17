@@ -4,7 +4,7 @@
     <div class="col-xs-12">
       <label>
         Email address
-        <input type="text" placeholder="amelia.lewis@wgsn.com">
+        <input type="text" value="amelia.lewis@wgsn.com" placeholder="Email">
       </label>
     </div>
   </div>
