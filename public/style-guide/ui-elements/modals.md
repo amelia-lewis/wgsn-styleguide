@@ -9,12 +9,14 @@
     <p>This is some content inside the modal.</p>
   </div>
 
-  <div class="modal-footer">
-    <div class="block-top-sm block-hor-sm pull-left">
-      <a class="tight underlined text-grey hoverable close-modal">Cancel</p>
+  <div class="modal-footer text-right">
+    <div class="inline-block block-right-sm">
+      <button class="btn-white tight">Cancel</button>
     </div>
 
-    <button class="btn-white pull-right tight close-modal">Done</button>
+    <div class="inline-block">
+      <button class="btn-black tight">Done</button>
+    </div>
   </div>
 </div>
 ```
