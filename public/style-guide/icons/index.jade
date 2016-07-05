@@ -22,12 +22,12 @@ block content
       .col-xs-12.col-sm-3
         ul#sidebar-nav
           li: a(href="#section-arrows") Arrows
-          li: a(href="#section-utilities") Application
-          li: a(href="#section-view-options") View Options
+          li: a(href="#section-application") Application
           li: a(href="#section-file-types") File Types
           li: a(href="#section-instock") Instock
-          li: a(href="#section-symbols") Symbols
+          li: a(href="#section-languages") Languages
           li: a(href="#section-social-media") Social Media
+          li: a(href="#section-symbols") Symbols
 
       .col-xs-12.col-sm-9
         .block-bot-md
@@ -85,8 +85,8 @@ block content
 
         hr
 
-        .block-ver-md#section-utilities
-          h2.inline-block Utilities
+        .block-ver-md#section-application
+          h2.inline-block Application
 
           .card
             .row
@@ -96,6 +96,7 @@ block content
               +icon-block("icon-briefcase")
               +icon-block("icon-camera")
               +icon-block("icon-chat")
+              +icon-block("icon-chat-inactive")
               +icon-block("icon-clone")
               +icon-block("icon-collapse")
               +icon-block("icon-comment")
@@ -201,7 +202,7 @@ block content
 
         hr
 
-        .block-ver-md#section-navigational
+        .block-ver-md#section-languages
           h2.inline-block Languages
 
           .card
@@ -212,6 +213,24 @@ block content
               +icon-block("icon-lang-cs")
               +icon-block("icon-lang-jp")
               +icon-block("icon-lang-ko")
+
+        hr
+
+        .block-top-md#section-social-media
+          h2.inline-block Social Media
+
+          .card
+            .row
+              +icon-block("icon-facebook")
+              +icon-block("icon-twitter")
+              +icon-block("icon-instagram")
+              +icon-block("icon-google-plus")
+              +icon-block("icon-tumblr")
+              +icon-block("icon-pinterest")
+              +icon-block("icon-youtube")
+              +icon-block("icon-youtube-alt")
+              +icon-block("icon-vimeo")
+              +icon-block("icon-linkedin")
 
         hr
 
@@ -237,20 +256,3 @@ block content
               +icon-block("icon-minus-circle-filled")
               +icon-block("icon-list")
               +icon-block("icon-eye")
-        hr
-
-        .block-top-md#section-social-media
-          h2.inline-block Social Media
-
-          .card
-            .row
-              +icon-block("icon-facebook")
-              +icon-block("icon-twitter")
-              +icon-block("icon-instagram")
-              +icon-block("icon-google-plus")
-              +icon-block("icon-tumblr")
-              +icon-block("icon-pinterest")
-              +icon-block("icon-youtube")
-              +icon-block("icon-youtube-alt")
-              +icon-block("icon-vimeo")
-              +icon-block("icon-linkedin")
