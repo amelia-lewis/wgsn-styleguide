@@ -1,5 +1,6 @@
 .token
-  background: darken($lt-grey, 5)
+  background: $lt-grey
+  border: 1px solid $lt-grey
   @extend .pull-left
   @extend .block-ver-xs
   padding-left: 7px
@@ -13,7 +14,7 @@
     @extend .pull-left
 
   span
-    padding: 0 7px 0 0
+    @extend .block-right-sm
     @extend .inline-block
     position: relative
 
@@ -30,6 +31,7 @@
   .icon-cross
     @extend .hoverable
     padding: 0 7px
+    // width: 20px
 
   &:hover
     border-color: darken($md-grey, 20)
