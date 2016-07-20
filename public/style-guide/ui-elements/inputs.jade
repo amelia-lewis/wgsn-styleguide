@@ -44,7 +44,7 @@
             input.is-valid(type='text' value='Lewis')
 
         .col-xs-12.col-sm-4
-          label Country
+          label.dropdown Country
             select
               option United States
               option United Kingdom
@@ -71,6 +71,10 @@
             input.pull-left#checkbox-3(type="checkbox" disabled)
             | Checkbox 3 (disabled)
 
+          label.checkbox-radio(for="checkbox-4")
+            input.pull-left#checkbox-4(type="checkbox")
+            | Checkbox 4
+
         .col-xs-12.col-sm-4
           form
             label.checkbox-radio(for="#radio-1")
@@ -84,6 +88,10 @@
             label.checkbox-radio(for="#radio-3")
               input(type="radio" name="radio-example" value="radio-3" disabled)
               | Radio 3 (disabled)
+
+            label.checkbox-radio(for="#radio-4")
+              input(type="radio" name="radio-example" value="radio-4")
+              | Radio 4
 
         .col-xs-12.col-sm-4
           .row

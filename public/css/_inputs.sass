@@ -1,14 +1,21 @@
+// ====================
+// Label
+// ====================
 label
   display: block
   margin-bottom: 10px
   line-height: 2em
   font-size: 10px
+  position: relative
 
   span.error-message
     color: $red
     margin-left: 5px
     @extend .wgsn-font
 
+// ====================
+// Text inputs
+// ====================
 input[type="text"],
 input[type="password"],
 textarea, 
@@ -29,7 +36,6 @@ select
 
   &:focus
     outline: none
-    border-color: $md-grey
 
   &:disabled
     background: $xlt-grey
@@ -41,8 +47,11 @@ select
   &.is-valid
     background: white url('../assets/img/icon-font_tick-circle-filled.svg') no-repeat right 10px center / 14px
 
-select
-  background: white url('../assets/img/icon-font_caret-down.svg') no-repeat right 10px center / 14px
+input[type="text"],
+input[type="password"],
+textarea
+  &:focus
+    border-color: $yellow
 
 textarea
   resize: vertical
@@ -67,7 +76,27 @@ textarea.comment-input
     background-image: none
     padding-left: 10px
 
-// CHECKBOXES & RADIO BUTTONS
+
+// ====================
+// Dropdowns
+// ====================
+select
+  background: white url('../assets/img/icon-font_caret-down.svg') no-repeat right 10px center / 14px
+
+label.dropdown:after
+  content: ""
+  width: 1px
+  background: $lt-grey
+  top: 26px
+  height: 24px
+  display: block
+  position: absolute
+  right: 36px
+
+
+// ====================
+// Checkboxes & Radio Buttons
+// ====================
 label.checkbox-radio
   @extend .sans-serif
   @extend .text-no-transform
@@ -116,7 +145,7 @@ input[type="checkbox"]
     background: transparent
     
     &:before
-      background: white url('../img/icons/icon-font_tick.svg') no-repeat center center / 14px 14px
+      background: white url('../assets/img/icon-font_tick.svg') no-repeat center center / 14px 14px
 
 input[type="radio"]
   &:before
@@ -132,12 +161,17 @@ input[type="radio"]
     bottom: 4px
     background: $xdk-grey
     border-radius: 50%
-    opacity: 0
+    transform: translate3d(0, 0, 0) scale(0)
+    transition: all 400ms
 
   &:checked
     &:after
-      opacity: 1
+      transform: translate3d(0, 0, 0) scale(1)
 
+
+// ====================
+// On a Dark Background
+// ====================
 .bg-xdk-grey
   input[type="checkbox"]:before,
   input[type="radio"]:before
@@ -147,7 +181,10 @@ input[type="radio"]
   input[type="checkbox"]:checked:before
     background: transparent url('../assets/img/icon-font_tick-white.svg') no-repeat center center / 12px 12px
 
-// TOGGLE
+
+// ====================
+// Toggle
+// ====================
 .toggle
   width: 20px
   height: 12px
