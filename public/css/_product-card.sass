@@ -22,26 +22,12 @@
     max-height: 30px
 
   .info
-    h3 .instructions
-      font-size: 0.8em
-      letter-spacing: 0
+    .instructions
+      font-size: 0.5em
       opacity: 0
       display: inline-block
       transform: translate3d(40px, 0, 0)
       transition: all 600ms
-
-    ul
-      list-style-type: none
-      padding: 0
-      margin: 0
-
-      li
-        transition: all 300ms
-        display: inline-block
-
-        i
-          font-size: 0.8em
-          margin: 0 10px 0 0
 
     .product-colors h3 .instructions
       transition-delay: 200ms
@@ -50,71 +36,70 @@
     &:before
       transform: translate3d(0, 0, 0) scale(1, 1)
 
-    .info h3 .instructions
+    .instructions
       transform: translate3d(0, 0, 0)
       opacity: 1
 
-  // product colours
+  // PRODUCT COLOURS
   &.group
-    .highlight-color
-      color: $wgsn
+    &:hover
+      h2
+        color: $wgsn
     
     &:before,
     &:after
       background: $wgsn
 
   &.insight
-    .highlight-color
-      color: $insight
+    &:hover
+      h2
+        color: $insight
     
     &:before,
     &:after
       background: $insight
 
   &.fashion
-    .highlight-color
-      color: $fashion
+    &:hover
+      h2
+        color: $fashion
     
     &:before,
     &:after
       background: $fashion
 
   &.styletrial
-    .highlight-color
-      color: $styletrial
+    &:hover
+      h2
+        color: $styletrial
     
     &:before,
     &:after
       background: $styletrial
 
   &.li
-    .highlight-color
-      color: $li
+    &:hover
+      h2
+        color: $li
     
     &:before,
     &:after
       background: $li
 
   &.mindset
-    .highlight-color
-      color: $mindset
+    &:hover
+      h2
+        color: $mindset
     
     &:before,
     &:after
       background: $mindset
 
   &.instock
-    .highlight-color
-      color: $instock
+    &:hover
+      h2
+        color: $instock
     
     &:before,
     &:after
       background: $instock
-  
-  &.website
-    .highlight-color
-      color: $yellow
-    
-    &:before,
-    &:after
-      background: $yellow
