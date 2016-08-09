@@ -133,10 +133,37 @@ block content
     .row
       .col-xs-12.col-sm-6
         h2 Looking for fonts?
-    .row  
-      .col-xs-12.col-md-6: +font-card("WGSN Headline", "This is WGSN’s bespoke font. We always feature it in uppercase to give prominence when using it in page titling and marketing headline elements. Use glyphs sparingly when incorporating into marketing headline copy.", "ABCDEFGHIJKLM NOPQRSTUVWXYZ", "abcdefghijklm nopqrstuvwxyz", "1234567980", "WGSNHeadline.otf")(class="wgsn-headline")
-      .col-xs-12.col-md-6: +font-card("PT Serif", "We use PT Serif for the WGSN Insider Blog. PT Serif is used in uppercase to give prominence when using it in page titling. It is used in standard case for secondary titling and body copy.", "ABCDEFGHIJKLM NOPQRSTUVWXYZ", "abcdefghijklm nopqrstuvwxyz", "1234567980", "PT_Serif-Web-Regular.ttf")(class="pt-serif")
-      .col-xs-12.col-md-6: +font-card("Helvetica Neue", "We use Helvetica Neue for all body copy and text heavy applications. We always use Helvetica Neue regular, but can use bold for in page navigation or to show emphasis.", "ABCDEFGHIJKLM NOPQRSTUVWXYZ", "abcdefghijklm nopqrstuvwxyz", "1234567980", "")(class="helvetica-neue")
+    
+    .row
+      .col-xs-12
+        +font-card(
+          "wgsn-font",
+          "WGSN Headline",
+          "WGSNHeadlineV5-RegularV5.otf",
+          "A contemporary sans-serif font with a particular character, used mainly for headings and any highlight text.",
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          "abcdefghijklmnopqrstuvwxyz",
+          "1234567980")
+
+      .col-xs-12.col-md-6
+        +font-card(
+          "sans-serif",
+          "Helvetica Neue",
+          "",
+          "We use Helvetica Neue for all body copy in every product except for Mindset.",
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          "abcdefghijklmnopqrstuvwxyz",
+          "1234567980")
+      
+      .col-xs-12.col-md-6
+        +font-card(
+          "serif",
+          "Playfair Display",
+          "",
+          "We use Playfair Display for all body copy only in the Mindset product. This is to create a clear differentiation from the other products and to give a more exclusive feel.",
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+          "abcdefghijklmnopqrstuvwxyz",
+          "1234567980")
 
     //- copy to clipboard alerts
     .alert-container

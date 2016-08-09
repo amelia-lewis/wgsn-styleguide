@@ -1,20 +1,14 @@
-mixin font-card(name, description, example, example2, example3, filename)
-  .card.font-card.wow.fadeIn(class!=attributes.class)
+mixin font-card(id, name, filename, description, ...examples)
+  .card.font-card.block-lg.wow.fadeIn
     .block-bot-md
       h3= name
       .description: p=description
   
     .example
-      for letter, i in example.split("")
-        span.char(class="char-#{i + 1}")= letter
-      br
-      if example2
-        for letter, i in example2.split("")
-          span.char(class="char-#{i + 1}")= letter
-      br
-      if example3
-        for letter, i in example3.split("")
-          span.char(class="char-#{i + 1}")= letter
+      each example in examples
+        for letter, i in example.split("")
+          span.char(class="char-#{i + 1} " + id)= letter
+        br
 
     if filename
-      .block-top-md: a.btn.btn-white(href="/downloads/fonts/" + filename download=filename) Font file
+      .block-top-md: a.btn.btn-white(href="/downloads/fonts/" + filename download=filename) Download font file
