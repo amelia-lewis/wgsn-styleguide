@@ -7,7 +7,7 @@ mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary
       if primary_hex || primary_pantone || primary_rgb || primary_cmyk
         .block-bot-md.color-primary(style="background-color: #" + primary_hex)
           ul.list-bare
-            li.clipboard(data-clipboard-text=primary_hex) HEX #
+            li.clipboard(data-clipboard-text=primary_hex) #
               span= primary_hex
             if pantone
               br
@@ -26,7 +26,7 @@ mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary
       if secondary_hex || secondary_pantone || secondary_rgb || secondary_cmyk
         .block-bot-md.color-secondary(style="background-color: #" + secondary_hex)
           ul.list-bare
-            li.clipboard(data-clipboard-text=secondary_hex) HEX #
+            li.clipboard(data-clipboard-text=secondary_hex) #
               span= secondary_hex
             if pantone
               br
@@ -45,7 +45,7 @@ mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary
       if tertiary_hex || tertiary_pantone || tertiary_rgb || tertiary_cmyk
         .block.color-tertiary(style="background-color: #" + tertiary_hex)
           ul.list-bare
-            li.clipboard(data-clipboard-text=tertiary_hex) HEX #
+            li.clipboard(data-clipboard-text=tertiary_hex) #
               span= tertiary_hex
             if pantone
               br
