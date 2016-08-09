@@ -1,52 +1,65 @@
 mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary_hex, secondary_pantone, secondary_rgb, secondary_cmyk, secondary_hex, tertiary_pantone, tertiary_rgb, tertiary_cmyk, tertiary_hex)
-  .card.product-card.wow.fadeIn(class!=attributes.class)
-    h2.transition WGSN 
-      span.wgsn-font.text-capitalize= name
-    
+  h2.transition WGSN 
+    span.wgsn-font.text-capitalize= name
+  
+  .product-card.wow.fadeIn(class!=attributes.class)
     .info
-      .block-bot-md.color-primary
-        //- h3 Colour  
-        //-   span.instructions.serif.text-lowercase.text-grey.text-italic.text-normal click to copy
-        if pantone
-          button.btn-white.clipboard(data-clipboard-text=primary_pantone) Pantone 
-            span= primary_pantone
-        button.btn-white.clipboard(data-clipboard-text=primary_rgb) RGB(
-          span= primary_rgb
-          | )
-        if cmyk
-          button.btn-white.clipboard(data-clipboard-text=primary_cmyk) CMYK(
-            span= primary_cmyk
-            | )
-        button.btn-white.clipboard(data-clipboard-text=primary_hex) HEX #
-          span= primary_hex
+      if primary_hex || primary_pantone || primary_rgb || primary_cmyk
+        .block-bot-md.color-primary(style="background-color: #" + primary_hex)
+          ul.list-bare
+            li.clipboard(data-clipboard-text=primary_hex) HEX #
+              span= primary_hex
+            if pantone
+              br
+              li.clipboard(data-clipboard-text=primary_pantone) Pantone 
+                span= primary_pantone
+            br
+            li.clipboard(data-clipboard-text=primary_rgb) RGB(
+              span= primary_rgb
+              | )
+            if primary_cmyk
+              br
+              li.clipboard(data-clipboard-text=primary_cmyk) CMYK(
+                span= primary_cmyk
+                | )
 
-      .block-bot-md.color-secondary
-        if pantone
-          button.btn-white.clipboard(data-clipboard-text=secondary_pantone) Pantone 
-            span= secondary_pantone
-        button.btn-white.clipboard(data-clipboard-text=secondary_rgb) RGB(
-          span= secondary_rgb
-          | )
-        if cmyk
-          button.btn-white.clipboard(data-clipboard-text=secondary_cmyk) CMYK(
-            span= secondary_cmyk
-            | )
-        button.btn-white.clipboard(data-clipboard-text=secondary_hex) HEX #
-          span= secondary_hex
-
-      .block.color-tertiary
-        if pantone
-          button.btn-white.clipboard(data-clipboard-text=tertiary_pantone) Pantone 
-            span= tertiary_pantone
-        button.btn-white.clipboard(data-clipboard-text=tertiary_rgb) RGB(
-          span= tertiary_rgb
-          | )
-        if cmyk
-          button.btn-white.clipboard(data-clipboard-text=tertiary_cmyk) CMYK(
-            span= tertiary_cmyk
-            | )
-        button.btn-white.clipboard(data-clipboard-text=tertiary_hex) HEX #
-          span= tertiary_hex
+      if secondary_hex || secondary_pantone || secondary_rgb || secondary_cmyk
+        .block-bot-md.color-secondary(style="background-color: #" + secondary_hex)
+          ul.list-bare
+            li.clipboard(data-clipboard-text=secondary_hex) HEX #
+              span= secondary_hex
+            if pantone
+              br
+              li.clipboard(data-clipboard-text=secondary_pantone) Pantone 
+                span= secondary_pantone
+            br
+            li.clipboard(data-clipboard-text=secondary_rgb) RGB(
+              span= secondary_rgb
+              | )
+            if secondary_cmyk
+              br
+              li.clipboard(data-clipboard-text=secondary_cmyk) CMYK(
+                span= secondary_cmyk
+                | )
+        
+      if tertiary_hex || tertiary_pantone || tertiary_rgb || tertiary_cmyk
+        .block.color-tertiary(style="background-color: #" + tertiary_hex)
+          ul.list-bare
+            li.clipboard(data-clipboard-text=tertiary_hex) HEX #
+              span= tertiary_hex
+            if pantone
+              br
+              li.clipboard(data-clipboard-text=tertiary_pantone) Pantone 
+                span= tertiary_pantone
+            br
+            li.clipboard(data-clipboard-text=tertiary_rgb) RGB(
+              span= tertiary_rgb
+              | )
+            if tertiary_cmyk
+              br
+              li.clipboard(data-clipboard-text=tertiary_cmyk) CMYK(
+                span= tertiary_cmyk
+                | )
 
       //- if hasdownloads
       //-   .block-top-md.product-logos

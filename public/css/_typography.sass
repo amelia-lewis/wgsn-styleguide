@@ -118,6 +118,7 @@ small
   font-size: 0.8em
 
 
+// STYLES
 a
   color: inherit
   text-decoration: none
@@ -126,10 +127,6 @@ a
   &:hover
     color: darken($dk-grey, 20)
     border-color: darken($dk-grey, 20)
-
-// a.underlined
-//   text-decoration: none
-//   border-bottom: 1px solid
 
 h2 + a
   margin-left: 10px
@@ -163,6 +160,10 @@ a.text-grey:hover
     position: absolute
     top: 1px
 
+.list-bare
+  list-style: none
+  padding-left: 0
+
 ul.styled
   list-style: none
   
@@ -177,7 +178,7 @@ ul.styled
       height: 4px
       left: -20px
       top: calc(50% - 2px)
-      background: $fashion
+      background: $wgsn
 
 ol.styled
   list-style: none
@@ -193,6 +194,6 @@ ol.styled
       width: 14px
       left: -20px
       top: 0
-      color: $fashion
+      color: $wgsn
       @extend .wgsn-font
       text-align: center

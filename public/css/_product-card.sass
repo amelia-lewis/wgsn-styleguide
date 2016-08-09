@@ -1,105 +1,112 @@
 .product-card
-  @extend .block-lg
-  opacity: 1
-  transition: all 300ms
-
-  &:before
-    content: ""
-    position: absolute
-    bottom: 0
-    left: 0
+  margin: 0 auto 50px
+  overflow: auto
+  
+  .color-primary,
+  .color-secondary,
+  .color-tertiary
+    float: left
+    color: white
     width: 100%
-    height: 6px
-    background: black
-    transition: all 500ms
-    transform-origin: left center
-    transform: translate3d(0, 0, 0) scale(0, 1)
+    position: relative
+    @extend .transition
 
-  img
-    width: auto
-    height: auto
-    max-width: 100%
-    max-height: 30px
+    ul
+      position: absolute
+      bottom: 10px
+      left: 14px
 
-  .info
-    .instructions
-      font-size: 0.5em
-      opacity: 0
-      display: inline-block
-      transform: translate3d(40px, 0, 0)
-      transition: all 600ms
+    li, span
+      @extend .wgsn-font
+      @extend .transition
+      @extend .inline-block
 
-    .product-colors h3 .instructions
-      transition-delay: 200ms
+    li
+      border-bottom: 2px dashed rgba(white, 0.3)
 
-  &:hover
-    &:before
-      transform: translate3d(0, 0, 0) scale(1, 1)
+      &:hover
+        border-color: white
 
-    .instructions
-      transform: translate3d(0, 0, 0)
-      opacity: 1
+  .color-primary
+    height: 280px
+
+  .color-secondary
+    width: 50%
+    height: 140px
+
+  .color-tertiary
+    height: 140px
+
+  .color-secondary + .color-tertiary
+    width: 50%
 
   // PRODUCT COLOURS
   &.group
-    &:hover
-      h2
-        color: $wgsn
-    
-    &:before,
-    &:after
-      background: $wgsn
+    .color-tertiary
+      color: $wgsn
+
+      li
+        border-color: rgba($wgsn, 0.3)
+
+        &:hover
+          border-color: $wgsn
 
   &.insight
-    &:hover
-      h2
-        color: $insight
-    
-    &:before,
-    &:after
-      background: $insight
+    .color-tertiary
+      color: $insight
+
+      li
+        border-color: rgba($insight, 0.3)
+
+        &:hover
+          border-color: $insight
 
   &.fashion
-    &:hover
-      h2
-        color: $fashion
-    
-    &:before,
-    &:after
-      background: $fashion
+    .color-tertiary
+      color: $fashion
+
+      li
+        border-color: rgba($fashion, 0.3)
+
+        &:hover
+          border-color: $fashion
 
   &.styletrial
-    &:hover
-      h2
-        color: $styletrial
-    
-    &:before,
-    &:after
-      background: $styletrial
+    .color-tertiary
+      color: $styletrial
+
+      li
+        border-color: rgba($styletrial, 0.3)
+
+        &:hover
+          border-color: $styletrial
 
   &.li
-    &:hover
-      h2
-        color: $li
-    
-    &:before,
-    &:after
-      background: $li
+    .color-tertiary
+      color: $li
+
+      li
+        border-color: rgba($li, 0.3)
+
+        &:hover
+          border-color: $li
 
   &.mindset
-    &:hover
-      h2
-        color: $mindset
-    
-    &:before,
-    &:after
-      background: $mindset
+    .color-tertiary
+      color: $mindset
+
+      li
+        border-color: rgba($mindset, 0.3)
+
+        &:hover
+          border-color: $mindset
 
   &.instock
-    &:hover
-      h2
-        color: $instock
-    
-    &:before,
-    &:after
-      background: $instock
+    .color-tertiary
+      color: $instock
+
+      li
+        border-color: rgba($instock, 0.3)
+
+        &:hover
+          border-color: $instock

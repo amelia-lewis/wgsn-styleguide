@@ -16,12 +16,13 @@ table.table
         border-bottom: 1px solid $lt-grey
         padding: 12px 5px
         @extend .text-normal
+        @extend .transition
 
   &.table-alternating
     tbody
       tr:nth-of-type(even)
         td
-          background: rgba($lt-grey, 0.5)
+          background: $xlt-grey
 
   &.table-selectable
     tbody
@@ -29,12 +30,12 @@ table.table
       
       tr.selected
         td
-          background: rgba($yellow, 0.2)
+          background: rgba($wgsn, 0.2)
 
         &:hover
           td
-            background: rgba($yellow, 0.25)
+            background: rgba($wgsn, 0.25)
 
       tr:hover
         td
-          background: rgba($yellow, 0.05)
+          background: rgba($wgsn, 0.05)

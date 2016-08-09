@@ -16,6 +16,9 @@ mixin colour-block(id, colour)
 
   .card
     .row
+      +colour-block("wgsn", "0000dd")
+    
+    .row
       +colour-block("insight", "9e70a1")
       +colour-block("fashion", "fe484f")
       +colour-block("li", "00b697")
@@ -27,10 +30,10 @@ mixin colour-block(id, colour)
     
   .card
     .row
-      +colour-block("xlt-grey", "f7f7f7")
-      +colour-block("lt-grey", "e6e6e6")
-      +colour-block("md-grey", "aaa")
-      +colour-block("dk-grey", "777")
+      +colour-block("xlt-grey", "fafafa")
+      +colour-block("lt-grey", "e4e5e6")
+      +colour-block("md-grey", "a7a9ac")
+      +colour-block("dk-grey", "555")
       +colour-block("xdk-grey", "222")
 
   p There are also some nicely prepared 
@@ -43,17 +46,17 @@ mixin colour-block(id, colour)
         .block-bot-md
           .block-md.border.text-center.bg-white
             .block-bot-sm: code .bg-white
-            p.tight Text will be dark grey
+            p.tight Text will be black
       .col-xs-12.col-sm-6
         .block-bot-md
           .block-md.border.text-center.bg-xlt-grey
             .block-bot-sm: code .bg-xlt-grey
-            p.tight Text will be dark grey
+            p.tight Text will be black
       .col-xs-12.col-sm-6
         .block-bot-md
           .block-md.border.text-center.bg-lt-grey
             .block-bot-sm: code .bg-lt-grey
-            p.tight Text will be dark grey
+            p.tight Text will be black
       .col-xs-12.col-sm-6
         .block-bot-md
           .block-md.border.text-center.bg-md-grey
