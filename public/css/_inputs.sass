@@ -5,7 +5,7 @@ label
   display: block
   margin-bottom: 10px
   line-height: 2em
-  font-size: 10px
+  font-size: 12px
   position: relative
 
   span.error-message
@@ -87,7 +87,7 @@ label.dropdown:after
   content: ""
   width: 1px
   background: $lt-grey
-  top: 26px
+  top: 30px
   height: 24px
   display: block
   position: absolute
@@ -130,8 +130,14 @@ input[type="radio"]
     bottom: 0
     background: white
     @extend .border
-    @extend .text-center
-    color: $xdk-grey
+    @extend .transition
+
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    transform: translate3d(0, 0, 0) scale(0)
+    @extend .transition
 
   &:focus
     outline: none
@@ -141,30 +147,38 @@ input[type="radio"]
       background: $xlt-grey
 
 input[type="checkbox"]
+  &:after
+    top: 1px
+    left: 1px
+    right: 1px
+    bottom: 1px
+    background: white url('../assets/img/icon-font_tick-wgsn.svg') no-repeat center center / 8px 8px
+
   &:checked
     background: transparent
     
     &:before
-      background: white url('../assets/img/icon-font_tick.svg') no-repeat center center / 14px 14px
+      border-color: $wgsn
+
+    &:after
+      transform: translate3d(0, 0, 0) scale(1)
 
 input[type="radio"]
   &:before
     border-radius: 50%
 
   &:after
-    content: ""
-    display: block
-    position: absolute
-    top: 4px
-    left: 4px
-    right: 4px
-    bottom: 4px
-    background: $xdk-grey
+    top: 5px
+    left: 5px
+    right: 5px
+    bottom: 5px
+    background: $wgsn
     border-radius: 50%
-    transform: translate3d(0, 0, 0) scale(0)
-    transition: all 400ms
 
   &:checked
+    &:before
+      border-color: $wgsn
+    
     &:after
       transform: translate3d(0, 0, 0) scale(1)
 
@@ -186,11 +200,12 @@ input[type="radio"]
 // Toggle
 // ====================
 .toggle
-  width: 20px
-  height: 12px
-  border-radius: 6px
+  width: 32px
+  height: 16px
+  border-radius: 8px
   position: relative
   cursor: pointer
+  @extend .transition
 
   &:after
     content: ""
@@ -198,12 +213,13 @@ input[type="radio"]
     position: absolute
     border-radius: 50%
     background: white
-    top: 1px
-    left: 1px
-    width: 10px
-    height: 10px
+    top: -2px
+    left: -2px
+    width: 18px
+    height: 18px
+    @extend .border
     transform: translate3d(0, 0, 0)
-    transition: all 400ms
+    @extend .transition
 
   &.toggle-off
     background: $md-grey
@@ -212,15 +228,7 @@ input[type="radio"]
       transform: translate3d(0, 0, 0)
 
   &.toggle-on
-    background: $yellow
+    background: $wgsn
 
     &:after
-      transform: translate3d(8px, 0, 0)
-
-body.product-fashion
-  .toggle.toggle-on
-    background: $fashion
-
-body.product-none
-  .toggle.toggle-on
-    background: $yellow
+      transform: translate3d(16px, 0, 0)
