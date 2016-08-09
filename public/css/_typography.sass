@@ -162,3 +162,37 @@ a.text-grey:hover
   &:before
     position: absolute
     top: 1px
+
+ul.styled
+  list-style: none
+  
+  li
+    position: relative
+
+    &:before
+      content: ""
+      position: absolute
+      display: block
+      width: 14px
+      height: 4px
+      left: -20px
+      top: calc(50% - 2px)
+      background: $fashion
+
+ol.styled
+  list-style: none
+
+  li
+    position: relative
+    counter-increment: step-counter
+
+    &:before
+      content: counter(step-counter)
+      position: absolute
+      display: block
+      width: 14px
+      left: -20px
+      top: 0
+      color: $fashion
+      @extend .wgsn-font
+      text-align: center
