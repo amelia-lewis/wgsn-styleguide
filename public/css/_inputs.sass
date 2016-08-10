@@ -152,12 +152,13 @@ input[type="checkbox"]
     left: 1px
     right: 1px
     bottom: 1px
-    background: white url('../assets/img/icon-font_tick-wgsn.svg') no-repeat center center / 8px 8px
+    background: url('../assets/img/icon-font_tick-white.svg') no-repeat center center / 16px 16px
 
   &:checked
     background: transparent
     
     &:before
+      background: $wgsn
       border-color: $wgsn
 
     &:after
@@ -172,11 +173,12 @@ input[type="radio"]
     left: 5px
     right: 5px
     bottom: 5px
-    background: $wgsn
+    background: white
     border-radius: 50%
 
   &:checked
     &:before
+      background: $wgsn
       border-color: $wgsn
     
     &:after
