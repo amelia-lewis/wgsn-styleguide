@@ -53,7 +53,7 @@ header
 
 .sub-header
   position: fixed
-  top: 77px
+  top: $header-height
   left: 0
   width: 100%
   z-index: 190
@@ -62,47 +62,18 @@ header
     transform: translate3d(0, 0, 0)
 
   &.headroom--not-top
-    transform: translate3d(0, -77px, 0)
+    transform: translate3d(0, -1 * $header-height, 0)
 
 
 // =============================================================
 
 
-body.index
-  #nav-products
-    @extend .active
+@each $view in products, style-guide
+  body.#{$view}
+    #nav-#{$view}
+      @extend .active
 
-body.style-guide-overview
-  #nav-style-guide,
-  #nav-style-guide-overview
-    @extend .active
-
-body.style-guide-typography
-  #nav-style-guide,
-  #nav-style-guide-typography
-    @extend .active
-
-body.style-guide-layout
-  #nav-style-guide,
-  #nav-style-guide-layout
-    @extend .active
-
-body.style-guide-ui-elements
-  #nav-style-guide,
-  #nav-style-guide-ui-elements
-    @extend .active
-
-body.style-guide-content-types
-  #nav-style-guide,
-  #nav-style-guide-content-types
-    @extend .active
-
-body.style-guide-icons
-  #nav-style-guide,
-  #nav-style-guide-icons
-    @extend .active
-
-body.style-guide-mixins
-  #nav-style-guide,
-  #nav-style-guide-mixins
-    @extend .active
+@each $sub-view in overview, typography, layout, ui-elements, content-types, icons, mixins
+  body.style-guide-#{$sub-view}
+    #nav-style-guide-#{$sub-view}
+      @extend .active

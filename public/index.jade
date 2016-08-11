@@ -4,12 +4,12 @@ include partials/font-card
 extends layout
 
 block append vars
-  - bodyclass = 'index'
+  - bodyclass = 'index products'
 
 block content
   section
     .row
-      .col-xs-12
+      .col-xs-12.col-md-8
         +product-card("group",
           "",
           "",
@@ -25,7 +25,8 @@ block content
           "9, 6, 6, 0",
           "E4E5E6")(class="group")
       
-      .col-xs-12.col-md-6
+    .row  
+      .col-xs-12.col-sm-6.col-md-4
         +product-card(
           "insight",
           "Insight",
@@ -42,7 +43,7 @@ block content
           "4, 10, 0, 0",
           "F0E4F9")(class="insight")
       
-      .col-xs-12.col-md-6
+      .col-xs-12.col-sm-6.col-md-4
         +product-card(
           "fashion",
           "Fashion",
@@ -59,7 +60,7 @@ block content
           "0, 8, 2, 0",
           "FFEBEC")(class="fashion")
       
-      .col-xs-12.col-md-6
+      .col-xs-12.col-sm-6.col-md-4
         +product-card(
           "lifestyle-and-interiors",
           "Lifestyle & Interiors",
@@ -76,7 +77,7 @@ block content
           "9, 0, 4, 0",
           "E3F7F4")(class="li")
       
-      .col-xs-12.col-md-6
+      .col-xs-12.col-sm-6.col-md-4
         +product-card(
           "instock",
           "Instock",
@@ -93,7 +94,7 @@ block content
           "6, 1, 0, 0",
           "EAF4FD")(class="instock")
       
-      .col-xs-12.col-md-6
+      .col-xs-12.col-sm-6.col-md-4
         +product-card(
           "styletrial",
           "Styletrial",
@@ -110,7 +111,7 @@ block content
           "0, 1, 9, 0",
           "FFF9E8")(class="styletrial")
       
-      .col-xs-12.col-md-6
+      .col-xs-12.col-sm-6.col-md-4
         +product-card(
           "mindset",
           "Mindset",
@@ -131,11 +132,11 @@ block content
 
   section
     .row
-      .col-xs-12.col-sm-6
+      .col-xs-12
         h2 Looking for fonts?
     
     .row
-      .col-xs-12
+      .col-xs-12.col-md-4
         +font-card(
           "wgsn-font",
           "WGSN Headline",
@@ -145,7 +146,7 @@ block content
           "abcdefghijklmnopqrstuvwxyz",
           "1234567980")
 
-      .col-xs-12.col-md-6
+      .col-xs-12.col-sm-6.col-md-4
         +font-card(
           "sans-serif",
           "Helvetica Neue",
@@ -155,7 +156,7 @@ block content
           "abcdefghijklmnopqrstuvwxyz",
           "1234567980")
       
-      .col-xs-12.col-md-6
+      .col-xs-12.col-sm-6.col-md-4
         +font-card(
           "serif",
           "Playfair Display",
