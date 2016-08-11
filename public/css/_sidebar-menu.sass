@@ -1,0 +1,47 @@
+.sidebar-menu
+  position: relative
+  @extend .bg-lt-grey
+  @extend .block-hor-md
+  @extend .block-ver-md
+  min-height: 100vh
+  height: 100%
+
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    right: 100%
+    width: 1000px
+    height: 100%
+    @extend .bg-lt-grey
+
+  h4:not(:first-child)
+    margin-top: 30px
+
+  h4, li
+    a
+      @extend .header-highlight
+
+      &:before
+        background: rgba($wgsn-grey-md, 0.6)
+        transform: scale(0, 1)
+        transform-origin: left center
+        @extend .transition
+
+      &:hover
+        &:before
+          transform: scale(1, 1)
+
+    &.sidebar-menu--active
+      a:before
+        background: rgba($wgsn, 0.3)
+        transform: scale(1, 1)
+
+  ul
+    @extend .list-bare
+
+
+// specific to the style guide
+#section-sidebar-menu
+  .sidebar-menu
+    min-height: auto

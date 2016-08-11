@@ -1,15 +1,27 @@
 .report-tile
+  display: block
+  @extend .transition
+
+  *
+    @extend .transition
+  
   .report-tile--img
-    width: 100% 
+    overflow: hidden
+    
+    img
+      display: block
+      width: 100%
+      transform: scale(1)
+      @extend .transition
 
   .report-tile--text
-    margin: 10px 0 30px
+    margin: 15px 0 30px
 
     .report-tile--category
       @extend .wgsn-font
       @extend .text-brand
       @extend .text-uppercase
-      @extend .tight
+      @extend .text-smaller
 
     .report-tile--title
       attr: none
@@ -20,3 +32,8 @@
     .report-tile--info span
       @extend .wgsn-font
       @extend .text-grey
+
+  &:hover
+    .report-tile--img
+      img
+        transform: scale(1.05)

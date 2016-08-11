@@ -1,6 +1,7 @@
 mixin report-tile(img, category, title, description, date, author)
-  .report-tile
-    img.report-tile--img(src=img)
+  a.report-tile(href="")
+    .report-tile--img
+      img(src=img)
     .report-tile--text
       p.report-tile--category= category
       h3.report-tile--title= title
