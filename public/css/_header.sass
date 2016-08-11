@@ -1,6 +1,6 @@
 header
   position: fixed
-  background: $xdk-grey
+  @extend .bg-black
   top: 0
   left: 0
   width: 100%
@@ -70,9 +70,9 @@ header
 
 .sub-header
   position: fixed
-  top: 79px
+  top: 77px
   left: 0
-  background: $xlt-grey
+  @extend .bg-xdk-grey
   width: 100%
   @extend .block-ver-sm
   z-index: 190
@@ -93,7 +93,7 @@ header
         border: none
         display: block
         position: relative
-        color: rgba($dk-grey, 0.5)
+        color: rgba(white, 0.5)
         transition: all 300ms
 
         &:after
@@ -111,7 +111,7 @@ header
 
       &.active
         a
-          color: $dk-grey
+          color: white
 
           &:after
             transform: scale(1, 1)
@@ -123,7 +123,7 @@ header
     transform: translate3d(0, 0, 0)
 
   &.headroom--not-top
-    transform: translate3d(0, -79px, 0)
+    transform: translate3d(0, -77px, 0)
 
 
 // =============================================================

@@ -6,17 +6,20 @@ block append vars
 block content
   include ../../partials/style-guide-sub-nav
   
-  section.block-top-xl
+  section
     .row
-      .col-xs-12.col-sm-3
-        ul#sidebar-nav
-          li: a(href="#section-headings") Headings
-          li: a(href="#section-paragraphs") Paragraphs
-          li: a(href="#section-lists") Lists
-          li: a(href="#section-links") Links
-          li: a(href="#section-typography-utilities") Typography Utilities
+      .col-xs-12.col-sm-3.col-md-2
+        .sidebar-menu
+          .sticky.block-top-md
+            h4.block-top-md Sections
+            ul
+              li: a(href="#section-headings") Headings
+              li: a(href="#section-paragraphs") Paragraphs
+              li: a(href="#section-lists") Lists
+              li: a(href="#section-links") Links
+              li: a(href="#section-typography-utilities") Typography Utilities
 
-      .col-xs-12.col-sm-9
+      .col-xs-12.col-sm-9.col-md-6
         
         include headings
         hr
