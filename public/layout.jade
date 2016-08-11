@@ -15,16 +15,14 @@ html
     link(rel="shortcut icon", type="image/x-icon", href="https://www.wgsn.com/wp-content/themes/stylesight/favicon.ico")
   
   body(class=bodyclass)
-    header
+    header.block-ver-sm.bg-black.transition
       .content-wrap
         .row
-          .col-xs-4
-            a.header-logo(href="/"): include partials/logo
-
-          .col-xs-8.text-right
-            ul#nav
-              li#nav-products: a(href="/") Products
-              li#nav-style-guide: a(href="/style-guide") Style Guide
+          .col-xs-12
+            a.header-logo.pull-left(href="/"): include partials/logo
+            ul.pull-left.list-bare.tight.header-nav
+              li.tight.block-right-md.block-ver-md.inline-block.pull-left#nav-products: a(href="/") Products
+              li.tight.block-md.inline-block.pull-left#nav-style-guide: a(href="/style-guide") Style Guide
     
     .content-wrap
       #content

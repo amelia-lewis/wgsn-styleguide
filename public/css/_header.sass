@@ -1,46 +1,20 @@
-header
-  position: fixed
-  @extend .bg-black
-  top: 0
-  left: 0
-  width: 100%
-  @extend .block-ver-sm
-  z-index: 200
-  transition: all 300ms
-
-  .header-logo
-    display: block
-    padding: 18px 0 12px
-    border: none
-
-  .wgsn-logo
-    fill: white
-    width: 80px
-
-  #nav
-    list-style-type: none
-    margin: 0
-
+header,
+.sub-header
+  .header-nav
     li
-      @extend .tight
-      @extend .block-hor-md
-      @extend .inline-block
-
       a
-        @extend .block-ver-md
-        @extend .wgsn-font
-        border: none
         display: block
         position: relative
         color: rgba(white, 0.5)
-        transition: all 300ms
+        @extend .wgsn-font
+        @extend .transition
 
         &:after
           content: ""
           display: block
           position: absolute
           background: white
-          bottom: 19px
+          bottom: -2px
           left: 0
           width: 100%
           height: 2px
@@ -48,6 +22,7 @@ header
           transform-origin: left center
           transition: all 300ms
 
+      &:hover,
       &.active
         a
           color: white
@@ -55,8 +30,20 @@ header
           &:after
             transform: scale(1, 1)
 
-      &:hover
-        @extend .active
+header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 200
+
+  .header-logo
+    display: block
+    margin: 18px 30px 0 0
+
+  .wgsn-logo
+    fill: white
+    width: 80px
 
   &.headroom--top
     transform: translate3d(0, 0, 0)
@@ -64,60 +51,12 @@ header
   &.headroom--not-top
     transform: translate3d(0, -100%, 0)
 
-
-// =============================================================
-
-
 .sub-header
   position: fixed
   top: 77px
   left: 0
-  @extend .bg-xdk-grey
   width: 100%
-  @extend .block-ver-sm
   z-index: 190
-  transition: all 300ms
-
-  #sub-nav
-    list-style-type: none
-    margin: 0
-
-    li
-      @extend .tight
-      @extend .block-hor-md
-      @extend .inline-block
-
-      a
-        @extend .block-ver-sm
-        @extend .wgsn-font
-        border: none
-        display: block
-        position: relative
-        color: rgba(white, 0.5)
-        transition: all 300ms
-
-        &:after
-          content: ""
-          display: block
-          position: absolute
-          background: $wgsn
-          bottom: 10px
-          left: 0
-          width: 100%
-          height: 2px
-          transform: scale(0, 1)
-          transform-origin: left center
-          transition: all 300ms
-
-      &.active
-        a
-          color: white
-
-          &:after
-            transform: scale(1, 1)
-
-      &:hover
-        @extend .active
 
   &.headroom--top
     transform: translate3d(0, 0, 0)
