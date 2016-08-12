@@ -15,8 +15,6 @@
 @import "font-card"
 
 // style guide
-@import "style-guide"
-
 @import "layout"
 @import "hiders"
 
@@ -65,10 +63,6 @@ body
   margin-top: $header-height
   min-height: calc(100vh - 262px) // keep footer at the base of the screen
 
-  > section
-    @extend .clearfix
-    padding-top: $sub-header-height
-
 .content-wrap
   width: 90%
   max-width: 1500px
@@ -80,3 +74,7 @@ hr
   background: $lt-grey
   height: 1px
   margin: 0
+
+section
+  @extend .clearfix
+  @extend .block-ver-lg
