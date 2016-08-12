@@ -1,7 +1,7 @@
 mixin colour-block(id, colour)
   .col-xs-6.col-sm-4.block-bot-md(class!=attributes.class)
     .colour-block.border.text-center(id=id)
-      .block-md.border-bottom.text-white(style="background-color: #" + colour)
+      .block-lg.border-bottom.text-white(style="background-color: #" + colour)
         span #
         span= colour
       .block-xs
@@ -16,23 +16,23 @@ mixin colour-block(id, colour)
 
   .card
     .row
-      +colour-block("wgsn", "0000dd")
+      +colour-block("wgsn", "0000DD")
     
     .row
-      +colour-block("insight", "9e70a1")
-      +colour-block("fashion", "fe484f")
-      +colour-block("li", "00b697")
-      +colour-block("instock", "3e97f1")
-      +colour-block("styletrial", "ffc430")
-      +colour-block("mindset", "231f20")
+      +colour-block("insight", "9B59B6")
+      +colour-block("fashion", "FE484F")
+      +colour-block("li", "00B697")
+      +colour-block("instock", "3E97F1")
+      +colour-block("styletrial", "FFC430")
+      +colour-block("mindset", "231F20")
 
   p ...and some handy, dandy greys.
     
   .card
     .row
-      +colour-block("xlt-grey", "fafafa")
-      +colour-block("lt-grey", "e4e5e6")
-      +colour-block("md-grey", "a7a9ac")
+      +colour-block("xlt-grey", "FAFAFA")
+      +colour-block("lt-grey", "E4E5E6")
+      +colour-block("md-grey", "A7A9AC")
       +colour-block("dk-grey", "555")
       +colour-block("xdk-grey", "222")
 
@@ -44,30 +44,40 @@ mixin colour-block(id, colour)
     .row
       .col-xs-12.col-sm-6
         .block-bot-md
-          .block-md.border.text-center.bg-white
+          .block-lg.border.text-center.bg-white
             .block-bot-sm: code .bg-white
             p.tight Text will be black
+      
       .col-xs-12.col-sm-6
         .block-bot-md
-          .block-md.border.text-center.bg-xlt-grey
+          .block-lg.border.text-center.bg-xlt-grey
             .block-bot-sm: code .bg-xlt-grey
             p.tight Text will be black
+      
       .col-xs-12.col-sm-6
         .block-bot-md
-          .block-md.border.text-center.bg-lt-grey
+          .block-lg.border.text-center.bg-lt-grey
             .block-bot-sm: code .bg-lt-grey
             p.tight Text will be black
+      
       .col-xs-12.col-sm-6
         .block-bot-md
-          .block-md.border.text-center.bg-md-grey
+          .block-lg.border.text-center.bg-md-grey
             .block-bot-sm: code .bg-md-grey
             p.tight Text will be white
+      
       .col-xs-12.col-sm-6
         .block-bot-md
-          .block-md.border.text-center.bg-dk-grey
+          .block-lg.border.text-center.bg-dk-grey
             .block-bot-sm: code .dk-xlt-grey
             p.tight Text will be white
+      
       .col-xs-12.col-sm-6
-        .block-md.border.text-center.bg-xdk-grey
+        .block-lg.border.text-center.bg-xdk-grey
           .block-bot-sm: code .bg-xdk-grey
+          p.tight Text will be white
+      
+      .col-xs-12.col-sm-6
+        .block-lg.border.text-center.bg-black
+          .block-bot-sm: code .bg-black
           p.tight Text will be white

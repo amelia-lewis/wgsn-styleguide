@@ -21,8 +21,14 @@ mixin report-tile(img, category, title, description, date, author)
       .col-xs-12.col-sm-6.col-md-4: +report-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67398/thumb.jpg", "Retail", "New Look A/W 16/17 – Womenswear", false, "03.08.16", "Faye Howard")
       .col-xs-12.col-sm-6.col-md-4: +report-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/66680/thumb.jpg", "Trend Forecast", "Women's Forecast S/S 18: Slow Futures", false, "01.08.16", "Robbie Sinclair, Jane Boddy, Laura Yiannakou")
       .col-xs-12.col-sm-6.col-md-4: +report-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67015/thumb.jpg", "Trade Shows", "Berlin Trade Shows S/S 17 – Premium", false, "08.07.16", "Laura Yiannakou")
+
+  include:markdown reports.md
+
+  h3 Reports with Descriptions
+  p Used in Insight
+    
+  .card
+    .row  
       .col-xs-12.col-sm-6.col-md-4: +report-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67227/thumb.jpg", "Future Trends", "Prints & Graphics Women S/S 18: Silent Shapes – Slow Futures", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "04.06.16", "Hannah Watkins")
       .col-xs-12.col-sm-6.col-md-4: +report-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67589/thumb.jpg", "Visual Merchandising", "S/S 17 Menswear & A/W 16/17 Couture Catwalk Sets", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "08.08.16", "Claire Dickinson")
       .col-xs-12.col-sm-6.col-md-4: +report-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67601/thumb.jpg", "Knitwear", "The Sporty Crop-Top", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "09.08.16", "Laura Yiannakou")
-
-  include:markdown reports.md

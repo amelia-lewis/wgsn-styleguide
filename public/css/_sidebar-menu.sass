@@ -47,3 +47,16 @@
 #section-sidebar-menu
   .sidebar-menu
     min-height: auto
+
+.sidebar-menu .sticky
+  margin-top: 36px
+
+body.style-guide
+  .sidebar-menu:before
+    content: ""
+    position: absolute
+    top: -200px
+    right: 0
+    width: 1000px
+    height: 200px
+    @extend .bg-xlt-grey
