@@ -4,12 +4,12 @@
 
   &:before
     content: ""
-    position: fixed
+    position: absolute
     top: 0
     right: 0
-    width: 65%
+    width: 70%
     height: 100%
-    background: $fashion-lt
+    background: $wgsn-lt
 
   .swiper-wrapper
     height: 100%
@@ -50,7 +50,7 @@
           @extend .wgsn-font
           font-size: 1.6em
           @extend .text-uppercase
-          color: $fashion
+          color: $wgsn
           transition-delay: 500ms
 
         .swiper-slide--title
@@ -78,7 +78,7 @@
     top: auto
     left: auto
     bottom: 10px
-    background: $fashion-md
+    background: $wgsn-md
     color: white
     width: 40px
     height: 30px
@@ -86,10 +86,18 @@
     @extend .transition
 
     &:hover
-      background: $fashion
+      background: $wgsn
 
   .swiper-button-prev
     right: 51px
   
   .swiper-button-next
     right: 10px
+
+
+// PRODUCT COLOURS
+@each $product in insight, fashion, li, instock, styletrial
+  body.product-#{$product}
+    .swiper-container
+      &:before
+        background: string("$" + #{$product} + "-lt")
