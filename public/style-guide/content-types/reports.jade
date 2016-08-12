@@ -9,13 +9,16 @@ mixin report-tile(img, category, title, description, date, author)
         p.report-tile--description= description
       p.report-tile--info
         span= date
-        span &nbsp;&nbsp;/&nbsp;&nbsp;By 
+        if date && author
+          span &nbsp;&nbsp;/&nbsp;&nbsp;By 
         span= author
 
-.block-top-lg.block-bot-md#section-reports
+section#section-reports
   h2.inline-block Reports
   a.styled.text-smaller(href="https://github.com/amelia-lewis/wgsn-styleguide/blob/master/public/css/_typography.sass" target="_blank") View on Github
   
+  p Reports are the main type of "content tile" used around the site, particularly in Fashion and Lifestyle &amp; Interiors. Reports can have a thumbnail image, a category, a title, a description, a date and an author(s). Report tiles should be used within a grid.
+
   .card
     .row
       .col-xs-12.col-sm-6.col-md-4: +report-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67398/thumb.jpg", "Retail", "New Look A/W 16/17 – Womenswear", false, "03.08.16", "Faye Howard")
@@ -25,7 +28,6 @@ mixin report-tile(img, category, title, description, date, author)
   include:markdown reports.md
 
   h3 Reports with Descriptions
-  p Used in Insight
     
   .card
     .row  

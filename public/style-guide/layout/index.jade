@@ -18,29 +18,17 @@ block content
               li: a(href="#section-helper-classes") Helper classes
               li: a(href="#section-hiders") Hiders
 
+      //- =======================================================
 
-      .col-xs-12.col-sm-9.col-md-7
-        .block-top-lg.block-bot-md
+      .col-xs-12.col-sm-9.col-md-7.block-top-lg
+        section
           h2 Example Page Layout
           .block: a.styled(href="/example-page") Here →
-        
-        hr
-
-        //- =======================================================
-
+        .block-ver-lg: hr
         include blocks
-        hr
-
-        //- =======================================================
-
+        .block-ver-lg: hr
         include colours
-        hr
-
-        //- =======================================================
-
+        .block-ver-lg: hr
         include helper-classes
-        hr
-
-        //- =======================================================
-
+        .block-ver-lg: hr
         include hiders
