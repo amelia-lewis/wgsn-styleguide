@@ -1,3 +1,15 @@
+mixin carousel-slide(img, category, title, date, author)
+  .swiper-slide
+    .swiper-slide--img: img(src=img)
+    .swiper-slide--text
+      p.swiper-slide--category= category
+      h2.swiper-slide--title= title
+      p.swiper-slide--info
+        span= date
+        if date && author
+          span &nbsp;&nbsp;/&nbsp;&nbsp;By 
+        span= author
+
 section#section-carousel
   h2.inline-block Carousel
   a.styled.text-smaller(href="https://github.com/amelia-lewis/wgsn-styleguide/blob/master/public/css/_carousel.sass" target="_blank") View on Github
@@ -5,6 +17,16 @@ section#section-carousel
   p Lorem ipsum
   
   .card
-    h2 E.g.
+    .swiper-container
+      .swiper-wrapper
+        +carousel-slide("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67398/thumb.jpg", "Retail", "New Look A/W 16/17 – Womenswear", "03.08.16", "Faye Howard")
+        +carousel-slide("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/66680/thumb.jpg", "Trend Forecast", "Women's Forecast S/S 18: Slow Futures", "01.08.16", "Robbie Sinclair, Jane Boddy, Laura Yiannakou")
+        +carousel-slide("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67015/thumb.jpg", "Trade Shows", "Berlin Trade Shows S/S 17 – Premium", "08.07.16", "Laura Yiannakou")
+        +carousel-slide("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67227/thumb.jpg", "Future Trends", "Prints & Graphics Women S/S 18: Silent Shapes – Slow Futures", "04.06.16", "Hannah Watkins")
+        +carousel-slide("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67589/thumb.jpg", "Visual Merchandising", "S/S 17 Menswear & A/W 16/17 Couture Catwalk Sets", "08.08.16", "Claire Dickinson")
+        +carousel-slide("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67601/thumb.jpg", "Knitwear", "The Sporty Crop-Top", "09.08.16", "Laura Yiannakou")
+
+      .swiper-button-prev: i.icon.icon-arrow-left
+      .swiper-button-next: i.icon.icon-arrow-right
   
   include:markdown carousel.md
