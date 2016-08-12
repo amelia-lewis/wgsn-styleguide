@@ -24,7 +24,11 @@
       @extend .text-smaller
 
     .report-tile--title
-      attr: none
+      background-image: linear-gradient(180deg, transparent 92%, $wgsn 0)
+      background-size: 0 100%
+      background-repeat: no-repeat
+      display: inline
+      line-height: 1.4em
 
     .report-tile--description
       attr: none
@@ -37,3 +41,6 @@
     .report-tile--img
       img
         transform: scale(1.05)
+
+    .report-tile--title
+      background-size: 100% 100%

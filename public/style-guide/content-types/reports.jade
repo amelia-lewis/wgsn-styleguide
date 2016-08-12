@@ -4,7 +4,7 @@ mixin report-tile(img, category, title, description, date, author)
       img(src=img)
     .report-tile--text
       p.report-tile--category= category
-      h3.report-tile--title= title
+      .block-bot-sm: h3.report-tile--title= title
       if description
         p.report-tile--description= description
       p.report-tile--info
