@@ -22,7 +22,7 @@ button,
   &:focus
     outline: none
 
-  // coloured
+  // COLOURED
   &.btn-coloured
     border: 1px solid $wgsn
     background: $wgsn
@@ -31,7 +31,7 @@ button,
     &:not(.btn-disabled):hover
       background: lighten($wgsn, 10)
 
-  // black
+  // BLACK
   &.btn-black
     border: 1px solid black
     background: black
@@ -40,7 +40,7 @@ button,
     &:not(.btn-disabled):hover
       background: lighten(black, 10)
 
-  // white
+  // WHITE
   &.btn-white
     border: 1px solid $lt-grey
     background: white
@@ -49,7 +49,7 @@ button,
     &:not(.btn-disabled):hover
       background: darken(white, 2)
 
-  // clear
+  // CLEAR
   &.btn-clear
     border: 1px solid white
     background: transparent
@@ -58,28 +58,42 @@ button,
     &:not(.btn-disabled):hover
       background: rgba(black, 0.2)
 
-  // disabled
+  // DISABLED
   &.btn-disabled
     opacity: 0.5
     cursor: default
 
-  // full-width, block
+  // FULL-WIDTH, BLOCK
   &.btn-full
     display: block
     width: 100%
     margin: 0
 
-  // large
+  // LARGE
   &.btn-lg
     height: 48px
     padding: 17px 20px
 
-  // small
+  // SMALL
   &.btn-sm
     height: 26px
     padding: 5px 10px 7px
 
-// coloured button takes on product colour
+
+// ========================================================================================================================
+// Product Colors
+
+// INSIGHT
+body.product-insight
+  .btn-coloured
+    border-color: $insight
+    background: $insight
+
+    &:not(.btn-disabled):hover
+      background: lighten($insight, 10)
+      transition-delay: 0ms !important
+
+// FASHION
 body.product-fashion
   .btn-coloured
     border-color: $fashion
@@ -89,6 +103,7 @@ body.product-fashion
       background: lighten($fashion, 10)
       transition-delay: 0ms !important
 
+// L&I
 body.product-li
   .btn-coloured
     border-color: $li
@@ -98,6 +113,7 @@ body.product-li
       background: lighten($li, 10)
       transition-delay: 0ms !important
 
+// INSTOCK
 body.product-instock
   .btn-coloured
     border-color: $instock
@@ -107,6 +123,7 @@ body.product-instock
       background: lighten($instock, 10)
       transition-delay: 0ms !important
 
+// STYLETRIAL
 body.product-styletrial
   .btn-coloured
     border-color: $styletrial
@@ -116,6 +133,8 @@ body.product-styletrial
       background: lighten($styletrial, 10)
       transition-delay: 0ms !important
 
+
+// specific to style guide
 #section-buttons
   .bg-dk-grey
     margin: -5px 0

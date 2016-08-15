@@ -95,9 +95,80 @@
     right: 10px
 
 
-// PRODUCT COLOURS
-@each $product in insight, fashion, li, instock, styletrial
-  body.product-#{$product}
-    .swiper-container
-      &:before
-        background: string("$" + #{$product} + "-lt")
+// ========================================================================================================================
+// Product Colors
+
+// INSIGHT
+body.product-insight
+  .swiper-container:before
+    background: $insight-lt
+
+  .swiper-container .swiper-slide .swiper-slide--text .swiper-slide--category
+    color: $insight
+
+  .swiper-button-prev,
+  .swiper-button-next
+    background: $insight-md
+
+    &:hover
+      background: $insight
+
+// FASHION
+body.product-fashion
+  .swiper-container:before
+    background: $fashion-lt
+
+  .swiper-container .swiper-slide .swiper-slide--text .swiper-slide--category
+    color: $fashion
+
+  .swiper-button-prev,
+  .swiper-button-next
+    background: $fashion-md
+
+    &:hover
+      background: $fashion
+
+// L&I
+body.product-li
+  .swiper-container:before
+    background: $li-lt
+
+  .swiper-container .swiper-slide .swiper-slide--text .swiper-slide--category
+    color: $li
+
+  .swiper-button-prev,
+  .swiper-button-next
+    background: $li-md
+
+    &:hover
+      background: $li
+
+// INSTOCK
+body.product-instock
+  .swiper-container:before
+    background: $instock-lt
+
+  .swiper-container .swiper-slide .swiper-slide--text .swiper-slide--category
+    color: $instock
+
+  .swiper-button-prev,
+  .swiper-button-next
+    background: $instock-md
+
+    &:hover
+      background: $instock
+
+// STYLETRIAL
+body.product-styletrial
+  .swiper-container:before
+    background: $styletrial-lt
+
+  .swiper-container .swiper-slide .swiper-slide--text .swiper-slide--category
+    color: $styletrial
+
+  .swiper-button-prev,
+  .swiper-button-next
+    background: $styletrial-md
+
+    &:hover
+      background: $styletrial
