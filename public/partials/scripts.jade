@@ -104,7 +104,11 @@ script.
 //- Product
 script.
   $('#product-changer').change(function() {
-    //- $('body').attr('class', $(this).val());
+    $('body').removeClass("product-wgsn product-insight product-fashion product-li product-instock product-styletrial");
+    $('body').addClass("product-" + $(this).val());
+  })
+
+  $('#product-changer2').change(function() {
     $('body').removeClass("product-wgsn product-insight product-fashion product-li product-instock product-styletrial");
     $('body').addClass("product-" + $(this).val());
   })

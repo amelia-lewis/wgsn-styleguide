@@ -4,22 +4,24 @@ include ../style-guide/content-types/reports.jade
 include ../style-guide/ui-elements/carousel.jade
 
 block append vars
-  - bodyclass = 'example-page product-fashion'
+  - bodyclass = 'example-page'
 
 block content
   section
     .example-page--header.bg-black
-      .row
-        .col-xs-12.col-sm-10 &nbsp;
-        .col-xs-12.col-sm-2
-          label.dropdown
-            select#product-changer
-              option.text-capitalise wgsn
-              option.text-capitalise insight
-              option.text-capitalise fashion
-              option.text-capitalise li
-              option.text-capitalise instock
-              option.text-capitalise styletrial
+      .content-wrap
+        .row
+          .col-xs-12.col-sm-10 &nbsp;
+          .col-xs-12.col-sm-2
+            .block-ver-sm
+              label.dropdown.tight
+                select.tight#product-changer2
+                  option(value="wgsn") WGSN
+                  option(value="insight") Insight
+                  option(value="fashion") Fashion
+                  option(value="li") Lifestyle &amp; Interiors
+                  option(value="instock") Instock
+                  option(value="styletrial") Styletrial
 
     .row.page-title
       .col-xs-12

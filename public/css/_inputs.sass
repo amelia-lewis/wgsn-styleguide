@@ -23,10 +23,11 @@ select
   display: block
   -webkit-appearance: none
   background: white
-  border: 1px solid $lt-grey
+  border: none
+  border-bottom: 1px solid $md-grey
   height: 36px
   width: 100%
-  padding: 10px
+  padding: 10px 0
   margin: 0 0 10px
   color: $dk-grey
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
@@ -39,9 +40,10 @@ select
 
   &:disabled
     background: $xlt-grey
+    padding: 10px
 
   &.has-error
-    border-color: $red
+    border-color: $red !important
     background: white url('../assets/img/icon-font_error-circle.svg') no-repeat right 10px center / 14px
 
   &.is-valid
@@ -51,7 +53,7 @@ input[type="text"],
 input[type="password"],
 textarea
   &:focus
-    border-color: $wgsn
+    border-color: $xdk-grey
 
 textarea
   resize: vertical
@@ -60,21 +62,21 @@ textarea
 ::-webkit-input-placeholder
    color: $md-grey
 
-input.search-input
-  background: white url('../assets/img/icon-font_search.svg') no-repeat 12px center / 12px 12px
-  padding-left: 36px
+// input.search-input
+//   background: white url('../assets/img/icon-font_search.svg') no-repeat 12px center / 12px 12px
+//   padding-left: 36px
 
-  &:focus
-    background-image: none
-    padding-left: 10px
+//   &:focus
+//     background-image: none
+//     padding-left: 10px
 
-textarea.comment-input
-  background: white url('../assets/img/icon-font_comment-filled.svg') no-repeat 12px 12px / 12px 12px
-  padding-left: 36px
+// textarea.comment-input
+//   background: white url('../assets/img/icon-font_comment-filled.svg') no-repeat 12px 12px / 12px 12px
+//   padding-left: 36px
 
-  &:focus
-    background-image: none
-    padding-left: 10px
+//   &:focus
+//     background-image: none
+//     padding-left: 10px
 
 
 // ====================
@@ -83,12 +85,13 @@ textarea.comment-input
 select
   background: white url('../assets/img/icon-font_caret-down.svg') no-repeat right 10px center / 14px
   padding: 0 10px
+  border: 1px solid $md-grey
 
 label.dropdown:after
   content: ""
   width: 1px
-  background: $lt-grey
-  bottom: 5px
+  background: $md-grey
+  bottom: 5.5px
   height: 24px
   display: block
   position: absolute
