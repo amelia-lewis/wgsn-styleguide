@@ -1,0 +1,23 @@
+extends ../../layout
+
+block append vars
+  - bodyclass = 'style-guide style-guide-grid'
+
+block content
+  include ../../partials/style-guide-sub-nav
+  
+  section
+    .row
+      .col-xs-12
+        section
+          h2.inline-block Grid
+          a.text-underline.text-grey.text-smaller.inline-block(href="https://github.com/amelia-lewis/wgsn-styleguide/blob/master/public/css/_mixins.sass" target="_blank") View on Github
+
+          p This style guide is based on 
+            a.styled(href="http://flexboxgrid.com/" target="_blank") Flexbox Grid
+            | .
+
+          .card
+            h3 hi
+
+          include:markdown grid.md
