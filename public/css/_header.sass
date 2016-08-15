@@ -45,11 +45,17 @@ header
     fill: white
     width: 80px
 
-  &.headroom--top
-    transform: translate3d(0, 0, 0)
+  label.dropdown
+    margin: 11px 0 0
 
-  &.headroom--not-top
-    transform: translate3d(0, -100%, 0)
+    &:after
+      top: 7px
+  
+  // &.headroom--top
+  //   transform: translate3d(0, 0, 0)
+
+  // &.headroom--not-top
+  //   transform: translate3d(0, -100%, 0)
 
 .sub-header
   position: fixed
@@ -57,16 +63,46 @@ header
   left: 0
   width: 100%
   z-index: 190
+  background: $wgsn
+  color: white
 
-  &.headroom--top
-    transform: translate3d(0, 0, 0)
+  // &.headroom--top
+  //   transform: translate3d(0, 0, 0)
 
-  &.headroom--not-top
-    transform: translate3d(0, -1 * $header-height, 0)
+  // &.headroom--not-top
+  //   transform: translate3d(0, -1 * $header-height, 0)
+
+
+// ========================================================================================================================
+// Product Colors
+
+// INSIGHT
+body.product-insight
+  .sub-header
+    background: $insight
+
+// FASHION
+body.product-fashion
+  .sub-header
+    background: $fashion
+
+// LI
+body.product-li
+  .sub-header
+    background: $li
+
+// INSTOCK
+body.product-instock
+  .sub-header
+    background: $instock
+
+// STYLETRIAL
+body.product-styletrial
+  .sub-header
+    background: $styletrial
 
 
 // =============================================================
-
 
 @each $view in products, style-guide
   body.#{$view}

@@ -15,15 +15,25 @@ html
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.css')
     link(rel="shortcut icon", type="image/x-icon", href="https://www.wgsn.com/wp-content/themes/stylesight/favicon.ico")
   
-  body(class=bodyclass + " product-instock")
+  body(class=bodyclass)
     header.block-ver-sm.bg-black.transition
       .content-wrap
         .row
-          .col-xs-12
+          .col-xs-12.col-sm-10
             a.header-logo.pull-left(href="/"): include partials/logo
             ul.pull-left.list-bare.tight.header-nav
               li.tight.block-right-md.block-ver-md.inline-block.pull-left#nav-products: a(href="/") Products
               li.tight.block-md.inline-block.pull-left#nav-style-guide: a(href="/style-guide") Style Guide
+
+          .col-xs-12.col-sm-2
+            label.dropdown
+              select#product-changer
+                option.text-capitalise wgsn
+                option.text-capitalise insight
+                option.text-capitalise fashion
+                option.text-capitalise li
+                option.text-capitalise instock
+                option.text-capitalise styletrial
     
     .content-wrap
       #content
