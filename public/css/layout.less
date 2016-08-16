@@ -1,6 +1,20 @@
 // ====================
 // Backgrounds
 // ====================
+// .make-bg-color(@bg-color) {
+//   .bg-@{bg-color} {
+//     background: @bg-color;
+//   } 
+// }
+
+// .make-bg-color(white);
+// .make-bg-color(xlt-grey);
+// .make-bg-color(lt-grey);
+// .make-bg-color(md-grey);
+// .make-bg-color(dk-grey);
+// .make-bg-color(xdk-grey);
+// .make-bg-color(black);
+
 .bg-white {
   background: white;
 }
@@ -40,7 +54,7 @@
   }
 
   a {
-    color: fade(white, 0.8);
+    color: fade(white, 80%);
 
     &:hover {
       color: white;
@@ -90,14 +104,19 @@
   border: 1px solid @lt-grey;
 }
 
-// @each @side in top, right, bottom, left {
-//   .border-#{@side} {
-//     border-#{@side}: 1px solid @lt-grey;
-//   }
-// }
+.make-border(@side) {
+  .border-@{side} {
+    border-@{side}: 1px solid @lt-grey;
+  } 
+}
+
+.make-border(top);
+.make-border(right);
+.make-border(bottom);
+.make-border(left);
 
 .box-shadow {
-  box-shadow: 0 2px 14px fade(black, 0.05);
+  box-shadow: 0 2px 14px fade(black, 5%);
 }
 
 
@@ -109,5 +128,5 @@
 }
 
 .transition {
-  transition: all 400ms;
+  transition: all 300ms;
 }

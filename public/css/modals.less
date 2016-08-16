@@ -5,9 +5,9 @@
   width: 580px;
   min-height: 100px;
   background: white;
-  &:extend(.box-shadow);
+  .box-shadow;
   transform: translate(-50%, -50%);
-  &:extend(.transition);
+  .transition;
   z-index: 100;
   opacity: 0;
   pointer-events: none;
@@ -15,7 +15,7 @@
   .modal-header {
     background: @xdk-grey;
     color: white;
-    &:extend(.block-md);
+    .block-md;
     overflow: auto;
     vertical-align: bottom;
 
@@ -28,7 +28,7 @@
       width: 12px;
       height: 12px;
       cursor: pointer;
-      transition: all 300ms;
+      .transition;
 
       &:hover {
         opacity: 1;
@@ -37,13 +37,13 @@
   }
 
   .modal-content {
-    &:extend(.block-md);
+    .block-md;
     border: solid @lt-grey;
     border-width: 0 1px 0 1px;
   }
 
   .modal-footer {
-    &:extend(.block-sm);
+    .block-sm;
     overflow: auto;
     border: 1px solid @lt-grey;
   }

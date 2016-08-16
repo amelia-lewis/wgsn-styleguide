@@ -6,7 +6,7 @@
     color: white;
     width: 100%;
     position: relative;
-    &:extend(.transition);
+    .transition;
 
     ul {
       position: absolute;
@@ -15,14 +15,14 @@
     }
 
     li, span {
-      &:extend(.wgsn-font);
-      &:extend(.transition);
-      &:extend(.inline-block);
+      .wgsn-font;
+      .transition;
+      .inline-block;
     }
 
     li {
       position: relative;
-      border-bottom: 2px dashed fade(white, 0.3);
+      border-bottom: 2px dashed fade(white, 30%);
       cursor: pointer;
 
       &:after {
@@ -32,9 +32,9 @@
         bottom: 0;
         &:extend(.serif);
         &:extend(.text-italic);
-        color: fade(white, 0.5);
+        color: fade(white, 50%);
         transform: translate(10px, 0);
-        &:extend(.transition);
+        .transition;
         opacity: 0;
       }
 
@@ -72,10 +72,10 @@
       color: @wgsn;
 
       li {
-        border-color: fade(@wgsn, 0.3);
+        border-color: fade(@wgsn, 30%);
 
         &:after {
-          color: fade(@wgsn, 0.5);
+          color: fade(@wgsn, 50%);
         }
 
         &:hover {
@@ -90,10 +90,10 @@
       color: @insight;
 
       li {
-        border-color: fade(@insight, 0.3);
+        border-color: fade(@insight, 30%);
 
         &:after {
-          color: fade(@insight, 0.5);
+          color: fade(@insight, 50%);
         }
 
         &:hover {
@@ -108,10 +108,10 @@
       color: @fashion;
 
       li {
-        border-color: fade(@fashion, 0.3);
+        border-color: fade(@fashion, 30%);
 
         &:after {
-          color: fade(@fashion, 0.5);
+          color: fade(@fashion, 50%);
         }
 
         &:hover {
@@ -126,10 +126,10 @@
       color: @styletrial;
 
       li {
-        border-color: fade(@styletrial, 0.3);
+        border-color: fade(@styletrial, 30%);
 
         &:after {
-          color: fade(@styletrial, 0.5);
+          color: fade(@styletrial, 50%);
         }
 
         &:hover {
@@ -144,10 +144,10 @@
       color: @li;
 
       li {
-        border-color: fade(@li, 0.3);
+        border-color: fade(@li, 30%);
 
         &:after {
-          color: fade(@li, 0.5);
+          color: fade(@li, 50%);
         }
 
         &:hover {
@@ -162,10 +162,10 @@
       color: @mindset;
 
       li {
-        border-color: fade(@mindset, 0.3);
+        border-color: fade(@mindset, 30%);
 
         &:after {
-          color: fade(@mindset, 0.5);
+          color: fade(@mindset, 50%);
         }
 
         &:hover {
@@ -180,10 +180,10 @@
       color: @instock;
 
       li {
-        border-color: fade(@instock, 0.3);
+        border-color: fade(@instock, 30%);
 
         &:after {
-          color: fade(@instock, 0.5);
+          color: fade(@instock, 50%);
         }
 
         &:hover {

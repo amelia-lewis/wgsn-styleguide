@@ -11,7 +11,7 @@ label {
   span.error-message {
     color: @red;
     margin-left: 5px;
-    &:extend(.wgsn-font);
+    .wgsn-font;
   }
 }
 
@@ -35,7 +35,7 @@ select {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 14px;
   border-radius: 0;
-  transition: all 300ms;
+  .transition;
 
   &:focus {
     outline: none;
@@ -119,8 +119,8 @@ label.dropdown:after {
 // Checkboxes & Radio Buttons
 // ====================
 label.checkbox-radio {
-  &:extend(.sans-serif);
-  &:extend(.text-no-transform);
+  .sans-serif;
+  .text-no-transform;
   font-size: 1em;
   line-height: 1.4em;
   cursor: pointer;
@@ -136,7 +136,7 @@ input[type="radio"] {
   position: absolute;
   top: 0;
   left: 0;
-  &:extend(.hoverable);
+  .hoverable;
   background: none;
   border: none;
   box-shadow: none;
@@ -151,8 +151,8 @@ input[type="radio"] {
     right: 0;
     bottom: 0;
     background: white;
-    &:extend(.border);
-    &:extend(.transition);
+    .border;
+    .transition;
   }
 
   &:after {
@@ -160,7 +160,7 @@ input[type="radio"] {
     display: block;
     position: absolute;
     transform: translate3d(0, 0, 0) scale(0);
-    &:extend(.transition);
+    .transition;
   }
 
   &:focus {
@@ -231,7 +231,7 @@ input[type="radio"] {
   input[type="checkbox"]:before,
   input[type="radio"]:before {
     background: @xdk-grey;
-    border-color: fade(white, 0.5);
+    border-color: fade(white, 50%);
   }
 
   input[type="checkbox"]:checked:before {
@@ -249,7 +249,7 @@ input[type="radio"] {
   border-radius: 8px;
   position: relative;
   cursor: pointer;
-  &:extend(.transition);
+  .transition;
 
   &:after {
     content: "";
@@ -261,9 +261,9 @@ input[type="radio"] {
     left: -2px;
     width: 18px;
     height: 18px;
-    &:extend(.border);
+    .border;
     transform: translate3d(0, 0, 0);
-    &:extend(.transition);
+    .transition;
   }
 
   &.toggle-off {

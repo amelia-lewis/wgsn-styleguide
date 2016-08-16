@@ -1,10 +1,10 @@
 pre {
   background: @xlt-grey !important;
   color: white;
-  &:extend(.block-md);
-  &:extend(.border-left);
-  &:extend(.border-right);
-  &:extend(.border-bottom);
+  .block-md;
+  .border-left;
+  .border-right;
+  .border-bottom;
   margin: 0 0 20px;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
@@ -15,7 +15,7 @@ pre {
 }
 
 code {
-  background: fade(@lt-grey, 0.75);
+  background: fade(@lt-grey, 75%);
   border-radius: 2px;
   padding: 0 4px;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -49,5 +49,5 @@ pre code {
 }
 
 aside code {
-  background: @md-grey;
+  background: darken(@lt-grey, 5%);
 }

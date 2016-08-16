@@ -1,7 +1,7 @@
 .token {
   background: @xlt-grey;
-  &:extend(.pull-left);
-  &:extend(.block-ver-xs);
+  .pull-left;
+  .block-ver-xs;
   padding-left: 7px;
   padding-right: 7px;
   margin: 0 5px 5px 0;
@@ -9,12 +9,12 @@
   .avatar,
   span,
   .icon {
-    &:extend(.pull-left);
+    .pull-left;
   }
 
   span {
-    &:extend(.block-right-sm);
-    &:extend(.inline-block);
+    .block-right-sm;
+    .inline-block;
     position: relative;
 
     &:after {
@@ -33,8 +33,8 @@
     padding: 0 7px;
     margin-left: 7px;
     color: @md-grey;
-    &:extend(.hoverable);
-    &:extend(.transition);
+    .hoverable;
+    .transition;
 
     &:hover {
       color: @dk-grey;

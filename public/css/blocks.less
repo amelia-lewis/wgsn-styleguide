@@ -1,4 +1,13 @@
 .make-block(@size, @padding) {
+  .block-@{size} {
+    padding: @padding;
+  }
+
+  .block-ver-@{size} {
+    padding-top: @padding;
+    padding-bottom: @padding;
+  }
+
   .block-hor-@{size} {
     padding-left: @padding;
     padding-right: @padding;
@@ -12,21 +21,12 @@
     padding-right: @padding;
   }
 
-  .block-ver-@{size} {
-    padding-top: @padding;
-    padding-bottom: @padding;
-  }
-
   .block-bot-@{size} {
     padding-bottom: @padding;
   }
 
   .block-top-@{size} {
     padding-top: @padding;
-  }
-
-  .block-@{size} {
-    padding: @padding;
   }
 }
 
