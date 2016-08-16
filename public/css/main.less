@@ -1,0 +1,85 @@
+// core
+@import "vars";
+@import "typography";
+@import "blocks";
+
+// components
+@import "header";
+@import "code-blocks";
+@import "aside";
+
+// ui
+@import "layout";
+@import "hiders";
+
+// @import "alerts";
+// @import "avatars";
+// @import "buttons";
+// @import "cards";
+// @import "carousel";
+// @import "comments";
+// @import "inputs";
+// @import "loading-indicator";
+// @import "modals";
+// @import "page-title";
+// @import "sidebar-menu";
+// @import "tab-nav";
+// @import "tables";
+// @import "tokens";
+// @import "tooltips";
+
+// @import "report-tile";
+
+// @import "icons";
+
+// example page
+@import "example-page";
+
+// specific to style guide
+@import "product-card";
+@import "font-card";
+
+
+// ==============================
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+#content {
+  margin-top: @header-height;
+  min-height: calc(100vh - 262px); // keep footer at the base of the screen
+}
+
+.content-wrap {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+hr {
+  outline: none;
+  border: none;
+  background: @lt-grey;
+  height: 1px;
+  margin: 0;
+}
+
+section {
+  &:extend(.block-ver-lg);
+}

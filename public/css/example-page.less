@@ -1,0 +1,35 @@
+body.example-page {
+  header,
+  footer,
+  #content + hr {
+    display: none;
+  }
+
+  #content {
+    margin-top: 0;
+
+    > section {
+      padding: 56px 0 0;
+    }
+  }
+
+  .content-wrap {
+    max-width: 1500px;
+  }
+
+  .sidebar-menu .sticky {
+    margin-top: 0;
+  }
+
+  .example-page--header.bg-black {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+  }
+
+  .ad-box {
+    height: 100%;
+  }
+}

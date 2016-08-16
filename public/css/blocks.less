@@ -1,0 +1,49 @@
+.make-block(@size, @padding) {
+  .block-hor-@{size} {
+    padding-left: @padding;
+    padding-right: @padding;
+  }
+
+  .block-left-@{size} {
+    padding-left: @padding;
+  }
+
+  .block-right-@{size} {
+    padding-right: @padding;
+  }
+
+  .block-ver-@{size} {
+    padding-top: @padding;
+    padding-bottom: @padding;
+  }
+
+  .block-bot-@{size} {
+    padding-bottom: @padding;
+  }
+
+  .block-top-@{size} {
+    padding-top: @padding;
+  }
+
+  .block-@{size} {
+    padding: @padding;
+  }
+}
+
+// .make-block-variant(@name, @color) {
+//   .block-#{@name} {
+//     background: @color;
+//   }
+// }
+
+.make-block(xs, 5px);
+.make-block(sm, 10px);
+.make-block(md, 20px);
+.make-block(lg, 50px);
+.make-block(xl, 100px);
+
+@media (max-width: @screen-sm-min) {
+  .make-block(md, 15px);
+  .make-block(lg, 30px);
+  .make-block(xl, 60px);
+}

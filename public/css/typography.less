@@ -1,0 +1,392 @@
+// ====================
+// Fonts
+// ====================
+@font-face {
+  font-family: "WGSN Headline";
+  src: url("../assets/fonts/WGSNHeadlineV5-RegularV5.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.serif {
+  font-family: "Playfair Display", "Georgia", serif;
+}
+
+.sans-serif {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+p, li, a, span {
+  &:extend(.sans-serif);
+}
+
+.wgsn-font {
+  font-family: "WGSN Headline", "Futura", sans-serif;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, label {
+  &:extend(.wgsn-font);
+}
+
+
+// ====================
+// Weight
+// ====================
+.text-normal {
+  font-weight: normal;
+}
+
+.text-bold, strong {
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, label {
+  &:extend(.text-normal);
+}
+
+
+// ====================
+// Style
+// ====================
+.text-italic, em {
+  font-style: italic;
+}
+
+.text-underline {
+  border-bottom: 1px solid @dk-grey;
+  display: inline-block;
+}
+
+
+// ====================
+// Alignment
+// ====================
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+// ====================
+// Transformation
+// ====================
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-no-transform {
+  text-transform: none;
+}
+
+
+// ====================
+// Margins
+// ====================
+h1, h2, h3, h4, ul, ol, li, p {
+  margin: 0 0 0.5em;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+.tight {
+  margin: 0 !important;
+}
+
+
+// ====================
+// Sizing
+// ====================
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+.text-smaller, small {
+  font-size: 0.8em;
+}
+
+
+// ====================
+// Styles
+// ====================
+// LINKS
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 300ms;
+
+  &:hover {
+    color: darken(@dk-grey, 20);
+    border-color: darken(@dk-grey, 20);
+  }
+}
+
+a.styled {
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(90deg, @wgsn 50%, fade(@wgsn, 0.2) 0);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    &:extend(.transition);
+  }
+
+  &:hover {
+    &:after {
+      background-position: 0 0;
+    }
+  }
+}
+
+h2 + a {
+  margin-left: 10px
+}
+
+
+// TEXT COLORS
+.text-brand {
+  color: @wgsn;
+}
+
+.text-white {
+  color: white;
+  border-color: white;
+}
+
+.text-grey {
+  color: @md-grey;
+}
+
+
+// LISTS
+.list-bare {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.styled {
+  list-style: none;
+  
+  li {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 14px;
+      height: 4px;
+      left: -20px;
+      top: calc(50% - 2px);
+      background: fade(@wgsn, 0.5);
+    }
+  }
+}
+
+ol.styled {
+  list-style: none;
+
+  li {
+    position: relative;
+    counter-increment: step-counter;
+
+    &:before {
+      content: counter(step-counter);
+      position: absolute;
+      display: block;
+      width: 14px;
+      left: -20px;
+      top: 0;
+      color: fade(@wgsn, 0.5);
+      &:extend(.wgsn-font);
+      text-align: center;
+    }
+  }
+}
+
+
+// HIGHLIGHTS
+.header-highlight {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -2px;
+    left: -10px;
+    right: -3px;
+    top: 50%;
+    background: fade(@wgsn, 0.3);
+    z-index: -1;
+  }
+}
+
+
+// ========================================================================================================================
+// Product Colors
+
+// INSIGHT
+body.product-insight {
+  a.styled:after {
+    background-image: linear-gradient(90deg, @insight 50%, fade(@insight, 0.2) 0);
+  }
+
+  .text-brand {
+    color: @insight;
+  }
+
+  ul.styled li:before {
+    background: fade(@insight, 0.5);
+  }
+
+  ol.styled li:before {
+    color: fade(@insight, 0.5);
+  }
+
+  .header-highlight:before {
+    background: fade(@insight, 0.3);
+  }
+}
+
+// FASHION
+body.product-fashion {
+  a.styled:after {
+    background-image: linear-gradient(90deg, @fashion 50%, fade(@fashion, 0.2) 0);
+  }
+
+  .text-brand {
+    color: @fashion;
+  }
+
+  ul.styled li:before {
+    background: fade(@fashion, 0.5);
+  }
+
+  ol.styled li:before {
+    color: fade(@fashion, 0.5);
+  }
+
+  .header-highlight:before {
+    background: fade(@fashion, 0.3);
+  }
+}
+
+// L&I
+body.product-li {
+  a.styled:after {
+    background-image: linear-gradient(90deg, @li 50%, fade(@li, 0.2) 0);
+  }
+
+  .text-brand {
+    color: @li;
+  }
+
+  ul.styled li:before {
+    background: fade(@li, 0.5);
+  }
+
+  ol.styled li:before {
+    color: fade(@li, 0.5);
+  }
+
+  .header-highlight:before {
+    background: fade(@li, 0.3);
+  }
+}
+
+// INSTOCK
+body.product-instock {
+  a.styled:after {
+    background-image: linear-gradient(90deg, @instock 50%, fade(@instock, 0.2) 0);
+  }
+
+  .text-brand {
+    color: @instock;
+  }
+
+  ul.styled li:before {
+    background: fade(@instock, 0.5);
+  }
+
+  ol.styled li:before {
+    color: fade(@instock, 0.5);
+  }
+
+  .header-highlight:before {
+    background: fade(@instock, 0.3);
+  }
+}
+
+// STYLETRIAL
+body.product-styletrial {
+  a.styled:after {
+    background-image: linear-gradient(90deg, @styletrial 50%, fade(@styletrial, 0.2) 0);
+  }
+
+  .text-brand {
+    color: @styletrial;
+  }
+
+  ul.styled li:before {
+    background: fade(@styletrial, 0.5);
+  }
+
+  ol.styled li:before {
+    color: fade(@styletrial, 0.5);
+  }
+
+  .header-highlight:before {
+    background: fade(@styletrial, 0.3)  };
+}
