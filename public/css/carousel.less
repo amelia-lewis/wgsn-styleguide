@@ -1,0 +1,215 @@
+.swiper-container {
+  width: 100%;
+  height: 400px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: @wgsn-lt;
+  }
+
+  .swiper-wrapper {
+    height: 100%;
+    
+    .swiper-slide {
+      .swiper-slide--img {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 35%;
+        &:extend(.transition);
+
+        img {
+          width: 100%;
+          display: block;
+          &:extend(.transition);
+          opacity: 0;
+          transition-delay: 300ms;
+        }
+      }
+
+      .swiper-slide--text {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 65%;
+        &:extend(.block-ver-md);
+        &:extend(.block-hor-lg);
+
+        .swiper-slide--category,
+        .swiper-slide--title,
+        .swiper-slide--info {
+          &:extend(.transition);
+          opacity: 0;
+          transform: translate(40px, 0);
+        }
+
+        .swiper-slide--category {
+          &:extend(.wgsn-font);
+          font-size: 1.6em;
+          &:extend(.text-uppercase);
+          color: @wgsn;
+          transition-delay: 500ms;
+        }
+
+        .swiper-slide--title {
+          transition-delay: 400ms;
+        }
+        
+        .swiper-slide--info {
+          transition-delay: 600ms;
+
+          span {
+            &:extend(.wgsn-font);
+            font-size: 1.6em;
+            &:extend(.text-grey);
+          }
+        }
+      }
+
+      &.swiper-slide-active {
+        .swiper-slide--img img,
+        .swiper-slide--category,
+        .swiper-slide--title,
+        .swiper-slide--info {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: auto;
+    left: auto;
+    bottom: 10px;
+    background: @wgsn-md;
+    color: white;
+    width: 40px;
+    height: 30px;
+    &:extend(.flex-center);
+    &:extend(.transition);
+
+    &:hover {
+      background: @wgsn;
+    }
+  }
+
+  .swiper-button-prev {
+    right: 51px;
+  }
+  
+  .swiper-button-next {
+    right: 10px;
+  }
+}
+
+
+// ========================================================================================================================
+// Product Colors
+
+// INSIGHT
+body.product-insight {
+  .swiper-container:before {
+    background: @insight-lt;
+  }
+
+  .swiper-container .swiper-slide .swiper-slide--text .swiper-slide--category {
+    color: @insight;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    background: @insight-md;
+
+    &:hover {
+      background: @insight;
+    }
+  }
+}
+
+// FASHION
+body.product-fashion {
+  .swiper-container:before {
+    background: @fashion-lt;
+  }
+
+  .swiper-container .swiper-slide .swiper-slide--text .swiper-slide--category {
+    color: @fashion;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    background: @fashion-md;
+
+    &:hover {
+      background: @fashion;
+    }
+  }
+}
+
+// L&I
+body.product-li {
+  .swiper-container:before {
+    background: @li-lt;
+  }
+
+  .swiper-container .swiper-slide .swiper-slide--text .swiper-slide--category {
+    color: @li;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    background: @li-md;
+
+    &:hover {
+      background: @li;
+    }
+  }
+}
+
+// INSTOCK
+body.product-instock {
+  .swiper-container:before {
+    background: @instock-lt;
+  }
+
+  .swiper-container .swiper-slide .swiper-slide--text .swiper-slide--category {
+    color: @instock;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    background: @instock-md;
+
+    &:hover {
+      background: @instock;
+    }
+  }
+}
+
+// STYLETRIAL
+body.product-styletrial {
+  .swiper-container:before {
+    background: @styletrial-lt;
+  }
+
+  .swiper-container .swiper-slide .swiper-slide--text .swiper-slide--category {
+    color: @styletrial;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    background: @styletrial-md;
+
+    &:hover {
+      background: @styletrial    };
+}}
