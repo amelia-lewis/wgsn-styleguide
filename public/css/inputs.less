@@ -32,7 +32,7 @@ select {
   padding: 10px 0;
   margin: 0 0 10px;
   color: @dk-grey;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  .sans-serif;
   font-size: 14px;
   border-radius: 0;
   .transition;
@@ -60,7 +60,7 @@ input[type="text"],
 input[type="password"],
 textarea {
   &:focus {
-    border-color: @xdk-grey;
+    border-color: @wgsn;
   }
 }
 
@@ -289,6 +289,10 @@ input[type="radio"] {
 
 // INSIGHT
 body.product-insight {
+  input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: @insight;
+  }
+
   input[type="checkbox"]:checked:before,
   input[type="radio"]:checked:before {
     background: @insight;
@@ -302,6 +306,10 @@ body.product-insight {
 
 // FASHION
 body.product-fashion {
+  input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: @fashion;
+  }
+
   input[type="checkbox"]:checked:before,
   input[type="radio"]:checked:before {
     background: @fashion;
@@ -315,6 +323,10 @@ body.product-fashion {
 
 // LI
 body.product-li {
+  input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: @li;
+  }
+
   input[type="checkbox"]:checked:before,
   input[type="radio"]:checked:before {
     background: @li;
@@ -328,6 +340,10 @@ body.product-li {
 
 // INSTOCK
 body.product-instock {
+  input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: @instock;
+  }
+
   input[type="checkbox"]:checked:before,
   input[type="radio"]:checked:before {
     background: @instock;
@@ -341,6 +357,10 @@ body.product-instock {
 
 // STYLETRIAL
 body.product-styletrial {
+  input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: @styletrial;
+  }
+  
   input[type="checkbox"]:checked:before,
   input[type="radio"]:checked:before {
     background: @styletrial;

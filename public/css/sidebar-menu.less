@@ -13,6 +13,7 @@
     width: 1000px;
     height: 100%;
     .bg-xlt-grey;
+    z-index: -1;
   }
 
   h4:not(:first-child) {
@@ -123,14 +124,8 @@ body.product-styletrial {
 
 
 // specific to the style guide
-// body.style-guide {
-//   .sidebar-menu:before {
-//     content: "";
-//     position: absolute;
-//     top: -200px;
-//     right: 0;
-//     width: 1000px;
-//     height: 200px;
-//     .bg-xlt-grey;
-//   }
-// }
+body.style-guide {
+  .sidebar-menu.sticky {
+    .block-top-lg;
+  }
+}
