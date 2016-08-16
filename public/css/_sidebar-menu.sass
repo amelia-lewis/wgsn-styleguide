@@ -3,7 +3,6 @@
   @extend .bg-xlt-grey
   @extend .block-hor-md
   @extend .block-top-md
-  // min-height: 100vh
   height: 100%
 
   &:after
@@ -25,7 +24,7 @@
       @extend .header-highlight
 
       &:before
-        background: rgba($wgsn-grey-md, 0.6)
+        background: rgba($wgsn-grey-md, 0.3)
         transform: scale(0, 1)
         transform-origin: left center
         @extend .transition
@@ -46,35 +45,53 @@
 // ========================================================================================================================
 // Product Colors
 
+// INSIGHT
 body.product-insight
-  .sidebar-menu .sidebar-menu--active a:before
-    background: rgba($insight, 0.3)
+  .sidebar-menu
+    h4 a:before, li a:before
+      background: rgba($wgsn-grey-md, 0.3)
 
+    .sidebar-menu--active a:before
+      background: rgba($insight, 0.3)
+
+// FASHION
 body.product-fashion
-  .sidebar-menu .sidebar-menu--active a:before
-    background: rgba($fashion, 0.3)
+  .sidebar-menu
+    h4 a:before, li a:before
+      background: rgba($wgsn-grey-md, 0.3)
 
+    .sidebar-menu--active a:before
+      background: rgba($fashion, 0.3)
+
+// LI
 body.product-li
-  .sidebar-menu .sidebar-menu--active a:before
-    background: rgba($li, 0.3)
+  .sidebar-menu
+    h4 a:before, li a:before
+      background: rgba($wgsn-grey-md, 0.3)
 
+    .sidebar-menu--active a:before
+      background: rgba($li, 0.3)
+
+// INSTOCK
 body.product-instock
-  .sidebar-menu .sidebar-menu--active a:before
-    background: rgba($instock, 0.3)
+  .sidebar-menu
+    h4 a:before, li a:before
+      background: rgba($wgsn-grey-md, 0.3)
 
+    .sidebar-menu--active a:before
+      background: rgba($instock, 0.3)
+
+// STYLETRIAL
 body.product-styletrial
-  .sidebar-menu .sidebar-menu--active a:before
-    background: rgba($styletrial, 0.3)
+  .sidebar-menu
+    h4 a:before, li a:before
+      background: rgba($wgsn-grey-md, 0.3)
+
+    .sidebar-menu--active a:before
+      background: rgba($styletrial, 0.3)
 
 
 // specific to the style guide
-#section-sidebar-menu
-  .sidebar-menu
-    min-height: auto
-
-// .sidebar-menu .sticky
-//   margin-top: 36px
-
 body.style-guide
   .sidebar-menu:before
     content: ""
