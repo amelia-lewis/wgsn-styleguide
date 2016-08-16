@@ -128,21 +128,44 @@ body.product-styletrial {
 
 // =============================================================
 
-// @each @view in products, style-guide {
-//   body.#{@view} {
-//     #nav-#{@view} {
-//       &:extend(.active);
-//     }
-//   }
-// }
+.header-active(@view) {
+  body.@{view} {
+    #nav-@{view} {
+      a {
+        color: white;
 
-// @each @sub-view in overview, typography, grid, layout, ui-elements, content-types, icons, mixins {
-//   body.style-guide-#{@sub-view} {
-//     #nav-style-guide-#{@sub-view} {
-//       &:extend(.active);
-//     }
-//   }
-// }
+        &:after {
+          transform: scale(1, 1);
+        }
+      }
+    }
+  } 
+}
+
+.sub-header-active(@sub-view) {
+  body.style-guide-@{sub-view} {
+    #nav-style-guide-@{sub-view} {
+      a {
+        color: white;
+
+        &:after {
+          transform: scale(1, 1);
+        }
+      }
+    }
+  } 
+}
+
+.header-active(products);
+.header-active(style-guide);
+.sub-header-active(overview);
+.sub-header-active(typography);
+.sub-header-active(grid);
+.sub-header-active(layout);
+.sub-header-active(ui-elements);
+.sub-header-active(content-types);
+.sub-header-active(icons);
+.sub-header-active(mixins);
 
 body.products {
   header {
