@@ -1,5 +1,5 @@
 ```html
-<table class="table table-alternating">
+<table class="table table--alternating">
   <thead>
     <th>#</th>
     <th>Name</th>
@@ -15,21 +15,6 @@
       <td>2</td>
       <td>Francis Wong</td>
       <td>Creative Services</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Kim Schaefer</td>
-      <td>Creative Services</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Oleg Zolotnisky</td>
-      <td>Tech</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Emily Spiegel</td>
-      <td>Marketing</td>
     </tr>
   </tbody>
 </table>

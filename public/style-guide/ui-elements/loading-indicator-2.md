@@ -1,3 +1,3 @@
 ```html
-<div class="loading-indicator loading-indicator-sm"></div>
+<div class="loading-indicator loading-indicator--sm"></div>
 ```

@@ -1,19 +1,18 @@
 .tab-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  overflow: auto;
+  .list-bare;
+  .overflow-auto;
   .border-bottom;
+  position: relative;
 
-  .tab-nav-tab {
+  .tab-nav--tab {
     .pull-left;
     .block-ver-sm;
     .wgsn-font;
+    .hoverable;
+    .transition;
     margin: 0 10px;
     position: relative;
-    cursor: pointer;
-    color: @dk-grey;
-    .transition;
+    color: @md-grey;
 
     &:after {
       content: "";
@@ -22,68 +21,61 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 3px;
-      background: @xdk-grey;
-      transform: translate3d(0, 0,) scale(1, 0);
+      height: 2px;
+      background: black;
+      transform: scale(1, 0);
       transform-origin: center bottom;
       .transition;
     }
 
     &:hover,
-    &.active {
-      color: @xdk-grey;
+    &.tab-nav--active {
+      color: black;
       
       &:after {
-        transform: translate3d(0, 0 0) scale(1, 1);
+        transform: scale(1, 1);
       }
     }
   }
-}
 
-.tab-nav-alt {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  overflow: auto;
-  position: relative;
-  
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: @lt-grey;
-  }
-
-  .tab-nav-tab {
-    .pull-left;
-    .block-ver-sm;
-    .block-hor-md;
-    .border-top;
-    .border-right;
-    .wgsn-font;
-    margin: 0;
-    position: relative;
-    cursor: pointer;
-    z-index: 10;
-    color: @dk-grey;
-    .transition;
-
-    &:first-of-type {
-      .border-left;
+  &.tab-nav--alt {
+    border-bottom: none;
+    
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: @lt-grey;
     }
 
-    &:hover {
-      color: @xdk-grey;
-    }
+    .tab-nav--tab {
+      .block-hor-md;
+      .border-top;
+      .border-right;
+      margin: 0;
+      z-index: 10;
 
-    &.active {
-      background: white;
-      border-bottom: none;
-      color: @xdk-grey;
+      &:after {
+        display: none;
+      }
+
+      &:first-of-type {
+        .border-left;
+      }
+
+      &:hover {
+        color: black;
+      }
+
+      &.tab-nav--active {
+        background: white;
+        border-bottom: none;
+        color: @xdk-grey;
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 ```html
 <div class="sidebar-menu">
-  <h4>Future Trends</h4>
+  <h4 class="sidebar-menu--title">Future Trends</h4>
   <ul>
     <a href="" class="sidebar--active"><li>S/S 18</li></a>
     <a href=""><li>A/W 17/18</li></a>

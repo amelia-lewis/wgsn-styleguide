@@ -40,7 +40,7 @@ section#section-tables
     |  for hover and selected states on rows.
 
   .card
-    table.table.table-alternating
+    table.table.table--alternating
       thead
         th #
         th Name
@@ -70,8 +70,16 @@ section#section-tables
 
   include:marked tables-2.md
 
+  p The selectable table will take on the product's 
+    a.styled(href='/') colour
+    |  when 
+    code body
+    |  has a product class, such as 
+    code .product-fashion
+    | , which it should always have.
+
   .card
-    table.table.table-selectable
+    table.table.table--selectable
       thead
         th #
         th Name
@@ -82,7 +90,7 @@ section#section-tables
           td 1
           td Hans Zhou
           td Tech
-        tr.selected
+        tr.table--selected
           td 2
           td Sansan Chen
           td Product

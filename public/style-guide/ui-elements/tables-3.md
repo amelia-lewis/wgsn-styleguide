@@ -1,5 +1,5 @@
 ```html
-<table class="table table-selectable">
+<table class="table table--selectable">
   <thead>
     <th>#</th>
     <th>Name</th>
@@ -11,20 +11,10 @@
       <td>Hans Zhou</td>
       <td>Tech</td>
     </tr>
-    <tr class="selected">
+    <tr class="table--selected">
       <td>2</td>
       <td>Sansan Chen</td>
       <td>Product</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Parisa Vahdatinia</td>
-      <td>QA</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Peter Morrison</td>
-      <td>Tech</td>
     </tr>
   </tbody>
 </table>

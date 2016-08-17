@@ -1,14 +1,14 @@
 // ====================
 // Label
 // ====================
-label {
+.label {
   display: block;
   margin-bottom: 10px;
   line-height: 2em;
   font-size: 12px;
   position: relative;
 
-  span.error-message {
+  span.input--error-message {
     color: @red;
     margin-left: 5px;
     .wgsn-font;
@@ -18,10 +18,10 @@ label {
 // ====================
 // Text inputs
 // ====================
-input[type="text"],
-input[type="password"],
-textarea, 
-select {
+.input--text,
+.input--password,
+.input--textarea,
+.input--dropdown {
   display: block;
   -webkit-appearance: none;
   background: white;
@@ -41,30 +41,31 @@ select {
     outline: none;
   }
 
-  &:disabled {
+  &:disabled,
+  &.input--disabled {
     background: @xlt-grey;
     padding: 10px;
   }
 
-  &.has-error {
+  &.input--has-error {
     border-color: @red !important;
     background: white url('../assets/img/icon-font_error-circle.svg') no-repeat right 10px center / 14px;
   }
 
-  &.is-valid {
+  &.input--is-valid {
     background: white url('../assets/img/icon-font_tick-circle-filled.svg') no-repeat right 10px center / 14px;
   }
 }
 
-input[type="text"],
-input[type="password"],
-textarea {
+.input--text,
+.input--password,
+.input--textarea {
   &:focus {
     border-color: @wgsn;
   }
 }
 
-textarea {
+.input--textarea {
   resize: vertical;
   min-height: 80px;
 }
@@ -73,37 +74,17 @@ textarea {
   color: @md-grey;
 }
 
-// input.search-input {
-//   background: white url('../assets/img/icon-font_search.svg') no-repeat 12px center / 12px 12px;
-//   padding-left: 36px;
-
-//   &:focus {
-//     background-image: none;
-//     padding-left: 10px;
-//   }
-// }
-
-// textarea.comment-input {
-//   background: white url('../assets/img/icon-font_comment-filled.svg') no-repeat 12px 12px / 12px 12px;
-//   padding-left: 36px;
-
-//   &:focus {
-//     background-image: none;
-//     padding-left: 10px;
-//   }
-// }
-
 
 // ====================
 // Dropdowns
 // ====================
-select {
+.input--dropdown {
   background: white url('../assets/img/icon-font_caret-down.svg') no-repeat right 10px center / 14px;
   padding: 0 10px;
   border: 1px solid @md-grey;
 }
 
-label.dropdown:after {
+label.label--dropdown:after {
   content: "";
   width: 1px;
   background: @md-grey;
@@ -118,7 +99,7 @@ label.dropdown:after {
 // ====================
 // Checkboxes & Radio Buttons
 // ====================
-label.checkbox-radio {
+label.label--checkbox-radio {
   .sans-serif;
   .text-no-transform;
   font-size: 1em;
@@ -128,8 +109,8 @@ label.checkbox-radio {
   padding-left: 24px;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+.input--checkbox,
+.input--radio {
   appearance: none;
   width: 16px;
   height: 16px;
@@ -174,7 +155,7 @@ input[type="radio"] {
   }
 }
 
-input[type="checkbox"] {
+.input--checkbox {
   &:after {
     top: 1px;
     left: 1px;
@@ -197,7 +178,7 @@ input[type="checkbox"] {
   }
 }
 
-input[type="radio"] {
+.input--radio {
   &:before {
     border-radius: 50%;
   }
@@ -225,25 +206,9 @@ input[type="radio"] {
 
 
 // ====================
-// On a Dark Background
-// ====================
-.bg-xdk-grey {
-  input[type="checkbox"]:before,
-  input[type="radio"]:before {
-    background: @xdk-grey;
-    border-color: fade(white, 50%);
-  }
-
-  input[type="checkbox"]:checked:before {
-    background: transparent url('../assets/img/icon-font_tick-white.svg') no-repeat center center / 12px 12px;
-  }
-}
-
-
-// ====================
 // Toggle
 // ====================
-.toggle {
+.input--toggle {
   width: 32px;
   height: 16px;
   border-radius: 8px;
@@ -266,7 +231,7 @@ input[type="radio"] {
     .transition;
   }
 
-  &.toggle-off {
+  &.input--toggle-off {
     background: @md-grey;
 
     &:after {
@@ -274,7 +239,7 @@ input[type="radio"] {
     }
   }
 
-  &.toggle-on {
+  &.input--toggle-on {
     background: @wgsn;
 
     &:after {
@@ -288,81 +253,81 @@ input[type="radio"] {
 // Product Colors
 
 body.product-insight {
-  input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+  .input--text:focus, .input--password:focus, .input--textarea:focus {
     border-color: @insight;
   }
 
-  input[type="checkbox"]:checked:before,
-  input[type="radio"]:checked:before {
+  .input--checkbox:checked:before,
+  .input--radio:checked:before {
     background: @insight;
     border-color: @insight;
   }
 
-  .toggle.toggle-on {
+  .input--toggle.input--toggle-on {
     background: @insight;
   }
 }
 
 body.product-fashion {
-  input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+  .input--text:focus, .input--password:focus, .input--textarea:focus {
     border-color: @fashion;
   }
 
-  input[type="checkbox"]:checked:before,
-  input[type="radio"]:checked:before {
+  .input--checkbox:checked:before,
+  .input--radio:checked:before {
     background: @fashion;
     border-color: @fashion;
   }
 
-  .toggle.toggle-on {
+  .input--toggle.input--toggle-on {
     background: @fashion;
   }
 }
 
 body.product-li {
-  input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+  .input--text:focus, .input--password:focus, .input--textarea:focus {
     border-color: @li;
   }
 
-  input[type="checkbox"]:checked:before,
-  input[type="radio"]:checked:before {
+  .input--checkbox:checked:before,
+  .input--radio:checked:before {
     background: @li;
     border-color: @li;
   }
 
-  .toggle.toggle-on {
+  .input--toggle.input--toggle-on {
     background: @li;
   }
 }
 
 body.product-instock {
-  input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+  .input--text:focus, .input--password:focus, .input--textarea:focus {
     border-color: @instock;
   }
 
-  input[type="checkbox"]:checked:before,
-  input[type="radio"]:checked:before {
+  .input--checkbox:checked:before,
+  .input--radio:checked:before {
     background: @instock;
     border-color: @instock;
   }
 
-  .toggle.toggle-on {
+  .input--toggle.input--toggle-on {
     background: @instock;
   }
 }
 
 body.product-styletrial {
-  input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+  .input--text:focus, .input--password:focus, .input--textarea:focus {
     border-color: @styletrial;
   }
   
-  input[type="checkbox"]:checked:before,
-  input[type="radio"]:checked:before {
+  .input--checkbox:checked:before,
+  .input--radio:checked:before {
     background: @styletrial;
     border-color: @styletrial;
   }
 
-  .toggle.toggle-on {
+  .input--toggle.input--toggle-on {
     background: @styletrial;
   }
 }

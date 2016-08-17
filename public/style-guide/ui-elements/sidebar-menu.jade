@@ -2,32 +2,43 @@ section#section-sidebar-menu
   h2.inline-block Sidebar Menu
   +github-link("sidebar-menu")
 
-  p The sidebar menu is used across all directory pages.
+  p The sidebar menu is used across all directory pages. The active item will take on the product's 
+    a.styled(href='/') colour
+    |  when 
+    code body
+    |  has a product class, such as 
+    code .product-fashion
+    | , which it should always have.
+  p The grey area to the left of the sidebar menu should always extend all the way to the left of the screen, achieved by using an 
+    code :after
+    | .
 
   .card
-    .sidebar-menu
-      h4 Future Trends
-      ul
-        li: a(href="") S/S 18
-        li: a(href="") A/W 17/18
-        li: a(href="") S/S17
-        li: a(href="") A/W 16/17
-        li: a(href="") S/S 16
-        li: a(href="") A/W 15/16
+    .row
+      .col-xs-12.col-sm-4
+        .sidebar-menu
+          h4.sidebar-menu--title Future Trends
+          ul
+            li: a(href="") S/S 18
+            li: a(href="") A/W 17/18
+            li: a(href="") S/S17
+            li: a(href="") A/W 16/17
+            li: a(href="") S/S 16
+            li: a(href="") A/W 15/16
 
-      h4 Catwalk Analysis
-      ul
-       li.sidebar-menu--active: a(href="") Pre-Summer 17
-       li: a(href="") S/S 17
-       li: a(href="") A/W 16/17
-       li: a(href="") Graduates 2016
-       li: a(href="") Pre-Fall 16
-       li: a(href="") S/S 16
-       li: a(href="") Graduates 2015
-       li: a(href="") Pre-Summer 16
-       li: a(href="") A/W 15/16
-       li: a(href="") Pre-Fall 15
-       li: a(href="") S/S 15
+          h4.sidebar-menu--title Catwalk Analysis
+          ul
+            li.sidebar-menu--active: a(href="") Pre-Summer 17
+            li: a(href="") S/S 17
+            li: a(href="") A/W 16/17
+            li: a(href="") Graduates 2016
+            li: a(href="") Pre-Fall 16
+            li: a(href="") S/S 16
+            li: a(href="") Graduates 2015
+            li: a(href="") Pre-Summer 16
+            li: a(href="") A/W 15/16
+            li: a(href="") Pre-Fall 15
+            li: a(href="") S/S 15
 
   include:marked sidebar-menu.md
 

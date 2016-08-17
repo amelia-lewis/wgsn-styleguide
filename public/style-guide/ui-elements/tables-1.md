@@ -16,16 +16,6 @@
       <td>Pathik Tanna</td>
       <td>Tech</td>
     </tr>
-    <tr>
-      <td>3</td>
-      <td>Anna Glassman</td>
-      <td>Creative Services</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Nicky Ashwell</td>
-      <td>Product</td>
-    </tr>
   </tbody>
 </table>
 ```

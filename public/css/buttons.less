@@ -27,70 +27,70 @@ button,
   }
 
   // COLOURED
-  &.btn-coloured {
+  &.btn--coloured {
     border: 1px solid @wgsn;
     background: @wgsn;
     color: white;
 
-    &:not(.btn-disabled):hover {
+    &:not(.btn--disabled):hover {
       background: lighten(@wgsn, 10);
     }
   }
 
   // BLACK
-  &.btn-black {
+  &.btn--black {
     border: 1px solid black;
     background: black;
     color: white;
 
-    &:not(.btn-disabled):hover {
+    &:not(.btn--disabled):hover {
       background: lighten(black, 10);
     }
   }
 
   // WHITE
-  &.btn-white {
+  &.btn--white {
     border: 1px solid @lt-grey;
     background: white;
     color: @dk-grey;
 
-    &:not(.btn-disabled):hover {
+    &:not(.btn--disabled):hover {
       background: darken(white, 2);
     }
   }
 
   // CLEAR
-  &.btn-clear {
+  &.btn--clear {
     border: 1px solid white;
     background: transparent;
     color: white;
 
-    &:not(.btn-disabled):hover {
+    &:not(.btn--disabled):hover {
       background: fade(black, 20%);
     }
   }
 
   // DISABLED
-  &.btn-disabled {
+  &.btn--disabled {
     opacity: 0.5;
     cursor: default;
   }
 
   // FULL-WIDTH, BLOCK
-  &.btn-full {
+  &.btn--full {
     display: block;
     width: 100%;
     margin: 0;
   }
 
   // LARGE
-  &.btn-lg {
+  &.btn--lg {
     height: 48px;
     padding: 17px 20px;
   }
 
   // SMALL
-  &.btn-sm {
+  &.btn--sm {
     height: 26px;
     padding: 5px 10px 7px;
   }
@@ -100,11 +100,11 @@ button,
 // Product Colors
 
 body.product-insight {
-  .btn-coloured {
+  .btn--coloured {
     border-color: @insight;
     background: @insight;
 
-    &:not(.btn-disabled):hover {
+    &:not(.btn--disabled):hover {
       background: lighten(@insight, 10);
       transition-delay: 0ms !important;
     }
@@ -112,11 +112,11 @@ body.product-insight {
 }
 
 body.product-fashion {
-  .btn-coloured {
+  .btn--coloured {
     border-color: @fashion;
     background: @fashion;
 
-    &:not(.btn-disabled):hover {
+    &:not(.btn--disabled):hover {
       background: lighten(@fashion, 10);
       transition-delay: 0ms !important;
     }
@@ -124,11 +124,11 @@ body.product-fashion {
 }
 
 body.product-li {
-  .btn-coloured {
+  .btn--coloured {
     border-color: @li;
     background: @li;
 
-    &:not(.btn-disabled):hover {
+    &:not(.btn--disabled):hover {
       background: lighten(@li, 10);
       transition-delay: 0ms !important;
     }
@@ -136,11 +136,11 @@ body.product-li {
 }
 
 body.product-instock {
-  .btn-coloured {
+  .btn--coloured {
     border-color: @instock;
     background: @instock;
 
-    &:not(.btn-disabled):hover {
+    &:not(.btn--disabled):hover {
       background: lighten(@instock, 10);
       transition-delay: 0ms !important;
     }
@@ -148,11 +148,11 @@ body.product-instock {
 }
 
 body.product-styletrial {
-  .btn-coloured {
+  .btn--coloured {
     border-color: @styletrial;
     background: @styletrial;
 
-    &:not(.btn-disabled):hover {
+    &:not(.btn--disabled):hover {
       background: lighten(@styletrial, 10);
       transition-delay: 0ms !important;
     }

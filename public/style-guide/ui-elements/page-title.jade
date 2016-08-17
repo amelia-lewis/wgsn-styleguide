@@ -2,7 +2,13 @@ section#section-page-title
   h2.inline-block Page Title
   +github-link("page-title")
 
-  p The page title styling to be used everywhere across the site.
+  p The page title styling to be used everywhere across the site. The sub-title will take on the product's 
+    a.styled(href='/') colour
+    |  when 
+    code body
+    |  has a product class, such as 
+    code .product-fashion
+    | , which it should always have.
 
   .card
     .row.page-title

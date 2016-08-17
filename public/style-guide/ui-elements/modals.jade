@@ -4,15 +4,15 @@ section#section-modals
   
   .card
     .modal.show
-      .modal-header
-        h4.pull-left.tight Modal Title
-        i.icon.icon-cross.pull-right.hoverable.close-modal
+      .modal--header
+        h4.modal--title Modal Title
+        i.icon.icon-cross.close-modal
 
-      .modal-content
+      .modal--content
         p This is some content inside the modal.
 
-      .modal-footer.text-right
-        .inline-block.block-right-sm: button.btn-white.tight Cancel
-        .inline-block: button.btn-black.tight Done
+      .modal--footer
+        button.btn--white Cancel
+        button.btn--black Done
 
   include:marked modals.md
