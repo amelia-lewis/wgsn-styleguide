@@ -110,7 +110,15 @@ h1, h2, h3, h4, label {
 // ====================
 // Margins
 // ====================
-h1, h2, h3, h4, ul, ol, li, p {
+ul, ol, li, p {
+  margin: 0 0 0.5em;
+}
+
+h1, h2, h3, h4 {
+  margin: 1em 0 0.5em;
+}
+
+section > h1:first-child, h2:first-child, h3:first-child, h4:first-child {
   margin: 0 0 0.5em;
 }
 
@@ -173,7 +181,9 @@ a.styled {
     left: 0;
     width: 100%;
     height: 2px;
-    background-image: linear-gradient(90deg, @wgsn 50%, fade(@wgsn, 20%) 0);
+    background-image: -webkit-linear-gradient(left, @wgsn 50%, fade(@wgsn, 20%) 0%);
+    background-image: -o-linear-gradient(left, @wgsn 50%, fade(@wgsn, 20%) 0%);
+    background-image: linear-gradient(to right, @wgsn 50%, fade(@wgsn, 20%) 0%);
     background-size: 200% 100%;
     background-repeat: no-repeat;
     background-position: 100% 0;
@@ -300,7 +310,9 @@ h2 + a {
 
 body.product-insight {
   a.styled:after {
-    background-image: linear-gradient(90deg, @insight 50%, fade(@insight, 20%) 0);
+    background-image: -webkit-linear-gradient(left, @insight 50%, fade(@insight, 20%) 0%);
+    background-image: -o-linear-gradient(left, @insight 50%, fade(@insight, 20%) 0%);
+    background-image: linear-gradient(to right, @insight 50%, fade(@insight, 20%) 0%);
   }
 
   .text-brand {
@@ -330,7 +342,9 @@ body.product-insight {
 
 body.product-fashion {
   a.styled:after {
-    background-image: linear-gradient(90deg, @fashion 50%, fade(@fashion, 20%) 0);
+    background-image: -webkit-linear-gradient(left, @fashion 50%, fade(@fashion, 20%) 0%);
+    background-image: -o-linear-gradient(left, @fashion 50%, fade(@fashion, 20%) 0%);
+    background-image: linear-gradient(to right, @fashion 50%, fade(@fashion, 20%) 0%);
   }
 
   .text-brand {
@@ -360,7 +374,9 @@ body.product-fashion {
 
 body.product-li {
   a.styled:after {
-    background-image: linear-gradient(90deg, @li 50%, fade(@li, 20%) 0);
+    background-image: -webkit-linear-gradient(left, @li 50%, fade(@li, 20%) 0%);
+    background-image: -o-linear-gradient(left, @li 50%, fade(@li, 20%) 0%);
+    background-image: linear-gradient(to right, @li 50%, fade(@li, 20%) 0%);
   }
 
   .text-brand {
@@ -390,7 +406,9 @@ body.product-li {
 
 body.product-instock {
   a.styled:after {
-    background-image: linear-gradient(90deg, @instock 50%, fade(@instock, 20%) 0);
+    background-image: -webkit-linear-gradient(left, @instock 50%, fade(@instock, 20%) 0%);
+    background-image: -o-linear-gradient(left, @instock 50%, fade(@instock, 20%) 0%);
+    background-image: linear-gradient(to right, @instock 50%, fade(@instock, 20%) 0%);
   }
 
   .text-brand {
@@ -420,7 +438,9 @@ body.product-instock {
 
 body.product-styletrial {
   a.styled:after {
-    background-image: linear-gradient(90deg, @styletrial 50%, fade(@styletrial, 20%) 0);
+    background-image: -webkit-linear-gradient(left, @styletrial 50%, fade(@styletrial, 20%) 0%);
+    background-image: -o-linear-gradient(left, @styletrial 50%, fade(@styletrial, 20%) 0%);
+    background-image: linear-gradient(to right, @styletrial 50%, fade(@styletrial, 20%) 0%);
   }
 
   .text-brand {
