@@ -40,12 +40,51 @@
       tr.table--selected {
         td {
           background: fade(@wgsn, 10%);
+
+          .product-insight & {
+            background: fade(@insight, 10%);
+          }
+
+          .product-fashion & {
+            background: fade(@fashion, 10%);
+          }
+
+          .product-li & {
+            background: fade(@li, 10%);
+          }
+
+          .product-instock & {
+            background: fade(@instock, 10%);
+          }
+
+          .product-styletrial & {
+            background: fade(@styletrial, 10%);
+          }
         }
-      
 
         &:hover {
           td {
             background: fade(@wgsn, 15%);
+
+            .product-insight & {
+              background: fade(@insight, 15%);
+            }
+
+            .product-fashion & {
+              background: fade(@fashion, 15%);
+            }
+
+            .product-li & {
+              background: fade(@li, 15%);
+            }
+
+            .product-instock & {
+              background: fade(@instock, 15%);
+            }
+
+            .product-styletrial & {
+              background: fade(@styletrial, 15%);
+            }
           }
         }
       }
@@ -53,103 +92,28 @@
       tr:hover {
         td {
           background: fade(@wgsn, 5%);
+
+          .product-insight & {
+            background: fade(@insight, 5%);
+          }
+
+          .product-fashion & {
+            background: fade(@fashion, 5%);
+          }
+
+          .product-li & {
+            background: fade(@li, 5%);
+          }
+
+          .product-instock & {
+            background: fade(@instock, 5%);
+          }
+
+          .product-styletrial & {
+            background: fade(@styletrial, 5%);
+          }
         }
       }
     }
   }
 }
-
-
-// ========================================================================================================================
-// Product Colors
-
-body.product-insight {
-  table.table.table-selectable {
-    tbody {
-      tr.table-selected td {
-        background: fade(@insight, 10%);
-      }
-
-      tr.table-selected :hover td {
-        background: fade(@insight, 15%);
-      }
-
-      tr:hover td {
-        background: fade(@insight, 5%);
-      }
-    }
-  }
-}
-
-body.product-fashion {
-  table.table.table-selectable {
-    tbody {
-      tr.table-selected td {
-        background: fade(@fashion, 10%);
-      }
-
-      tr.table-selected :hover td {
-        background: fade(@fashion, 15%);
-      }
-
-      tr:hover td {
-        background: fade(@fashion, 5%);
-      }
-    }
-  }
-}
-
-body.product-li {
-  table.table.table-selectable {
-    tbody {
-      tr.table-selected td {
-        background: fade(@li, 10%);
-      }
-
-      tr.table-selected :hover td {
-        background: fade(@li, 15%);
-      }
-
-      tr:hover td {
-        background: fade(@li, 5%);
-      }
-    }
-  }
-}
-
-body.product-instock {
-  table.table.table-selectable {
-    tbody {
-      tr.table-selected td {
-        background: fade(@instock, 10%);
-      }
-
-      tr.table-selected :hover td {
-        background: fade(@instock, 15%);
-      }
-
-      tr:hover td {
-        background: fade(@instock, 5%);
-      }
-    }
-  }
-}
-
-body.product-styletrial {
-  table.table.table-selectable {
-    tbody {
-      tr.table-selected td {
-        background: fade(@styletrial, 10%);
-      }
-
-      tr.table-selected :hover td {
-        background: fade(@styletrial, 15%);
-      }
-
-      tr:hover td {
-        background: fade(@styletrial, 5%);
-      }
-    }
-  }
-}
-

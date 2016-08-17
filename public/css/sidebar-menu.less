@@ -42,76 +42,32 @@
       a:before {
         background: fade(@wgsn, 30%);
         transform: scale(1, 1);
+
+        .product-insight & {
+          background: fade(@insight, 30%);
+        }
+
+        .product-fashion & {
+          background: fade(@fashion, 30%);
+        }
+
+        .product-li & {
+          background: fade(@li, 30%);
+        }
+
+        .product-instock & {
+          background: fade(@instock, 30%);
+        }
+
+        .product-styletrial & {
+          background: fade(@styletrial, 30%);
+        }
       }
     }
   }
 
   ul {
     .list-bare;
-  }
-}
-
-
-// ========================================================================================================================
-// Product Colors
-
-body.product-insight {
-  .sidebar-menu {
-    .sidebar-menu--title a:before, li a:before {
-      background: fade(@wgsn-grey-md, 30%);
-    }
-
-    .sidebar-menu--active a:before {
-      background: fade(@insight, 30%);
-    }
-  }
-}
-
-body.product-fashion {
-  .sidebar-menu {
-    .sidebar-menu--title a:before, li a:before {
-      background: fade(@wgsn-grey-md, 30%);
-    }
-
-    .sidebar-menu--active a:before {
-      background: fade(@fashion, 30%);
-    }
-  }
-}
-
-body.product-li {
-  .sidebar-menu {
-    .sidebar-menu--title a:before, li a:before {
-      background: fade(@wgsn-grey-md, 30%);
-    }
-
-    .sidebar-menu--active a:before {
-      background: fade(@li, 30%);
-    }
-  }
-}
-
-body.product-instock {
-  .sidebar-menu {
-    .sidebar-menu--title a:before, li a:before {
-      background: fade(@wgsn-grey-md, 30%);
-    }
-
-    .sidebar-menu--active a:before {
-      background: fade(@instock, 30%);
-    }
-  }
-}
-
-body.product-styletrial {
-  .sidebar-menu {
-    .sidebar-menu--title a:before, li a:before {
-      background: fade(@wgsn-grey-md, 30%);
-    }
-
-    .sidebar-menu--active a:before {
-      background: fade(@styletrial, 30%);
-    }
   }
 }
 

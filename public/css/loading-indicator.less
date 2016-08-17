@@ -8,6 +8,31 @@
   border-radius: 50%;
   animation: spCircRot 1s infinite linear;
 
+  .product-insight & {
+    border-color: fade(@insight, 40%);
+    border-top-color: @insight;
+  }
+
+  .product-fashion & {
+    border-color: fade(@fashion, 40%);
+    border-top-color: @fashion;
+  }
+
+  .product-li & {
+    border-color: fade(@li, 40%);
+    border-top-color: @li;
+  }
+
+  .product-instock & {
+    border-color: fade(@instock, 40%);
+    border-top-color: @instock;
+  }
+
+  .product-styletrial & {
+    border-color: fade(@styletrial, 40%);
+    border-top-color: @styletrial;
+  }
+
   &.loading-indicator--sm {
     width: 16px;
     height: 16px;
@@ -29,44 +54,5 @@
     transform: rotate(0deg)
   } to {
     transform: rotate(359deg)
-  }
-}
-
-
-// ========================================================================================================================
-// Product Colors
-
-body.product-insight {
-  .loading-indicator {
-    border-color: fade(@insight, 40%);
-    border-top-color: @insight;
-  }
-}
-
-body.product-fashion {
-  .loading-indicator {
-    border-color: fade(@fashion, 40%);
-    border-top-color: @fashion;
-  }
-}
-
-body.product-li {
-  .loading-indicator {
-    border-color: fade(@li, 40%);
-    border-top-color: @li;
-  }
-}
-
-body.product-instock {
-  .loading-indicator {
-    border-color: fade(@instock, 40%);
-    border-top-color: @instock;
-  }
-}
-
-body.product-styletrial {
-  .loading-indicator {
-    border-color: fade(@styletrial, 40%);
-    border-top-color: @styletrial;
   }
 }

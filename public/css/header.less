@@ -77,6 +77,26 @@ header {
   background: @wgsn;
   color: white;
 
+  .product-insight & {
+    background: @insight;
+  }
+
+  .product-fashion & {
+    background: @fashion;
+  }
+
+  .product-li & {
+    background: @li;
+  }
+
+  .product-instock & {
+    background: @instock;
+  }
+
+  .product-styletrial & {
+    background: @styletrial;
+  }
+
   // &.headroom--top {
   //   transform: translate3d(0, 0, 0);
   // }
@@ -85,43 +105,6 @@ header {
   //   transform: translate3d(0, -1 * @header-height, 0);
   // }
 }
-
-
-// ========================================================================================================================
-// Product Colors
-
-body.product-insight {
-  .sub-header {
-    background: @insight;
-  }
-}
-
-body.product-fashion {
-  .sub-header {
-    background: @fashion;
-  }
-}
-
-body.product-li {
-  .sub-header {
-    background: @li;
-  }
-}
-
-body.product-instock {
-  .sub-header {
-    background: @instock;
-  }
-}
-
-body.product-styletrial {
-  .sub-header {
-    background: @styletrial;
-  }
-}
-
-
-// =============================================================
 
 .header-active(@view) {
   body.@{view} {
@@ -158,7 +141,7 @@ body.product-styletrial {
 .sub-header-active(grid);
 .sub-header-active(layout);
 .sub-header-active(ui-elements);
-.sub-header-active(content-types);
+.sub-header-active(content-tiles);
 .sub-header-active(icons);
 .sub-header-active(mixins);
 
