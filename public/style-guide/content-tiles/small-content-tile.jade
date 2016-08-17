@@ -1,10 +1,10 @@
 mixin content-tile--small(img, category, title, description, date, author)
-  a.content-tile(href="")
+  a.content-tile--small(href="")
     .content-tile--img
       img(src=img)
     .content-tile--text
       p.content-tile--category= category
-      .block-bot-sm: h3.content-tile--title= title
+      .block-bot-sm: h4.content-tile--title= title
       if description
         p.content-tile--description= description
       p.content-tile--info
@@ -19,8 +19,9 @@ section#section-small-content-tile
 
   .card
     .row
-      .col-xs-12.col-sm-6.col-md-4: +content-tile-small("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67398/thumb.jpg", "Retail", "New Look A/W 16/17 – Womenswear", false, "03.08.16", "Faye Howard")
-      .col-xs-12.col-sm-6.col-md-4: +content-tile-small("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/66680/thumb.jpg", "Trend Forecast", "Women's Forecast S/S 18: Slow Futures", false, "01.08.16", "Robbie Sinclair, Jane Boddy, Laura Yiannakou")
-      .col-xs-12.col-sm-6.col-md-4: +content-tile-small("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67015/thumb.jpg", "Trade Shows", "Berlin Trade Shows S/S 17 – Premium", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "08.07.16", "Laura Yiannakou")
+      .col-xs-12.col-sm-6: +content-tile--small("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67296/thumb.jpg", "Knitwear", "Pinterests That Inspire – Knitwear", false, "12.08.16", "Charlotte Casey")
+      .col-xs-12.col-sm-6: +content-tile--small("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67404/thumb.jpg", "Footwear", "Accessories & Footwear Forecast S/S 18: Leather & Non-Leather", false, "09.08.16", "Melissa Taylor, Claire Foster")
+      .col-xs-12.col-sm-6: +content-tile--small("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/66456/thumb.jpg", "Street Style", "June 2016 – Shanghai Streets", false, "24.06.16", "Anupreet Bhui")
+      .col-xs-12.col-sm-6: +content-tile--small("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67483/thumb.jpg", "Colour", "Olive Green – Intimates Colour Alert", false, "17.08.16", "Jo Lynch")
 
   include:marked small-content-tile.md

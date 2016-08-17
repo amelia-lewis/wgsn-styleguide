@@ -1,5 +1,5 @@
 ```html
-<a class="content-tile" href="">
+<a class="content-tile--small" href="">
   <div class="content-tile--img"><img src="/path/to/file"></div>
   <div class="content-tile--text">
     <p class="content-tile--category">Category</p>
