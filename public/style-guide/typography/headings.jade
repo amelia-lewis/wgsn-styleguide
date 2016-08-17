@@ -1,39 +1,45 @@
 section#section-headings
   h2.inline-block Headings
- +github-link("typography")
+  +github-link("typography")
   
   .card
     .row.block-bot-md.border-bottom
-      .col-xs-2
+      .col-xs-3
         code h1
-      .col-xs-10
+      .col-xs-9
         h1.tight Heading Level 1
 
     .row.block-ver-md.border-bottom
-      .col-xs-2
+      .col-xs-3
         code h2
-      .col-xs-10
+      .col-xs-9
         h2.tight Heading Level 2
 
     .row.block-ver-md.border-bottom
-      .col-xs-2
+      .col-xs-3
         code h3
-      .col-xs-10
+      .col-xs-9
         h3.tight Heading Level 3
 
     .row.block-top-md
-      .col-xs-2
+      .col-xs-3
         code h4
-      .col-xs-10
+      .col-xs-9
         h4.tight Heading Level 4
 
   p Headings can also have a highlight, with the class 
     code .header-highlight
-    | . This highlight should always take on the product color.
+    | . This highlight will take on the product's 
+    a.styled(href='/') colour
+    |  when 
+    code body
+    |  has a product class, such as 
+    code .product-fashion
+    | , which it should always have.
   
   .card
     .row.block-ver-md
-      .col-xs-2
+      .col-xs-3
         code .header-highlight
-      .col-xs-10
+      .col-xs-9
         h2.tight.header-highlight Heading

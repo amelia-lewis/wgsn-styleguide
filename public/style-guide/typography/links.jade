@@ -9,8 +9,10 @@ section#section-links
     |  should reflect the product.
   
   .card
-    p This text has a 
-      a.styled(href="") link
-      |  in it.
-
-  include:marked links.md
+    .row
+      .col-xs-3
+        code .link-styled
+      .col-xs-9
+        p This text has a 
+          a.styled(href="") link
+          |  in it.

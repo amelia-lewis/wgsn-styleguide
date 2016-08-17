@@ -212,7 +212,7 @@ h2 + a {
   padding-left: 0;
 }
 
-ul.styled {
+.ul-styled {
   list-style: none;
   
   li {
@@ -222,16 +222,27 @@ ul.styled {
       content: "";
       position: absolute;
       display: block;
-      width: 14px;
-      height: 4px;
+      width: 12px;
+      height: 3px;
       left: -20px;
-      top: calc(50% - 2px);
+      top: 6px;
       background: fade(@wgsn, 50%);
+    }
+  }
+
+  ul {
+    list-style: none;
+    .block-top-sm;
+    
+    li {
+      &:before {
+        background: fade(@wgsn, 25%);
+      }
     }
   }
 }
 
-ol.styled {
+.ol-styled {
   list-style: none;
 
   li {
@@ -248,6 +259,17 @@ ol.styled {
       color: fade(@wgsn, 50%);
       .wgsn-font;
       text-align: center;
+    }
+  }
+
+  ol {
+    list-style: none;
+    .block-top-sm;
+    
+    li {
+      &:before {
+        color: fade(@wgsn, 25%);
+      }
     }
   }
 }
@@ -285,12 +307,20 @@ body.product-insight {
     color: @insight;
   }
 
-  ul.styled li:before {
+  .ul-styled li:before {
     background: fade(@insight, 50%);
+
+    ul li:before {
+      background: fade(@insight, 25%);
+    }
   }
 
-  ol.styled li:before {
+  .ol-styled li:before {
     color: fade(@insight, 50%);
+
+    ol li:before {
+      color: fade(@insight, 25%);
+    }
   }
 
   .header-highlight:before {
@@ -307,12 +337,20 @@ body.product-fashion {
     color: @fashion;
   }
 
-  ul.styled li:before {
+  .ul-styled li:before {
     background: fade(@fashion, 50%);
+
+    ul li:before {
+      background: fade(@fashion, 25%);
+    }
   }
 
-  ol.styled li:before {
+  .ol-styled li:before {
     color: fade(@fashion, 50%);
+
+    ol li:before {
+      color: fade(@fashion, 25%);
+    }
   }
 
   .header-highlight:before {
@@ -329,12 +367,20 @@ body.product-li {
     color: @li;
   }
 
-  ul.styled li:before {
+  .ul-styled li:before {
     background: fade(@li, 50%);
+
+    ul li:before {
+      background: fade(@li, 25%);
+    }
   }
 
-  ol.styled li:before {
+  .ol-styled li:before {
     color: fade(@li, 50%);
+
+    ol li:before {
+      color: fade(@li, 25%);
+    }
   }
 
   .header-highlight:before {
@@ -351,12 +397,20 @@ body.product-instock {
     color: @instock;
   }
 
-  ul.styled li:before {
+  .ul-styled li:before {
     background: fade(@instock, 50%);
+
+    ul li:before {
+      background: fade(@instock, 25%);
+    }
   }
 
-  ol.styled li:before {
+  .ol-styled li:before {
     color: fade(@instock, 50%);
+
+    ol li:before {
+      color: fade(@instock, 25%);
+    }
   }
 
   .header-highlight:before {
@@ -373,12 +427,20 @@ body.product-styletrial {
     color: @styletrial;
   }
 
-  ul.styled li:before {
+  .ul-styled li:before {
     background: fade(@styletrial, 50%);
+
+    ul li:before {
+      background: fade(@styletrial, 25%);
+    }
   }
 
-  ol.styled li:before {
+  .ol-styled li:before {
     color: fade(@styletrial, 50%);
+
+    ol li:before {
+      color: fade(@styletrial, 25%);
+    }
   }
 
   .header-highlight:before {
