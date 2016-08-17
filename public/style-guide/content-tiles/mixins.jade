@@ -1,0 +1,59 @@
+mixin content-tile(img, title, description, date, author, ...categories)
+  a.content-tile(href="" class!=attributes.class)
+    .content-tile--img
+      img(src=img)
+    .content-tile--text
+      if categories
+        ul.content-tile--category
+          each category in categories
+            li= category
+      .block-bot-sm: h3.content-tile--title= title
+      if description
+        p.content-tile--description= description
+      p.content-tile--info
+        if date
+          span= date
+        if date && author
+          span &nbsp;&nbsp;/&nbsp;&nbsp;By 
+        if author
+          span= author
+
+mixin content-tile--featured(img, title, description, date, author, ...categories)
+  a.content-tile--featured(href="" class!=attributes.class)
+    .content-tile--img
+      img(src=img)
+    if categories
+      ul.content-tile--category
+        each category in categories
+          li= category
+    .content-tile--text
+      h2.content-tile--title= title
+      if description
+        p.content-tile--description= description
+      p.content-tile--info
+        if date
+          span= date
+        if date && author
+          span &nbsp;&nbsp;/&nbsp;&nbsp;By 
+        if author
+          span= author
+
+mixin content-tile--small(img, title, description, date, author, ...categories)
+  a.content-tile--small(href="" class!=attributes.class)
+    .content-tile--img
+      img(src=img)
+    .content-tile--text
+      .block-bot-sm: h4.content-tile--title= title
+      if description
+        p.content-tile--description= description
+      p.content-tile--info
+        if date
+          span= date
+        if date && author
+          span &nbsp;&nbsp;/&nbsp;&nbsp;By 
+        if author
+          span= author
+      if categories
+        ul.content-tile--category
+          each category in categories
+            li= category

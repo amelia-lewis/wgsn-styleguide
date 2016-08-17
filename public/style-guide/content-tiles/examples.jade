@@ -1,0 +1,43 @@
+include mixins
+
+section#section-examples
+  h2.inline-block Examples
+
+  p The content tile is to be used for all types of content, not just reports. Here are some examples.
+  
+  h3 Videos
+
+  .card
+    .row
+      .col-xs-12.col-sm-6.col-md-4: +content-tile("https://www.wgsn.com/fashionoffice/cached_data/auto_boards/46906/thumb.jpg", "WGSN@ The Lingerie Edit", false, "21.07.16", false, "WGSN at...")(class="content-tile--video")
+      .col-xs-12.col-sm-6.col-md-4: +content-tile("https://www.wgsn.com/fashionoffice/cached_data/auto_boards/46896/thumb.jpg", "Trend Minute: Tropical Foliage", false, "13.07.16", false, "Trend Minute")(class="content-tile--video")
+      .col-xs-12.col-sm-6.col-md-4: +content-tile("https://www.wgsn.com/fashionoffice/cached_data/auto_boards/46841/thumb.jpg", "WGSN Whereabouts: Governors Ball 2016", false, "08.07.16", false, "WGSN Whereabouts")(class="content-tile--video")
+
+  h3 News Articles
+
+  .card
+    .row
+      .col-xs-12.col-sm-6: +content-tile("https://www.wgsn.com/news/wp-content/uploads_21/2016/08/urban-holding.png", "Urban Outfitters enjoys surprise comps, margins success, sees “new fashion excitement” emerging", false, "12 hours ago", "Nigel Taylor", "Retail", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6: +content-tile("https://www.wgsn.com/news/wp-content/uploads_21/2016/08/laura-ashley-holding.png", "Laura Ashley posts profit but fashion dips, current trading in line with view", false, "12 hours ago", "Nigel Taylor", "Interiors", "Retail", "Womenswear")
+
+  h3 City by City Listings
+
+  .card
+    .row
+      .col-xs-12.col-sm-8: +content-tile--small("https://www.wgsn.com/storage/vol9/pineapple/3/listings/thumb/Screen_Shot_2014-10-20_at_6.32_.19_PM_.png", "& Other Stories", "H&M's coveted sister label & Other Stories has finally debuted stateside with its much-anticipated flagship. Here find a beautiful collection of on-trend apparel for women and Juniors (including pieces shipped directly from its Paris boutique), alongside a dedicated shoe department and cult status jewellery, accessories and beauty products.", false, false, "New York", "Shop")
+      .col-xs-12.col-sm-8: +content-tile--small("https://www.wgsn.com/assets/external/styletraveler/production/listings/01-25-2011/listingImg_1075_1295993307.jpg", "A Bathing Ape", "The U.S. flagship store, opened by Japanese designer Nigo and Neptunes' producer Pharrell, displays its sneakers in glass cases in both the luxe upstairs area and downstairs with an interior of mirrors, etched glass and smooth white surfaces. Look for the street-savvy men's and women's collection including sleeveless camo hoodies, corduroy button-downs and premium denim.", false, false, "New York", "Shop")
+      .col-xs-12.col-sm-8: +content-tile--small("https://www.wgsn.com/assets/external/styletraveler/production/listings/06-01-2012/listingImg_24258_1338573705.jpg", "Acne Studios", "This is the NYC flagship boutique of the Swedish staple brand Acne Studio. Here you’ll find a house-like setup kitted out by intertwining rooms, green flooring, and racks edited by color story. Reaching 4,200 sqft., the entire Acne collection is on offer here.", false, false, "New York", "Shop")
+
+  aside
+    p N.B. CxC listings actually have other pieces of information, such as address and phone number, but we'll deal with those when we redesign it.
+
+  h3 Sites That Inspire Listings
+
+  .card
+    .row
+      .col-xs-12.col-sm-6: +content-tile--small("https://www.wgsn.com/storage/vol17/sitesthatinspire/site_thumbs/Jonsey_Jonsey006_1452274682.jpg", "Jonsey's Pinterest", "Selfies and editorial shoots fill up Jonsey’s Ooh Lala – Lingerie Pinterest board. Both contemporary and vintage pieces are showcased, with a focus on interesting strapping ideas and innovative appliqué detailing.", false, false, "Fashion", "Art & Design")
+      .col-xs-12.col-sm-6: +content-tile--small("https://www.wgsn.com/storage/vol17/sitesthatinspire/site_thumbs/Screen_Shot_2015-11-10_at_2.38.04_PM_1452267906.png", "What She Said", "Before modelling, digital muse Joanna Halpin studied graphic design and with her sister Sarah started the blog What She Said as a creative outlet to share their interests and inspirations.", false, false, "Fashion", "Lifestyle & Culture")
+      .col-xs-12.col-sm-6: +content-tile--small("https://www.wgsn.com/storage/vol17/sitesthatinspire/site_thumbs/Materials_Agency_6-_materialsagency.tumblr.com_1433797558.jpg", "Materials Agency Tumblr", "Materials Agency features a bold material direction with a stimulating portrayal of fresh tones and intersecting textures. Coloured grains and corrugated edges provide inspiration for product and interiors", false, false, "Lifestlye & Culture", "Art & Design")
+      .col-xs-12.col-sm-6: +content-tile--small("https://www.wgsn.com/storage/vol3/marint/link_images/Screen%20Shot%202013-07-22%20at%203.06.14%20PM_1374520021.png", "Adidas Originals Tumblr", "Athletic footwear brand adidas posts and reblogs all things related to the adidas Originals line on their Tumblr. From the latest campaigns, brand collaborations with their favorite artists, street style and vintage ads to exclusive art in the form of fun nail art and DIY projects – this blog evangelizes the diversity and vibrant street cred of the brand.", false, false, "Active", "Active Footwear")
+
+  aside: p STI listings also have things like "Editor's Choice" marks and Favourites, which we'll also deal with when we redesign that part of the site.

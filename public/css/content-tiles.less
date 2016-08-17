@@ -25,29 +25,36 @@
     margin: 15px 0 30px;
 
     .content-tile--category {
-      .wgsn-font;
-      .text-uppercase;
-      .text-smaller;
-      color: @wgsn;
+      .list-bare;
+      
+      li {
+        display: inline-block;
+        .wgsn-font;
+        .text-uppercase;
+        .text-smaller;
+        .block-right-sm;
+        .tight;
+        color: @wgsn;
 
-      body.insight & {
-        color: @insight;
-      }
+        body.insight & {
+          color: @insight;
+        }
 
-      body.fashion & {
-        color: @fashion;
-      }
+        body.fashion & {
+          color: @fashion;
+        }
 
-      body.li & {
-        color: @li;
-      }
+        body.li & {
+          color: @li;
+        }
 
-      body.instock & {
-        color: @instock;
-      }
+        body.instock & {
+          color: @instock;
+        }
 
-      body.styletrial & {
-        color: @styletrial;
+        body.styletrial & {
+          color: @styletrial;
+        }
       }
     }
 
@@ -134,35 +141,40 @@
   }
 
   .content-tile--category {
-    .wgsn-font;
-    .text-white;
-    .text-uppercase;
-    .text-smaller;
-    .block-hor-sm;
-    .block-ver-xs;
-    position: absolute;
-    top: 10px;
-    left: -5px;
-    background: @wgsn;
+    .list-bare;
+      .block-hor-sm;
+      .block-ver-xs;
+      position: absolute;
+      top: 10px;
+      left: -5px;
+      background: @wgsn;
 
-    body.insight & {
-      background: @insight;
-    }
+      body.insight & {
+        background: @insight;
+      }
 
-    body.fashion & {
-      background: @fashion;
-    }
+      body.fashion & {
+        background: @fashion;
+      }
 
-    body.li & {
-      background: @li;
-    }
+      body.li & {
+        background: @li;
+      }
 
-    body.instock & {
-      background: @instock;
-    }
+      body.instock & {
+        background: @instock;
+      }
 
-    body.styletrial & {
-      background: @styletrial;
+      body.styletrial & {
+        background: @styletrial;
+      }
+
+    li {
+      .wgsn-font;
+      .text-white;
+      .text-uppercase;
+      .text-smaller;
+      .tight;
     }
   }
 
@@ -227,19 +239,18 @@
 .content-tile--small {
   display: block;
   .transition;
-  .overflow-auto;
+  overflow: auto;
   .block-bot-md;
 
   .content-tile--img {
-    .pull-left;
+    float: left;
     width: 100px;
     height: 100px;
   }
 
   .content-tile--text {
-    .pull-left;
-    .block-left-sm;
-    .block-top-xs;
+    float: left;
+    padding: 0 0 0 15px;
     width: calc(~"100% - 100px");
     margin: 0;
   }
@@ -250,5 +261,28 @@
         transform: translate3d(0, 0, 0) scale(1.05, 1.05);
       }
     }
+  }
+}
+
+
+// ====================
+// Video Content Tile
+// ====================
+.content-tile--video {
+  .content-tile--img {
+    height: 180px;
+    position: relative;
+
+    &:after {
+      content: "2:30";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      .block-ver-xs;
+      .block-hor-sm;
+      background: fade(black, 80%);
+      color: white;
+      .text-smaller;
+    } 
   }
 }

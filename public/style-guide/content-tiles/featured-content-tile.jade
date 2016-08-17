@@ -1,25 +1,12 @@
-mixin content-tile--featured(img, category, title, description, date, author)
-  a.content-tile--featured(href="")
-    .content-tile--img
-      img(src=img)
-    p.content-tile--category= category
-    .content-tile--text
-      h2.content-tile--title= title
-      if description
-        p.content-tile--description= description
-      p.content-tile--info
-        span= date
-        if date && author
-          span &nbsp;&nbsp;/&nbsp;&nbsp;By 
-        span= author
+include mixins
 
 section#section-featured-content-tile
   h2.inline-block Featured Content Tile
   +github-link("content-tiles")
     
-  .card.bg-xlt-grey
+  .card
     .row
-      .col-xs-12.col-sm-6: +content-tile--featured("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67648/thumb.jpg", "Youth", "Youth #ICYMI – July", false, "16.08.16", "Chris Coleman")
-      .col-xs-12.col-sm-6: +content-tile--featured("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67700/thumb.jpg", "Intimates & Swim", "Floating Motifs", false, "16.08.16", "Katie Atkinson")
+      .col-xs-12.col-sm-6: +content-tile--featured("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67648/thumb.jpg", "Youth #ICYMI – July", false, "16.08.16", "Chris Coleman", "Youth")
+      .col-xs-12.col-sm-6: +content-tile--featured("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67700/thumb.jpg", "Floating Motifs", false, "16.08.16", "Katie Atkinson", "Intimates & Swim")
 
   include:marked featured-content-tile.md

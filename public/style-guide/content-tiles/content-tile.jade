@@ -1,17 +1,4 @@
-mixin content-tile(img, category, title, description, date, author)
-  a.content-tile(href="")
-    .content-tile--img
-      img(src=img)
-    .content-tile--text
-      p.content-tile--category= category
-      .block-bot-sm: h3.content-tile--title= title
-      if description
-        p.content-tile--description= description
-      p.content-tile--info
-        span= date
-        if date && author
-          span &nbsp;&nbsp;/&nbsp;&nbsp;By 
-        span= author
+include mixins
 
 section#section-content-tile
   h2.inline-block Content Tile
@@ -19,8 +6,8 @@ section#section-content-tile
   
   .card
     .row
-      .col-xs-12.col-sm-6.col-md-4: +content-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67398/thumb.jpg", "Retail", "New Look A/W 16/17 – Womenswear", false, "03.08.16", "Faye Howard")
-      .col-xs-12.col-sm-6.col-md-4: +content-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/66680/thumb.jpg", "Trend Forecast", "Women's Forecast S/S 18: Slow Futures", false, "01.08.16", "Robbie Sinclair, Jane Boddy, Laura Yiannakou")
-      .col-xs-12.col-sm-6.col-md-4: +content-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67015/thumb.jpg", "Trade Shows", "Berlin Trade Shows S/S 17 – Premium", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "08.07.16", "Laura Yiannakou")
+      .col-xs-12.col-sm-6.col-md-4: +content-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67398/thumb.jpg", "New Look A/W 16/17 – Womenswear", false, "03.08.16", "Faye Howard", "Retail")
+      .col-xs-12.col-sm-6.col-md-4: +content-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/66680/thumb.jpg", "Women's Forecast S/S 18: Slow Futures", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "01.08.16", "Robbie Sinclair, Jane Boddy, Laura Yiannakou", "Trend Forecast")
+      .col-xs-12.col-sm-6.col-md-4: +content-tile("https://www.wgsn.com/storage/vol21/fo_image_store/cached/boards/67015/thumb.jpg", "Berlin Trade Shows S/S 17 – Premium", false, "08.07.16", "Laura Yiannakou", "Trade Shows")
 
   include:marked content-tile.md
