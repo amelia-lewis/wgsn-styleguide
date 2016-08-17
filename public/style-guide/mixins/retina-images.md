@@ -1,7 +1,0 @@
-```css
-=setRetinaImages($low, $hi)
-  background-image: url($low)
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and ( min--moz-device-pixel-ratio: 1.25), only screen and ( -o-min-device-pixel-ratio: 1.25/1), only screen and ( min-device-pixel-ratio: 1.25), only screen and ( min-resolution: 200dpi), only screen and ( min-resolution: 1.25dppx)
-    background-image: url($hi)
-```

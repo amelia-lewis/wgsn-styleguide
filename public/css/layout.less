@@ -1,20 +1,6 @@
 // ====================
 // Backgrounds
 // ====================
-// .make-bg-color(@bg-color) {
-//   .bg-@{bg-color} {
-//     background: @bg-color;
-//   } 
-// }
-
-// .make-bg-color(white);
-// .make-bg-color(xlt-grey);
-// .make-bg-color(lt-grey);
-// .make-bg-color(md-grey);
-// .make-bg-color(dk-grey);
-// .make-bg-color(xdk-grey);
-// .make-bg-color(black);
-
 .bg-white {
   background: white;
 }
@@ -68,7 +54,7 @@
 
 
 // ====================
-// Alignment
+// Helper Classes
 // ====================
 .flex-center {
   display: flex;
@@ -96,6 +82,18 @@
   overflow: auto;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.hoverable {
+  cursor: pointer;
+}
+
+.transition {
+  transition: all 300ms;
+}
+
 
 // ====================
 // Borders & Shadows
@@ -117,16 +115,4 @@
 
 .box-shadow {
   box-shadow: 0 2px 14px fade(black, 5%);
-}
-
-
-// ====================
-// Misc.
-// ====================
-.hoverable {
-  cursor: pointer;
-}
-
-.transition {
-  transition: all 300ms;
 }

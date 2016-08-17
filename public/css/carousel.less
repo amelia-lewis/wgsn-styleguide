@@ -27,20 +27,20 @@
         img {
           width: 100%;
           display: block;
-          .transition;
           opacity: 0;
           transition-delay: 300ms;
+          .transition;
         }
       }
 
       .swiper-slide--text {
+        .block-ver-md;
+        .block-hor-lg;
         position: absolute;
         right: 0;
         top: 50%;
         transform: translate(0, -50%);
         width: 65%;
-        .block-ver-md;
-        .block-hor-lg;
 
         .swiper-slide--category,
         .swiper-slide--title,
@@ -67,8 +67,8 @@
 
           span {
             .wgsn-font;
-            font-size: 1.6em;
             .text-grey;
+            font-size: 1.6em;
           }
         }
       }
@@ -87,6 +87,8 @@
 
   .swiper-button-prev,
   .swiper-button-next {
+    .flex-center;
+    .transition;
     position: absolute;
     top: auto;
     left: auto;
@@ -95,8 +97,6 @@
     color: white;
     width: 40px;
     height: 30px;
-    .flex-center;
-    .transition;
 
     &:hover {
       background: @wgsn;
