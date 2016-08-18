@@ -99,6 +99,7 @@
       }
     }
     
+    .content-tile--info,
     .content-tile--info span {
       .wgsn-font;
       .text-grey;
@@ -270,19 +271,29 @@
 // ====================
 .content-tile--video {
   .content-tile--img {
-    height: 180px;
+    padding-bottom: 60%;
     position: relative;
 
-    &:after {
-      content: "2:30";
+    // maintain rectangular aspect ratio with square asset
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    .content-tile--length {
       position: absolute;
       bottom: 0;
       right: 0;
       .block-ver-xs;
       .block-hor-sm;
+      .tight;
       background: fade(black, 80%);
       color: white;
       .text-smaller;
-    } 
+    }
   }
 }

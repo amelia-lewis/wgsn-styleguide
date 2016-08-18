@@ -1,5 +1,6 @@
+//- Standard
 mixin content-tile(img, title, description, date, author, ...categories)
-  a.content-tile(href="" class!=attributes.class)
+  a.content-tile(href="")
     .content-tile--img
       img(src=img)
     .content-tile--text
@@ -18,8 +19,9 @@ mixin content-tile(img, title, description, date, author, ...categories)
         if author
           span= author
 
+//- Featured
 mixin content-tile--featured(img, title, description, date, author, ...categories)
-  a.content-tile--featured(href="" class!=attributes.class)
+  a.content-tile--featured(href="")
     .content-tile--img
       img(src=img)
     if categories
@@ -38,8 +40,9 @@ mixin content-tile--featured(img, title, description, date, author, ...categorie
         if author
           span= author
 
+//- Small
 mixin content-tile--small(img, title, description, date, author, ...categories)
-  a.content-tile--small(href="" class!=attributes.class)
+  a.content-tile--small(href="")
     .content-tile--img
       img(src=img)
     .content-tile--text
@@ -57,3 +60,20 @@ mixin content-tile--small(img, title, description, date, author, ...categories)
         ul.content-tile--category
           each category in categories
             li= category
+
+//- Video
+mixin content-tile--video(img, title, description, date, length, ...categories)
+  a.content-tile.content-tile--video(href="")
+    .content-tile--img
+      img(src=img)
+      p.content-tile--length= length
+    .content-tile--text
+      if categories
+        ul.content-tile--category
+          each category in categories
+            li= category
+      .block-bot-sm: h3.content-tile--title= title
+      if description
+        p.content-tile--description= description
+      if date
+        p.content-tile--info= date
