@@ -396,8 +396,8 @@ a.styled {
       left: -20px;
       top: 0;
       color: fade(@wgsn, 50%);
-      .wgsn-font;
       text-align: center;
+      .text-bolder;
 
       body.insight & {
         color: fade(@insight, 50%);
@@ -430,39 +430,40 @@ a.styled {
 
 // HIGHLIGHTS
 .header-highlight {
-  display: inline-block;
-  position: relative;
-  z-index: 10;
+  display: inline;
+  background-image: -webkit-linear-gradient(transparent 50%, fade(@wgsn, 30%) 0%);
+  background-image: -o-linear-gradient(transparent 50%, fade(@wgsn, 30%) 0%);
+  background-image: linear-gradient(transparent 50%, fade(@wgsn, 30%) 0%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 
-  &:before {
-    content: "";
-    position: absolute;
-    display: block;
-    bottom: -2px;
-    left: -10px;
-    right: -3px;
-    top: 50%;
-    background: fade(@wgsn, 30%);
-    z-index: -1;
+  body.insight & {
+    background-image: -webkit-linear-gradient(transparent 50%, fade(@insight, 30%) 0%);
+    background-image: -o-linear-gradient(transparent 50%, fade(@insight, 30%) 0%);
+    background-image: linear-gradient(transparent 50%, fade(@insight, 30%) 0%);
+  }
 
-    body.insight & {
-      background: fade(@insight, 30%);
-    }
+  body.fashion & {
+    background-image: -webkit-linear-gradient(transparent 50%, fade(@fashion, 30%) 0%);
+    background-image: -o-linear-gradient(transparent 50%, fade(@fashion, 30%) 0%);
+    background-image: linear-gradient(transparent 50%, fade(@fashion, 30%) 0%);
+  }
 
-    body.fashion & {
-      background: fade(@fashion, 30%);
-    }
+  body.li & {
+    background-image: -webkit-linear-gradient(transparent 50%, fade(@li, 30%) 0%);
+    background-image: -o-linear-gradient(transparent 50%, fade(@li, 30%) 0%);
+    background-image: linear-gradient(transparent 50%, fade(@li, 30%) 0%);
+  }
 
-    body.li & {
-      background: fade(@li, 30%);
-    }
+  body.instock & {
+    background-image: -webkit-linear-gradient(transparent 50%, fade(@instock, 30%) 0%);
+    background-image: -o-linear-gradient(transparent 50%, fade(@instock, 30%) 0%);
+    background-image: linear-gradient(transparent 50%, fade(@instock, 30%) 0%);
+  }
 
-    body.instock & {
-      background: fade(@instock, 30%);
-    }
-
-    body.styletrial & {
-      background: fade(@styletrial, 30%);
-    }
+  body.styletrial & {
+    background-image: -webkit-linear-gradient(transparent 50%, fade(@styletrial, 30%) 0%);
+    background-image: -o-linear-gradient(transparent 50%, fade(@styletrial, 30%) 0%);
+    background-image: linear-gradient(transparent 50%, fade(@styletrial, 30%) 0%);
   }
 }
