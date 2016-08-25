@@ -21,13 +21,13 @@ html
     header.block-ver-sm.bg-black.transition
       .content-wrap
         .row
-          .col-xs-8.col-sm-10
+          .col-xs-6.col-sm-10
             a.header-logo.pull-left.l(href="/"): include partials/logo
             ul.pull-left.list-bare.tight.header-nav
               li.tight.block-md.inline-block.pull-left#nav-products: a(href="/") Products
               li.tight.block-md.inline-block.pull-left#nav-style-guide: a(href="/style-guide") Style Guide
 
-          .col-xs-4.col-sm-2
+          .col-xs-6.col-sm-2
             label.label.label--dropdown
               select.input.input--dropdown#product-changer
                 option(value="wgsn") WGSN
@@ -39,11 +39,15 @@ html
 
     .hamburgler-menu
       ul.hamburgler-menu-list
-        li never
-        li gonna
-        li give
-        li you
-        li up
+        li.block-xs#nav-products: a.text-bolder(href="/") Products
+        li.block-xs#nav-style-guide: a.text-bolder(href="/style-guide") Style Guide
+        li.block-xs#nav-style-guide-overview: a(href="/style-guide") Overview
+        li.block-xs#nav-style-guide-typography: a(href="/style-guide/typography") Typography
+        li.block-xs#nav-style-guide-grid: a(href="/style-guide/grid") Grid
+        li.block-xs#nav-style-guide-layout: a(href="/style-guide/layout") Layout
+        li.block-xs#nav-style-guide-ui-elements: a(href="/style-guide/ui-elements") UI Elements
+        li.block-xs#nav-style-guide-content-tiles: a(href="/style-guide/content-tiles") Content Tiles
+        li.block-xs#nav-style-guide-icons: a(href="/style-guide/icons") Icons
 
     #hamburgler.hamburgler-icon-wrapper
       span.hamburgler-icon

@@ -1,11 +1,15 @@
 .hamburgler-icon-wrapper {
-  position: absolute;
-  top: 1em;
-  left: 1em;
-  height: 26px;
-  width: 26px;
+  position: fixed;
+  top: 24px;
+  left: 5%;
+  height: 20px;
+  width: 20px;
   cursor: pointer;
   z-index: 300;
+
+  @media (min-width: @screen-sm-min) {
+    display: none;
+  }
 
   .hamburgler-icon,
   .hamburgler-icon:before,
@@ -14,20 +18,20 @@
     position: absolute;
     border-radius: 1em;
     height: 2px;
-    width: 26px;
+    width: 20px;
     background: white;
     transition: all 0.2s ease;
   }
 
   .hamburgler-icon {
-    top: 0.75em;
+    top: calc(50% - 1px);
 
     &:before {
-      top: -0.55em;
+      top: -7px;
     }
 
     &:after {
-      top: 0.55em;
+      top: 7px;
     }
 
     .hamburgler-active & {
@@ -59,6 +63,11 @@
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   text-align: center;
+  z-index: 300;
+
+  @media (min-width: @screen-sm-min) {
+    display: none;
+  }
 
   .hamburgler-active & {
     opacity: 1;
@@ -74,6 +83,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.2);
+
+    li {
+      a {
+        font-size: 20px;
+      }
+    }
 
     .hamburgler-active & {
       transform: translate(-50%, -50%) scale(1);
