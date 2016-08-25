@@ -4,6 +4,7 @@
   .block-ver-md;
   .block-right-md;
   height: 100%;
+  display: none;
 
   &:after {
     content: "";
@@ -14,6 +15,15 @@
     height: 100%;
     .bg-xlt-grey;
     z-index: -1;
+    display: none;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    display: block;
+
+    &:after {
+      display: block;
+    }
   }
 
   .sidebar-menu--title:first-child {
