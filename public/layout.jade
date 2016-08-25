@@ -21,13 +21,13 @@ html
     header.block-ver-sm.bg-black.transition
       .content-wrap
         .row
-          .col-xs-12.col-sm-10
-            a.header-logo.pull-left(href="/"): include partials/logo
+          .col-xs-8.col-sm-10
+            a.header-logo.pull-left.l(href="/"): include partials/logo
             ul.pull-left.list-bare.tight.header-nav
-              li.tight.block-right-md.block-ver-md.inline-block.pull-left#nav-products: a(href="/") Products
+              li.tight.block-md.inline-block.pull-left#nav-products: a(href="/") Products
               li.tight.block-md.inline-block.pull-left#nav-style-guide: a(href="/style-guide") Style Guide
 
-          .col-xs-12.col-sm-2
+          .col-xs-4.col-sm-2
             label.label.label--dropdown
               select.input.input--dropdown#product-changer
                 option(value="wgsn") WGSN
@@ -36,6 +36,17 @@ html
                 option(value="li") Lifestyle &amp; Interiors
                 option(value="instock") Instock
                 option(value="styletrial") Styletrial
+
+    .hamburgler-menu
+      ul.hamburgler-menu-list
+        li never
+        li gonna
+        li give
+        li you
+        li up
+
+    #hamburgler.hamburgler-icon-wrapper
+      span.hamburgler-icon
     
     .content-wrap
       #content
