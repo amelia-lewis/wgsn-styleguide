@@ -2,7 +2,7 @@ section#section-page-title
   h2.inline-block Page Title
   +github-link("page-title")
 
-  p The page title styling to be used everywhere across the site. The sub-title will take on the product's 
+  p The page title styling to be used everywhere across the site. The sub-titles will take on the product's 
     a.styled(href='/') colour
     |  when 
     code body
@@ -10,10 +10,36 @@ section#section-page-title
     code .fashion
     | , which it should always have.
 
+  h4 Standard Title
+
   .card
     .row.page-title
       .col-xs-12
-        h1 Colour
-        h2 /Catwalk Analysis
+        h1.page-title--primary Colour
+    hr
 
-  include:marked page-title.md
+  include:marked page-title-1.md
+
+  h4 With Categories
+  p To be used in places like report directory pages, where there are parent-level categories to show. The lowest-level (i.e. the one you're in) should be the main title.
+  
+  .card
+    .row.page-title
+      .col-xs-12
+        h4.page-title--categories Marketing&nbsp;&nbsp;/&nbsp;&nbsp;Social Media
+        h1.page-title--primary Influencers
+    hr
+  
+  include:marked page-title-2.md
+
+  h4 With Sub-Title
+  p This is to be used in places like the search results, where the title requires some secondary information that isn't a category.
+
+  .card
+    .row.page-title
+      .col-xs-12
+        h1.page-title--primary Search Results
+        h2.page-title--secondary "Instagram 2016"
+    hr
+
+  include:marked page-title-2.md

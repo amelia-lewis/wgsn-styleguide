@@ -1,15 +1,42 @@
 .page-title {
-  margin: 40px auto -14px;
+  margin: 40px auto -22px;
   
-  h1 {
+  .page-title--primary {
     display: inline-block;
-    margin: 0;
+    .tight;
   }
 
-  h2 {
+  .page-title--secondary {
     display: inline-block;
     color: @wgsn-md;
     margin: 0 0 0 20px;
+
+    body.insight & {
+      color: @insight-md;
+    }
+
+    body.fashion & {
+      color: @fashion-md;
+    }
+
+    body.li & {
+      color: @li-md;
+    }
+
+    body.instock & {
+      color: @instock-md;
+    }
+
+    body.styletrial & {
+      color: @styletrial-md;
+    }
+  }
+
+  .page-title--categories {
+    .text-uppercase;
+    .text-bold;
+    .tight;
+    color: @wgsn-md;
 
     body.insight & {
       color: @insight-md;
