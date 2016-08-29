@@ -5,6 +5,7 @@
 <button class="btn--clear">Clear Button</button>
 
 <button class="btn--coloured btn-disabled" disabled>Disabled Button</button>
+<button class="btn--coloured"><i class="icon icon-reset"></i>Button with Icon</button>
 
 <button class="btn--coloured btn-full">Full-Width Button</button>
 

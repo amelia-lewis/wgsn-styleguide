@@ -9,10 +9,19 @@
   position: relative;
   .text-bold;
 
-  span.input--error-message {
-    color: @red;
-    margin-left: 5px;
-    .text-bold;
+  .input--error-message,
+  .input--helper-message {
+    display: block;
+    margin-top: 5px;
+    .text-smaller;
+  }
+
+  .input--error-message {
+    .text-red;
+  }
+
+  .input--helper-message {
+    .text-grey;
   }
 }
 
@@ -31,7 +40,6 @@
   height: 36px;
   width: 100%;
   padding: 10px 0;
-  margin: 0 0 10px;
   color: @dk-grey;
   .sans-serif;
   .text-normal;
@@ -51,11 +59,6 @@
 
   &.input--has-error {
     border-color: @red !important;
-    background: white url('../assets/img/icon-font_error-circle.svg') no-repeat right 10px center / 14px;
-  }
-
-  &.input--is-valid {
-    background: white url('../assets/img/icon-font_tick-circle-filled.svg') no-repeat right 10px center / 14px;
   }
 }
 

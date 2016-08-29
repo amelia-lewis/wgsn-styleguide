@@ -21,24 +21,30 @@ section#section-buttons
     | , which it should always have.
 
   .card
-    .block-bot-sm
-      button.btn--coloured Coloured Button
-      button.btn--black Black Button
-      button.btn--white White Button
-      .bg-dk-grey.block-xs.inline-block: button.btn--clear.tight Clear Button
+    .block-bot-sm.overflow-auto
+      button.btn--coloured.pull-left Coloured Button
+      button.btn--black.pull-left Black Button
+      button.btn--white.pull-left White Button
+      
+    .block-bot-md.overflow-auto
+      .bg-dk-grey.block-sm.inline-block
+        button.btn--clear.tight Clear Button
     
-    .block-bot-sm
-      button.btn--coloured.btn--disabled(disabled) Disabled Button
+    .block-bot-sm.overflow-auto
+      button.btn--coloured.btn--disabled.pull-left(disabled) Disabled Button
+      button.btn--coloured.pull-left
+        i.icon.icon-reset
+        | Button with Icon
     
-    .block-bot-sm
-      button.btn--coloured.btn--full Full-Width Button
+    .block-bot-sm.overflow-auto
+      button.btn--coloured.btn--full.pull-left Full-Width Button
     
-    .block-bot-sm
-      button.btn--coloured.btn--lg Large Button
-      button.btn--coloured.btn--sm Small Button
+    .block-bot-sm.overflow-auto
+      button.btn--coloured.btn--lg.pull-left Large Button
+      button.btn--coloured.btn--sm.pull-left Small Button
     
-    .block
-      button.btn--white.btn--big.btn--full Big, White, Full-Width Button
+    .overflow-auto
+      button.btn--white.btn--big.btn--full.pull-left Big, White, Full-Width Button
   
   include:marked buttons.md
 

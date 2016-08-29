@@ -1,21 +1,21 @@
 // Standard button, must be used with one of the colour classes below
 button,
 .btn {
-  display: inline-block;
   margin: 0 10px 10px 0;
-  padding: 0 30px;
+  padding: 0 20px;
   height: 36px;
   font-size: 1em;
   line-height: 1em;
   .text-bold;
   .text-center;
   .transition;
+  .flex-center;
+  position: relative;
   transform: translate3d(0, 0, 0);
   cursor: pointer;
 
-  span {
-    .wgsn-font;
-    font-size: 1em;
+  .icon {
+    margin-right: 5px;
   }
 
   &:active {
@@ -144,9 +144,3 @@ button,
 
 // ========================================================================================================================
 // Specific to Style Guide
-
-#section-buttons {
-  .bg-dk-grey {
-    margin: -5px 0;
-  }
-}

@@ -5,16 +5,20 @@ section#section-alerts
   p Alerts are used to inform a user of an action they just completed, sometimes with an undo option. They are in a fixed position in the bottom left of the screen, and disappear after a few seconds.
 
   .card
+    .block-bot-md
+      .alert.show
+        .row
+          .col-xs-12
+            p Code copied to clipboard.
+
     .alert.show
-      p Code copied to clipboard.
-
-    br
-
-    .alert.show
-      p You moved 6 images into 
-        span Autumn/Winter 2016
-        | .
-
-      a.alert--undo(href="") Undo
+      .row.middle-xs
+        .col-xs-9
+          p You moved 6 images into 
+            span Autumn/Winter 2016
+            | .
+        
+        .col-xs-3
+          a.alert--undo(href="") Undo
 
   include:marked alerts.md

@@ -2,7 +2,7 @@ section#section-inputs
   h2.inline-block Inputs &amp; Labels
   +github-link("inputs")
 
-  p Inputs and labels are used in forms... but you knew that.
+  p Inputs and labels are used in forms... but you knew that. They take up the entire width of their parent, so you can and should use them in the grid.
   p They will take on the product's 
     a.styled(href='/') colour
     |  when 
@@ -17,10 +17,7 @@ section#section-inputs
         .col-xs-12
           label.label Email address
             input.input.input--text(type='text' value='amelia.lewis@wgsn.com' placeholder='Email')
-
-      .row.block-bot-md
-        .col-xs-12
-          p Inputs take up the entire width of their parent, so you can and should use them in the grid.
+            span.input--helper-message Some inputs require some extra information, which can be put here.
 
       .row
         .col-xs-12.col-sm-6
@@ -43,12 +40,12 @@ section#section-inputs
       .row.block-bot-md
         .col-xs-12.col-sm-4
           label.label First name
-            span.input--error-message (Required)
-            input.input.input--text.input--has-error(type='text')
+            input.input.input--text.input--has-error(type='text' value='!@#$%')
+            span.input--error-message Invalid for this reason
 
         .col-xs-12.col-sm-4
           label.label Last name
-            input.input.input--text.input--is-valid(type='text' value='Lewis')
+            input.input.input--text(type='text' value='Lewis')
 
         .col-xs-12.col-sm-4
           label.label.label--dropdown Country
