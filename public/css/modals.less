@@ -2,7 +2,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 580px;
+  width: 100%;
+  max-width: 580px;
   min-height: 100px;
   background: white;
   .box-shadow;
@@ -17,7 +18,7 @@
     color: white;
     .block-md;
     overflow: auto;
-    vertical-align: bottom;
+    position: relative;
 
     .modal--title {
       .tight;
@@ -29,7 +30,9 @@
     }
 
     .icon-cross {
-      float: right;
+      position: absolute;
+      top: calc(~"50% - 6px");
+      right: 20px;
       .hoverable;
       opacity: 0.6;
       width: 12px;
@@ -57,6 +60,7 @@
 
     button {
       margin: 0 0 0 10px;
+      .inline-block;
     }
   }
 

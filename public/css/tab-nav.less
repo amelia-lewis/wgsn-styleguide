@@ -1,11 +1,12 @@
 .tab-nav {
   .list-bare;
-  overflow: auto;
   .border-bottom;
+  overflow: auto;
   position: relative;
+  white-space: nowrap;
 
   .tab-nav--tab {
-    float: left;
+    .inline-block;
     .block-ver-sm;
     .hoverable;
     .transition;
@@ -13,6 +14,7 @@
     margin: 0 10px;
     position: relative;
     color: @md-grey;
+    white-space: nowrap;
 
     &:after {
       content: "";
@@ -40,17 +42,6 @@
 
   &.tab-nav--alt {
     border-bottom: none;
-    
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: @lt-grey;
-    }
 
     .tab-nav--tab {
       .block-hor-md;
@@ -71,10 +62,13 @@
         color: black;
       }
 
+      &:not(.tab-nav--active) {
+        .border-bottom;
+      }
+
       &.tab-nav--active {
-        background: white;
         border-bottom: none;
-        color: @xdk-grey;
+        color: black;
       }
     }
   }
