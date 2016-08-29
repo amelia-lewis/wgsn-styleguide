@@ -122,24 +122,6 @@
     }
   }
 
-  &.styletrial {
-    .color-tertiary {
-      color: @styletrial;
-
-      li {
-        border-color: fade(@styletrial, 30%);
-
-        &:after {
-          color: fade(@styletrial, 50%);
-        }
-
-        &:hover {
-          border-color: @styletrial;
-        }
-      }
-    }
-  }
-
   &.li {
     .color-tertiary {
       color: @li;
@@ -158,24 +140,6 @@
     }
   }
 
-  &.mindset {
-    .color-tertiary {
-      color: @mindset;
-
-      li {
-        border-color: fade(@mindset, 30%);
-
-        &:after {
-          color: fade(@mindset, 50%);
-        }
-
-        &:hover {
-          border-color: @mindset;
-        }
-      }
-    }
-  }
-
   &.instock {
     .color-tertiary {
       color: @instock;
@@ -189,6 +153,43 @@
 
         &:hover {
           border-color: @instock;
+        }
+      }
+    }
+  }
+
+  &.styletrial {
+    .color-tertiary {
+      color: @styletrial;
+
+      li {
+        border-color: fade(@styletrial, 30%);
+
+        &:after {
+          color: fade(@styletrial, 50%);
+        }
+
+        &:hover {
+          border-color: @styletrial;
+        }
+      }
+    }
+  }
+
+   &.mindset {
+    .color-tertiary {
+      color: @mindset;
+      .border;
+
+      li {
+        border-color: fade(@mindset, 30%);
+
+        &:after {
+          color: fade(@mindset, 50%);
+        }
+
+        &:hover {
+          border-color: @mindset;
         }
       }
     }
