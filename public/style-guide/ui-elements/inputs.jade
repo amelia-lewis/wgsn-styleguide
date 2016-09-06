@@ -22,39 +22,39 @@ section#section-inputs
             span.input--helper-message Some inputs require some extra information, which can be put here.
 
       .row
-        .col-xs-12.col-sm-6
+        .col-xs-12.col-sm-4
           label.label Password
             input.input.input--password(type='password' placeholder='Keep it secret.')
 
-        .col-xs-12.col-sm-6
+        .col-xs-12.col-sm-4
           label.label Confirm password
-            input.input.input--password(type='password' placeholder='Keep it safe.')
+            input.input.input--password.input--has-error(type='password' placeholder='Keep it safe.' value='password123')
+            span.input--error-message Invalid for this clearly explained reason.
 
-      .row.block-bot-md
-        .col-xs-12.col-sm-6
+        .col-xs-12.col-sm-4
           label.label Disabled field
             input.input.input--text.input--disabled(type='text' placeholder='This is disabled.' disabled)
 
+      .row.block-bot-md
         .col-xs-12.col-sm-6
           label.label Textarea
             textarea.input.input--textarea Edit me, yo.
 
       .row.block-bot-md
-        .col-xs-12.col-sm-4
-          label.label First name
-            input.input.input--text.input--has-error(type='text' value='!@#$%')
-            span.input--error-message Invalid for a reason, which would be explained clearly here
-
-        .col-xs-12.col-sm-4
-          label.label Last name
-            input.input.input--text(type='text' value='Lewis')
-
-        .col-xs-12.col-sm-4
+        .col-xs-12.col-sm-4.col-md-3
           label.label.label--dropdown Country
             select.input.input--dropdown
               option United States
               option United Kingdom
               option Australia
+        
+        .col-xs-12.col-sm-8
+          label.label.label--dropdown-bare Sort by:
+            select.input.input--dropdown-bare
+              option Relevance
+              option Date: newest first
+              option Date: oldest first
+            span.input--helper-message You may find the need for an inline dropdown, so there is this alternative.
 
       .row
         .col-xs-12.col-sm-4

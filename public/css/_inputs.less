@@ -31,7 +31,8 @@
 .input--text,
 .input--password,
 .input--textarea,
-.input--dropdown {
+.input--dropdown,
+.input--dropdown-bare {
   display: block;
   -webkit-appearance: none;
   background: white;
@@ -120,6 +121,20 @@ label.label--dropdown:after {
   right: 36px;
 }
 
+.label--dropdown-bare {
+  font-size: 14px;
+}
+
+.input--dropdown-bare {
+  display: inline-block;
+  height: auto;
+  width: auto;
+  background: transparent url('../assets/img/icon-font_caret-down.svg') no-repeat right top / 14px;
+  border: none;
+  padding: 0 15px 0 0;
+  margin: 0 0 0 10px;
+}
+
 
 // ====================
 // Checkboxes & Radio Buttons
@@ -128,7 +143,7 @@ label.label--checkbox-radio {
   .sans-serif;
   .text-normal;
   .text-no-transform;
-  font-size: 1em;
+  font-size: 14px;
   line-height: 1.4em;
   cursor: pointer;
   position: relative;

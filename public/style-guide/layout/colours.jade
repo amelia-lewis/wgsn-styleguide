@@ -1,14 +1,14 @@
 include ../../partials/github-link
 
 mixin colour-block(id, colour)
-  .col-xs-6.col-sm-4.block-bot-md(class!=attributes.class)
-    .colour-block.border.text-center(id=id)
-      .block-lg.border-bottom.text-white(style="background-color: #" + colour)
+  .colour-block.border.text-center(id=id)
+    .block-lg.border-bottom.text-white(style="background-color: #" + colour)
+      p
         span #
         span= colour
-      .block-xs
-        code $
-          code= id
+    .block-xs
+      code @
+        span= id
 
 section#section-colours
   h2.inline-block Colours
@@ -18,25 +18,25 @@ section#section-colours
 
   .card
     .row
-      +colour-block("wgsn", "0000DD")
+      .col-xs-6.col-sm-8.block-bot-md: +colour-block("wgsn", "0000DD")
     
     .row
-      +colour-block("insight", "9B59B6")
-      +colour-block("fashion", "FE484F")
-      +colour-block("li", "00B697")
-      +colour-block("instock", "3E97F1")
-      +colour-block("styletrial", "FFC430")
-      +colour-block("mindset", "231F20")
+      .col-xs-6.col-sm-4.block-bot-md: +colour-block("insight", "9B59B6")
+      .col-xs-6.col-sm-4.block-bot-md: +colour-block("fashion", "FE484F")
+      .col-xs-6.col-sm-4.block-bot-md: +colour-block("li", "00B697")
+      .col-xs-6.col-sm-4.block-bot-md: +colour-block("instock", "3E97F1")
+      .col-xs-6.col-sm-4.block-bot-md: +colour-block("styletrial", "FFC430")
+      .col-xs-6.col-sm-4.block-bot-md: +colour-block("mindset", "231F20")
 
   p ...and some handy, dandy greys.
     
   .card
     .row
-      +colour-block("xlt-grey", "FAFAFA")
-      +colour-block("lt-grey", "E4E5E6")
-      +colour-block("md-grey", "A7A9AC")
-      +colour-block("dk-grey", "555")
-      +colour-block("xdk-grey", "222")
+      .col-xs-6.col-sm-4.block-bot-md: +colour-block("xlt-grey", "F2F2F2")
+      .col-xs-6.col-sm-4.block-bot-md: +colour-block("lt-grey", "E4E5E6")
+      .col-xs-6.col-sm-4.block-bot-md: +colour-block("md-grey", "A7A9AC")
+      .col-xs-6.col-sm-4.block-bot-md: +colour-block("dk-grey", "555")
+      .col-xs-6.col-sm-4.block-bot-md: +colour-block("xdk-grey", "222")
 
   p There are also some nicely prepared 
     code .bg
@@ -71,7 +71,7 @@ section#section-colours
       .col-xs-12.col-sm-6
         .block-bot-md
           .block-lg.border.text-center.bg-dk-grey
-            .block-bot-sm: code .dk-xlt-grey
+            .block-bot-sm: code .bg-dk-grey
             p.tight Text will be white
       
       .col-xs-12.col-sm-6

@@ -1,4 +1,4 @@
-mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary_hex, secondary_pantone, secondary_rgb, secondary_cmyk, secondary_hex, tertiary_pantone, tertiary_rgb, tertiary_cmyk, tertiary_hex)
+mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary_hex, secondary_rgb, secondary_cmyk, secondary_hex, tertiary_rgb, tertiary_cmyk, tertiary_hex)
   .block-bot-lg
     h2.transition WGSN 
       span.text-capitalize= name
@@ -15,14 +15,16 @@ mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary
                 li.clipboard(data-clipboard-text=primary_pantone) Pantone 
                   span= primary_pantone
               br
-              li.clipboard(data-clipboard-text=primary_rgb) RGB(
+              li.clipboard(data-clipboard-text=primary_rgb) RGB 
                 span= primary_rgb
-                | )
               if primary_cmyk
                 br
-                li.clipboard(data-clipboard-text=primary_cmyk) CMYK(
+                li.clipboard(data-clipboard-text=primary_cmyk) CMYK 
                   span= primary_cmyk
-                  | )
+              if primary_pantone
+                br
+                li.clipboard(data-clipboard-text=primary_pantone) Pantone 
+                  span= primary_pantone
 
         if secondary_hex || secondary_pantone || secondary_rgb || secondary_cmyk
           .block-bot-md.color-secondary(style="background-color: #" + secondary_hex)
@@ -34,14 +36,12 @@ mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary
                 li.clipboard(data-clipboard-text=secondary_pantone) Pantone 
                   span= secondary_pantone
               br
-              li.clipboard(data-clipboard-text=secondary_rgb) RGB(
+              li.clipboard(data-clipboard-text=secondary_rgb) RGB 
                 span= secondary_rgb
-                | )
               if secondary_cmyk
                 br
-                li.clipboard(data-clipboard-text=secondary_cmyk) CMYK(
+                li.clipboard(data-clipboard-text=secondary_cmyk) CMYK 
                   span= secondary_cmyk
-                  | )
           
         if tertiary_hex || tertiary_pantone || tertiary_rgb || tertiary_cmyk
           .block.color-tertiary(style="background-color: #" + tertiary_hex)
@@ -53,14 +53,12 @@ mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary
                 li.clipboard(data-clipboard-text=tertiary_pantone) Pantone 
                   span= tertiary_pantone
               br
-              li.clipboard(data-clipboard-text=tertiary_rgb) RGB(
+              li.clipboard(data-clipboard-text=tertiary_rgb) RGB 
                 span= tertiary_rgb
-                | )
               if tertiary_cmyk
                 br
-                li.clipboard(data-clipboard-text=tertiary_cmyk) CMYK(
+                li.clipboard(data-clipboard-text=tertiary_cmyk) CMYK 
                   span= tertiary_cmyk
-                  | )
 
         //- if hasdownloads
         //-   .block-top-md.product-logos
