@@ -8,7 +8,7 @@ mixin content-tile(img, title, description, date, author, ...categories)
         ul.content-tile--category
           each category in categories
             li= category
-      .block-bot-sm: h3.content-tile--title= title
+      .block-bot-sm: h4.content-tile--title= title
       if description
         p.content-tile--description= description
       p.content-tile--info
@@ -47,7 +47,7 @@ mixin content-tile--small(img, title, description, date, author, ...categories)
     .content-tile--img
       img(src=img)
     .content-tile--text
-      .block-bot-sm: h4.content-tile--title= title
+      .block-bot-sm: h5.content-tile--title= title
       if description
         p.content-tile--description= description
       p.content-tile--info
