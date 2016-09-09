@@ -28,8 +28,9 @@ mixin content-tile--featured(img, title, description, date, author, ...categorie
       ul.content-tile--category
         each category in categories
           li= category
+          br
     .content-tile--text
-      h2.content-tile--title= title
+      .block-bot-sm: h2.content-tile--title= title
       if description
         p.content-tile--description= description
       p.content-tile--info

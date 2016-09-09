@@ -32,54 +32,40 @@
 
   .sidebar-menu--title, li {
     a {
-      position: relative;
-      z-index: 10;
-
-      &:after {
-        content: "";
-        position: absolute;
-        display: block;
-        background: fade(@md-grey, 30%);
-        top: 50%;
-        right: -3px;
-        bottom: -2px;
-        left: -10px;
-        z-index: -1;
-        transform: scale(0, 1);
-        transform-origin: left center;
-        .transition;
-      }
-
-      &:hover:after {
-        transform: scale(1, 1);
+      display: inline;
+      background-image: linear-gradient(transparent 50%, fade(@wgsn-grey-md, 30%) 0%);
+      background-size: 0 100%;
+      background-repeat: no-repeat;
+      padding-bottom: 2px;
+    
+      &:hover {
+        background-size: 100% 100%;
       }
     }
 
     &.sidebar-menu--active {
       a {
-        &:after {
-          background: fade(@wgsn, 30%);
-          transform: scale(1, 1);
-
-          body.insight & {
-            background: fade(@insight, 30%);
-          }
-        
-          body.fashion & {
-            background: fade(@fashion, 30%);
-          }
-        
-          body.li & {
-            background: fade(@li, 30%);
-          }
-        
-          body.instock & {
-            background: fade(@instock, 30%);
-          }
-        
-          body.styletrial & {
-            background: fade(@styletrial, 30%);
-          }
+        background-image: linear-gradient(transparent 50%, fade(@wgsn, 20%) 0%);
+        background-size: 100% 100%;
+      
+        body.insight & {
+          background-image: linear-gradient(transparent 50%, fade(@insight, 20%) 0%);
+        }
+      
+        body.fashion & {
+          background-image: linear-gradient(transparent 50%, fade(@fashion, 20%) 0%);
+        }
+      
+        body.li & {
+          background-image: linear-gradient(transparent 50%, fade(@li, 20%) 0%);
+        }
+      
+        body.instock & {
+          background-image: linear-gradient(transparent 50%, fade(@instock, 20%) 0%);
+        }
+      
+        body.styletrial & {
+          background-image: linear-gradient(transparent 50%, fade(@styletrial, 20%) 0%);
         }
       }
     }
