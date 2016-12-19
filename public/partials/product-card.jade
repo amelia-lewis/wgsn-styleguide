@@ -1,7 +1,7 @@
 mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary_hex, secondary_rgb, secondary_cmyk, secondary_hex, tertiary_rgb, tertiary_cmyk, tertiary_hex)
   .block-bot-lg
-    h2.transition WGSN 
-      span.text-capitalize= name
+    h2.transition.text-bold WGSN 
+      span.text-capitalize.text-bold= name
     
     .product-card.overflow-auto.wow.fadeIn(class!=attributes.class)
       .info
