@@ -14,6 +14,7 @@
       position: absolute;
       bottom: 10px;
       left: 14px;
+      margin: 0;
     }
 
     li, span {
@@ -51,16 +52,16 @@
   }
 
   .color-primary {
-    height: 280px;
+    height: 260px;
   }
 
   .color-secondary {
     width: 50%;
-    height: 140px;
+    height: 160px;
   }
 
   .color-tertiary {
-    height: 140px;
+    height: 160px;
   }
 
   .color-secondary + .color-tertiary {
@@ -68,19 +69,19 @@
   }
 
   // PRODUCT COLOURS
-  &.group {
+  &.wgsn {
     .color-tertiary {
-      color: @wgsn;
+      color: @wgsn-primary-color;
 
       li {
-        border-color: fade(@wgsn, 30%);
+        border-color: fade(@wgsn-primary-color, 30%);
 
         &:after {
-          color: fade(@wgsn, 50%);
+          color: fade(@wgsn-primary-color, 50%);
         }
 
         &:hover {
-          border-color: @wgsn;
+          border-color: @wgsn-primary-color;
         }
       }
     }
@@ -88,17 +89,17 @@
 
   &.insight {
     .color-tertiary {
-      color: @insight;
+      color: @insight-primary-color;
 
       li {
-        border-color: fade(@insight, 30%);
+        border-color: fade(@insight-primary-color, 30%);
 
         &:after {
-          color: fade(@insight, 50%);
+          color: fade(@insight-primary-color, 50%);
         }
 
         &:hover {
-          border-color: @insight;
+          border-color: @insight-primary-color;
         }
       }
     }
@@ -106,17 +107,17 @@
 
   &.fashion {
     .color-tertiary {
-      color: @fashion;
+      color: @fashion-primary-color;
 
       li {
-        border-color: fade(@fashion, 30%);
+        border-color: fade(@fashion-primary-color, 30%);
 
         &:after {
-          color: fade(@fashion, 50%);
+          color: fade(@fashion-primary-color, 50%);
         }
 
         &:hover {
-          border-color: @fashion;
+          border-color: @fashion-primary-color;
         }
       }
     }
@@ -124,17 +125,17 @@
 
   &.li {
     .color-tertiary {
-      color: @li;
+      color: @li-primary-color;
 
       li {
-        border-color: fade(@li, 30%);
+        border-color: fade(@li-primary-color, 30%);
 
         &:after {
-          color: fade(@li, 50%);
+          color: fade(@li-primary-color, 50%);
         }
 
         &:hover {
-          border-color: @li;
+          border-color: @li-primary-color;
         }
       }
     }
@@ -142,17 +143,35 @@
 
   &.instock {
     .color-tertiary {
-      color: @instock;
+      color: @instock-primary-color;
 
       li {
-        border-color: fade(@instock, 30%);
+        border-color: fade(@instock-primary-color, 30%);
 
         &:after {
-          color: fade(@instock, 50%);
+          color: fade(@instock-primary-color, 50%);
         }
 
         &:hover {
-          border-color: @instock;
+          border-color: @instock-primary-color;
+        }
+      }
+    }
+  }
+
+  &.barometer {
+    .color-tertiary {
+      color: @barometer-primary-color;
+
+      li {
+        border-color: fade(@barometer-primary-color, 30%);
+
+        &:after {
+          color: fade(@barometer-primary-color, 50%);
+        }
+
+        &:hover {
+          border-color: @barometer-primary-color;
         }
       }
     }
@@ -160,17 +179,17 @@
 
   &.styletrial {
     .color-tertiary {
-      color: @styletrial;
+      color: @styletrial-primary-color;
 
       li {
-        border-color: fade(@styletrial, 30%);
+        border-color: fade(@styletrial-primary-color, 30%);
 
         &:after {
-          color: fade(@styletrial, 50%);
+          color: fade(@styletrial-primary-color, 50%);
         }
 
         &:hover {
-          border-color: @styletrial;
+          border-color: @styletrial-primary-color;
         }
       }
     }
@@ -178,18 +197,18 @@
 
    &.mindset {
     .color-tertiary {
-      color: @mindset;
+      color: @mindset-primary-color;
       .border;
 
       li {
-        border-color: fade(@mindset, 30%);
+        border-color: fade(@mindset-primary-color, 30%);
 
         &:after {
-          color: fade(@mindset, 50%);
+          color: fade(@mindset-primary-color, 50%);
         }
 
         &:hover {
-          border-color: @mindset;
+          border-color: @mindset-primary-color;
         }
       }
     }

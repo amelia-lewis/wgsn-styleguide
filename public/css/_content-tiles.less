@@ -35,32 +35,36 @@
         .text-smaller;
         .block-right-sm;
         .tight;
-        color: @wgsn;
+        color: @wgsn-primary-color;
 
         body.insight & {
-          color: @insight;
+          color: @insight-primary-color;
         }
 
         body.fashion & {
-          color: @fashion;
+          color: @fashion-primary-color;
         }
 
         body.li & {
-          color: @li;
+          color: @li-primary-color;
         }
 
         body.instock & {
-          color: @instock;
+          color: @instock-primary-color;
+        }
+
+        body.barometer & {
+          color: @barometer-primary-color;
         }
 
         body.styletrial & {
-          color: @styletrial;
+          color: @styletrial-primary-color;
         }
       }
     }
 
     .content-tile--title {
-      background-image: linear-gradient(transparent 50%, fade(@wgsn, 20%) 0%);
+      background-image: linear-gradient(transparent 50%, fade(@wgsn-primary-color, 20%) 0%);
       background-size: 0 100%;
       background-repeat: no-repeat;
       display: inline;
@@ -68,23 +72,27 @@
       padding-bottom: 2px;
     
       body.insight & {
-        background-image: linear-gradient(transparent 50%, fade(@insight, 20%) 0%);
+        background-image: linear-gradient(transparent 50%, fade(@insight-primary-color, 20%) 0%);
       }
     
       body.fashion & {
-        background-image: linear-gradient(transparent 50%, fade(@fashion, 20%) 0%);
+        background-image: linear-gradient(transparent 50%, fade(@fashion-primary-color, 20%) 0%);
       }
     
       body.li & {
-        background-image: linear-gradient(transparent 50%, fade(@li, 20%) 0%);
+        background-image: linear-gradient(transparent 50%, fade(@li-primary-color, 20%) 0%);
       }
     
       body.instock & {
-        background-image: linear-gradient(transparent 50%, fade(@instock, 20%) 0%);
+        background-image: linear-gradient(transparent 50%, fade(@instock-primary-color, 20%) 0%);
+      }
+
+      body.barometer & {
+        background-image: linear-gradient(transparent 50%, fade(@barometer-primary-color, 20%) 0%);
       }
     
       body.styletrial & {
-        background-image: linear-gradient(transparent 50%, fade(@styletrial, 20%) 0%);
+        background-image: linear-gradient(transparent 50%, fade(@styletrial-primary-color, 20%) 0%);
       }
     }
     
@@ -141,27 +149,31 @@
       .text-uppercase;
       .text-smaller;
       .inline-block;
-      background: @wgsn;
+      background: @wgsn-primary-color;
       padding: 4px 8px 3px;
 
       body.insight & {
-        background: @insight;
+        background: @insight-primary-color;
       }
 
       body.fashion & {
-        background: @fashion;
+        background: @fashion-primary-color;
       }
 
       body.li & {
-        background: @li;
+        background: @li-primary-color;
       }
 
       body.instock & {
-        background: @instock;
+        background: @instock-primary-color;
+      }
+
+      body.barometer & {
+        background: @barometer-primary-color;
       }
 
       body.styletrial & {
-        background: @styletrial;
+        background: @styletrial-primary-color;
       }
     }
   }
@@ -174,27 +186,31 @@
     margin: -50px 0 20px 30px;
     z-index: 10;
     position: relative;
-    border-bottom: 2px solid @wgsn;
+    border-bottom: 2px solid @wgsn-primary-color;
     box-shadow: 0 2px 14px fade(black, 0%);
 
     body.insight & {
-      border-color: @insight;
+      border-color: @insight-primary-color;
     }
 
     body.fashion & {
-      border-color: @fashion;
+      border-color: @fashion-primary-color;
     }
 
     body.li & {
-      border-color: @li;
+      border-color: @li-primary-color;
     }
 
     body.instock & {
-      border-color: @instock;
+      border-color: @instock-primary-color;
+    }
+
+    body.barometer & {
+      border-color: @barometer-primary-color;
     }
 
     body.styletrial & {
-      border-color: @styletrial;
+      border-color: @styletrial-primary-color;
     }
 
     .content-tile--title {

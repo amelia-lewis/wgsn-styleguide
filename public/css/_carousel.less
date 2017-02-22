@@ -8,26 +8,30 @@
     right: 0;
     width: 100%;
     height: 70%;
-    background: @wgsn-lt;
+    background: @wgsn-tertiary-color;
 
     body.insight & {
-      background: @insight-lt;
+      background: @insight-tertiary-color;
     }
 
     body.fashion & {
-      background: @fashion-lt;
+      background: @fashion-tertiary-color;
     }
 
     body.li & {
-      background: @li-lt;
+      background: @li-tertiary-color;
     }
 
     body.instock & {
-      background: @instock-lt;
+      background: @instock-tertiary-color;
+    }
+
+    body.barometer & {
+      background: @barometer-tertiary-color;
     }
 
     body.styletrial & {
-      background: @styletrial-lt;
+      background: @styletrial-tertiary-color;
     }
 
     @media (min-width: @screen-sm-min) {
@@ -81,27 +85,31 @@
         .swiper-slide--category {
           .text-uppercase;
           .text-bold;
-          color: @wgsn;
+          color: @wgsn-primary-color;
           transition-delay: 500ms;
 
           body.insight & {
-            color: @insight;
+            color: @insight-primary-color;
           }
 
           body.fashion & {
-            color: @fashion;
+            color: @fashion-primary-color;
           }
 
           body.li & {
-            color: @li;
+            color: @li-primary-color;
           }
 
           body.instock & {
-            color: @instock;
+            color: @instock-primary-color;
+          }
+
+          body.barometer & {
+            color: @barometer-primary-color;
           }
 
           body.styletrial & {
-            color: @styletrial;
+            color: @styletrial-primary-color;
           }
         }
 
@@ -150,52 +158,60 @@
     top: auto;
     left: auto;
     bottom: 10px;
-    background: @wgsn-md;
+    background: @wgsn-secondary-color;
     color: white;
     width: 40px;
     height: 30px;
 
     body.insight & {
-      background: @insight-md;
+      background: @insight-secondary-color;
     }
 
     body.fashion & {
-      background: @fashion-md;
+      background: @fashion-secondary-color;
     }
 
     body.li & {
-      background: @li-md;
+      background: @li-secondary-color;
     }
 
     body.instock & {
-      background: @instock-md;
+      background: @instock-secondary-color;
     }
 
+    body.barometer & {
+      background: @barometer-secondary-color;
+    }    
+
     body.styletrial & {
-      background: @styletrial-md;
+      background: @styletrial-secondary-color;
     }
 
     &:hover {
-      background: @wgsn;
+      background: @wgsn-primary-color;
 
       body.insight & {
-        background: @insight;
+        background: @insight-primary-color;
       }
 
       body.fashion & {
-        background: @fashion;
+        background: @fashion-primary-color;
       }
 
       body.li & {
-        background: @li;
+        background: @li-primary-color;
       }
 
       body.instock & {
-        background: @instock;
+        background: @instock-primary-color;
+      }
+
+      body.barometer & {
+        background: @barometer-primary-color;
       }
 
       body.styletrial & {
-        background: @styletrial;
+        background: @styletrial-primary-color;
       }
     }
   }

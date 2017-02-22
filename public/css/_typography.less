@@ -246,7 +246,7 @@ a {
 a.styled {
   position: relative;
   display: inline-block;
-  background-image: linear-gradient(to right, @wgsn 50%, fade(@wgsn, 30%) 0%);
+  background-image: linear-gradient(to right, @wgsn-primary-color 50%, fade(@wgsn-primary-color, 30%) 0%);
   background-size: 200% 2px;
   background-repeat: no-repeat;
   background-position: 100% bottom;
@@ -254,23 +254,27 @@ a.styled {
   padding-bottom: 3px;
   
   body.insight & {
-    background-image: linear-gradient(to right, @insight 50%, fade(@insight, 30%) 0%);
+    background-image: linear-gradient(to right, @insight-primary-color 50%, fade(@insight-primary-color, 30%) 0%);
   }
 
   body.fashion & {
-    background-image: linear-gradient(to right, @fashion 50%, fade(@fashion, 30%) 0%);
+    background-image: linear-gradient(to right, @fashion-primary-color 50%, fade(@fashion-primary-color, 30%) 0%);
   }
 
   body.li & {
-    background-image: linear-gradient(to right, @li 50%, fade(@li, 30%) 0%);
+    background-image: linear-gradient(to right, @li-primary-color 50%, fade(@li-primary-color, 30%) 0%);
   }
 
   body.instock & {
-    background-image: linear-gradient(to right, @instock 50%, fade(@instock, 30%) 0%);
+    background-image: linear-gradient(to right, @instock-primary-color 50%, fade(@instock-primary-color, 30%) 0%);
+  }
+
+  body.barometer & {
+    background-image: linear-gradient(to right, @barometer-primary-color 50%, fade(@barometer-primary-color, 30%) 0%);
   }
 
   body.styletrial & {
-    background-image: linear-gradient(to right, @styletrial 50%, fade(@styletrial, 30%) 0%);
+    background-image: linear-gradient(to right, @styletrial-primary-color 50%, fade(@styletrial-primary-color, 30%) 0%);
   }
 
   &:hover {
@@ -281,26 +285,30 @@ a.styled {
 
 // TEXT COLORS
 .text-brand {
-  color: @wgsn;
+  color: @wgsn-primary-color;
 
   body.insight & {
-    color: @insight;
+    color: @insight-primary-color;
   }
 
   body.fashion & {
-    color: @fashion;
+    color: @fashion-primary-color;
   }
 
   body.li & {
-    color: @li;
+    color: @li-primary-color;
   }
 
   body.instock & {
-    color: @instock;
+    color: @instock-primary-color;
+  }
+
+  body.barometer & {
+    color: @barometer-primary-color;
   }
 
   body.styletrial & {
-    color: @styletrial;
+    color: @styletrial-primary-color;
   }
 }
 
@@ -337,26 +345,30 @@ a.styled {
       height: 3px;
       left: -20px;
       top: 6px;
-      background: fade(@wgsn, 50%);
+      background: fade(@wgsn-primary-color, 50%);
 
       body.insight & {
-        background: fade(@insight, 50%);
+        background: fade(@insight-primary-color, 50%);
       }
 
       body.fashion & {
-        background: fade(@fashion, 50%);
+        background: fade(@fashion-primary-color, 50%);
       }
 
       body.li & {
-        background: fade(@li, 50%);
+        background: fade(@li-primary-color, 50%);
       }
 
       body.instock & {
-        background: fade(@instock, 50%);
+        background: fade(@instock-primary-color, 50%);
+      }
+
+      body.barometer & {
+        background: fade(@barometer-primary-color, 50%);
       }
 
       body.styletrial & {
-        background: fade(@styletrial, 50%);
+        background: fade(@styletrial-primary-color, 50%);
       }
     }
   }
@@ -381,28 +393,32 @@ a.styled {
       width: 14px;
       left: -20px;
       top: 0;
-      color: fade(@wgsn, 50%);
+      color: fade(@wgsn-primary-color, 50%);
       text-align: center;
       .text-bolder;
 
       body.insight & {
-        color: fade(@insight, 50%);
+        color: fade(@insight-primary-color, 50%);
       }
 
       body.fashion & {
-        color: fade(@fashion, 50%);
+        color: fade(@fashion-primary-color, 50%);
       }
 
       body.li & {
-        color: fade(@li, 50%);
+        color: fade(@li-primary-color, 50%);
       }
 
       body.instock & {
-        color: fade(@instock, 50%);
+        color: fade(@instock-primary-color, 50%);
+      }
+
+      body.barometer & {
+        color: fade(@barometer-primary-color, 50%);
       }
 
       body.styletrial & {
-        color: fade(@styletrial, 50%);
+        color: fade(@styletrial-primary-color, 50%);
       }
     }
   }
@@ -417,27 +433,31 @@ a.styled {
 // HIGHLIGHTS
 .header-highlight {
   display: inline;
-  background-image: linear-gradient(transparent 50%, fade(@wgsn, 30%) 0%);
+  background-image: linear-gradient(transparent 50%, fade(@wgsn-primary-color, 30%) 0%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
   body.insight & {
-    background-image: linear-gradient(transparent 50%, fade(@insight, 30%) 0%);
+    background-image: linear-gradient(transparent 50%, fade(@insight-primary-color, 30%) 0%);
   }
 
   body.fashion & {
-    background-image: linear-gradient(transparent 50%, fade(@fashion, 30%) 0%);
+    background-image: linear-gradient(transparent 50%, fade(@fashion-primary-color, 30%) 0%);
   }
 
   body.li & {
-    background-image: linear-gradient(transparent 50%, fade(@li, 30%) 0%);
+    background-image: linear-gradient(transparent 50%, fade(@li-primary-color, 30%) 0%);
   }
 
   body.instock & {
-    background-image: linear-gradient(transparent 50%, fade(@instock, 30%) 0%);
+    background-image: linear-gradient(transparent 50%, fade(@instock-primary-color, 30%) 0%);
+  }
+
+  body.barometer & {
+    background-image: linear-gradient(transparent 50%, fade(@barometer-primary-color, 30%) 0%);
   }
 
   body.styletrial & {
-    background-image: linear-gradient(transparent 50%, fade(@styletrial, 30%) 0%);
+    background-image: linear-gradient(transparent 50%, fade(@styletrial-primary-color, 30%) 0%);
   }
 }

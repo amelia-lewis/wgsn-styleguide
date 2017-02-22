@@ -1,6 +1,6 @@
-mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary_hex, secondary_rgb, secondary_cmyk, secondary_hex, tertiary_rgb, tertiary_cmyk, tertiary_hex)
+mixin product-card(id, name, primary_pantone, primary_variable, primary_rgb, primary_cmyk, primary_hex, secondary_variable, secondary_rgb, secondary_cmyk, secondary_hex, tertiary_variable, tertiary_rgb, tertiary_cmyk, tertiary_hex)
   .block-bot-lg
-    h2.transition.text-bold WGSN 
+    h2.transition.text-bold.text-truncate WGSN 
       span.text-capitalize.text-bold= name
     
     .product-card.overflow-auto.wow.fadeIn(class!=attributes.class)
@@ -8,6 +8,9 @@ mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary
         if primary_hex || primary_pantone || primary_rgb || primary_cmyk
           .block-bot-md.color-primary(style="background-color: #" + primary_hex)
             ul.list-bare
+              li.clipboard(data-clipboard-text=primary_variable)
+                span= primary_variable
+              <br>
               li.clipboard(data-clipboard-text=primary_hex) #
                 span= primary_hex
               if pantone
@@ -29,6 +32,9 @@ mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary
         if secondary_hex || secondary_pantone || secondary_rgb || secondary_cmyk
           .block-bot-md.color-secondary(style="background-color: #" + secondary_hex)
             ul.list-bare
+              li.clipboard(data-clipboard-text=secondary_variable)
+                span= secondary_variable
+              <br>
               li.clipboard(data-clipboard-text=secondary_hex) #
                 span= secondary_hex
               if pantone
@@ -46,6 +52,9 @@ mixin product-card(id, name, primary_pantone, primary_rgb, primary_cmyk, primary
         if tertiary_hex || tertiary_pantone || tertiary_rgb || tertiary_cmyk
           .block.color-tertiary(style="background-color: #" + tertiary_hex)
             ul.list-bare
+              li.clipboard(data-clipboard-text=tertiary_variable)
+                span= tertiary_variable
+              <br>
               li.clipboard(data-clipboard-text=tertiary_hex) #
                 span= tertiary_hex
               if pantone

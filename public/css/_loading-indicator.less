@@ -3,34 +3,39 @@
   height: 32px;
   clear: both;
   margin: 20px auto;
-  border: 4px solid fade(@wgsn, 40%);
-  border-top: 4px solid @wgsn;
+  border: 4px solid fade(@wgsn-primary-color, 40%);
+  border-top: 4px solid @wgsn-primary-color;
   border-radius: 50%;
   animation: spCircRot 1s infinite linear;
 
   body.insight & {
-    border-color: fade(@insight, 40%);
-    border-top-color: @insight;
+    border-color: fade(@insight-primary-color, 40%);
+    border-top-color: @insight-primary-color;
   }
 
   body.fashion & {
-    border-color: fade(@fashion, 40%);
-    border-top-color: @fashion;
+    border-color: fade(@fashion-primary-color, 40%);
+    border-top-color: @fashion-primary-color;
   }
 
   body.li & {
-    border-color: fade(@li, 40%);
-    border-top-color: @li;
+    border-color: fade(@li-primary-color, 40%);
+    border-top-color: @li-primary-color;
   }
 
   body.instock & {
-    border-color: fade(@instock, 40%);
-    border-top-color: @instock;
+    border-color: fade(@instock-primary-color, 40%);
+    border-top-color: @instock-primary-color;
+  }
+
+  body.barometer & {
+    border-color: fade(@barometer-primary-color, 40%);
+    border-top-color: @barometer-primary-color;
   }
 
   body.styletrial & {
-    border-color: fade(@styletrial, 40%);
-    border-top-color: @styletrial;
+    border-color: fade(@styletrial-primary-color, 40%);
+    border-top-color: @styletrial-primary-color;
   }
 
   &.loading-indicator--sm {

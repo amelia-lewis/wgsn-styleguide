@@ -28,56 +28,65 @@ button,
 
   // COLOURED
   &.btn--coloured {
-    border: 1px solid @wgsn;
-    background: @wgsn;
+    border: 1px solid @wgsn-primary-color;
+    background: @wgsn-primary-color;
     color: white;
 
     body.insight & {
-      border-color: @insight;
-      background: @insight;
+      border-color: @insight-primary-color;
+      background: @insight-primary-color;
     }
 
     body.fashion & {
-      border-color: @fashion;
-      background: @fashion;
+      border-color: @fashion-primary-color;
+      background: @fashion-primary-color;
     }
 
     body.li & {
-      border-color: @li;
-      background: @li;
+      border-color: @li-primary-color;
+      background: @li-primary-color;
     }
 
     body.instock & {
-      border-color: @instock;
-      background: @instock;
+      border-color: @instock-primary-color;
+      background: @instock-primary-color;
+    }
+
+    body.barometer & {
+      border-color: @barometer-primary-color;
+      background: @barometer-primary-color;
     }
 
     body.styletrial & {
-      border-color: @styletrial;
-      background: @styletrial;
+      border-color: @styletrial-primary-color;
+      background: @styletrial-primary-color;
     }
 
     &:not(.btn--disabled):hover {
-      background: lighten(@wgsn, 10);
+      background: lighten(@wgsn-primary-color, 10);
 
       body.insight & {
-        background: lighten(@insight, 10);
+        background: lighten(@insight-primary-color, 10);
       }
 
       body.fashion & {
-        background: lighten(@fashion, 10);
+        background: lighten(@fashion-primary-color, 10);
       }
 
       body.li & {
-        background: lighten(@li, 10);
+        background: lighten(@li-primary-color, 10);
       }
 
       body.instock & {
-        background: lighten(@instock, 10);
+        background: lighten(@instock-primary-color, 10);
+      }
+
+      body.barometer & {
+        background: lighten(@barometer-primary-color, 10);
       }
 
       body.styletrial & {
-        background: lighten(@styletrial, 10);
+        background: lighten(@styletrial-primary-color, 10);
       }
     }
   }
