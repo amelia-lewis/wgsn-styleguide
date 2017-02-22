@@ -8,11 +8,10 @@ mixin icon-block(name)
     .icon-block.block-sm
       .row
         .col-xs-2
-          i.icon(class=name)
+          //- i.icon(class=name)
+          svg(class="icon"): use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../assets/icons/wgsn-icons.svg#" + name)
         .col-xs-10
-          code.pull-left
-            | .
-            span= name
+          code.pull-left= name
 
 block content
   include ../../partials/style-guide-sub-nav
@@ -33,21 +32,11 @@ block content
 
       //- =======================================================
 
-      .col-xs-12.col-sm-9.col-md-7
+      .col-xs-12.col-sm-9.col-lg-7
         section
-          p Icons use an icon font, which can be added to your project by including 
-            code &lt;link href="https://file.myfontastic.com/VeyjPfaKqwcaCVK6kquFB4/icons.css" rel="stylesheet"&gt;
-            |  in the 
-            code head
+          p For our icons, we are using an SVG sprite system. You can find more information on how that works on  
+            a.styled(href="https://css-tricks.com/svg-sprites-use-better-icon-fonts/" target="_blank") CSS Tricks
             | .
-          p The classes below 
-            strong must
-            |  be added to an 
-            code i.icon
-            |  (e.g. 
-            code i.icon.icon-arrow-right
-            | ).
-
           p Vectors of the icons can be found 
             a.styled(href="https://drive.google.com/open?id=0B-449LHnjupfXzFHOEd3R3FhbmM" target="_blank") here
             | .
@@ -59,33 +48,33 @@ block content
 
           .card
             .row
-              +icon-block("icon-caret-down")
-              +icon-block("icon-caret-right")
-              +icon-block("icon-dropdown-arrow")
+              +icon-block("arrows-caret-down")
+              +icon-block("arrows-caret-right")
+              +icon-block("arrows-dropdown-arrow")
 
-            hr
-
-            .row
-              +icon-block("icon-arrow-up")
-              +icon-block("icon-arrow-right")
-              +icon-block("icon-arrow-left")
-              +icon-block("icon-arrow-down")
-
-            hr
+            .block-ver-sm: hr
 
             .row
-              +icon-block("icon-angle-up")
-              +icon-block("icon-angle-right")
-              +icon-block("icon-angle-left")
-              +icon-block("icon-angle-down")
+              +icon-block("arrows-arrow-up")
+              +icon-block("arrows-arrow-right")
+              +icon-block("arrows-arrow-left")
+              +icon-block("arrows-arrow-down")
 
-            hr
+            .block-ver-sm: hr
 
             .row
-              +icon-block("icon-double-angle-up")
-              +icon-block("icon-double-angle-right")
-              +icon-block("icon-double-angle-left")
-              +icon-block("icon-double-angle-down")
+              +icon-block("arrows-angle-up")
+              +icon-block("arrows-angle-right")
+              +icon-block("arrows-angle-left")
+              +icon-block("arrows-angle-down")
+
+            .block-ver-sm: hr
+
+            .row
+              +icon-block("arrows-double-angle-up")
+              +icon-block("arrows-double-angle-right")
+              +icon-block("arrows-double-angle-left")
+              +icon-block("arrows-double-angle-down")
 
         hr
 
@@ -94,60 +83,76 @@ block content
 
           .card
             .row
-              +icon-block("icon-bars")
-              +icon-block("icon-bell")
-              +icon-block("icon-bookmark")
-              +icon-block("icon-briefcase")
-              +icon-block("icon-camera")
-              +icon-block("icon-chat")
-              +icon-block("icon-chat-inactive")
-              +icon-block("icon-clone")
-              +icon-block("icon-collapse")
-              +icon-block("icon-comment")
-              +icon-block("icon-comment-filled")
-              +icon-block("icon-crop")
-              +icon-block("icon-download")
-              +icon-block("icon-ellipsis")
-              +icon-block("icon-envelope")
-              +icon-block("icon-error-circle")
-              +icon-block("icon-expand")
-              +icon-block("icon-export")
-              +icon-block("icon-filter")
-              +icon-block("icon-folder")
-              +icon-block("icon-folder-filled")
-              +icon-block("icon-folder-shared")
-              +icon-block("icon-folder-shared-filled")
-              +icon-block("icon-fullscreen")
-              +icon-block("icon-gear")
-              +icon-block("icon-grid-sm")
-              +icon-block("icon-grid-md")
-              +icon-block("icon-grid-lg")
-              +icon-block("icon-grid-details")
-              +icon-block("icon-help-circle")
-              +icon-block("icon-inbox")
-              +icon-block("icon-info-circle")
-              +icon-block("icon-link")
-              +icon-block("icon-map")
-              +icon-block("icon-map-marker")
-              +icon-block("icon-minimise")
-              +icon-block("icon-mobile")
-              +icon-block("icon-move")
-              +icon-block("icon-paper-plane")
-              +icon-block("icon-pencil")
-              +icon-block("icon-pencil-square")
-              +icon-block("icon-print")
-              +icon-block("icon-reset")
-              +icon-block("icon-related-reports")              
-              +icon-block("icon-search")
-              +icon-block("icon-share-left")
-              +icon-block("icon-share-right")
-              +icon-block("icon-sliders")
-              +icon-block("icon-trash")
-              +icon-block("icon-upload")
-              +icon-block("icon-user")
-              +icon-block("icon-user-filled")
-              +icon-block("icon-zoom-plus")
-              +icon-block("icon-zoom-minus")
+              +icon-block("application-bars")
+              +icon-block("application-bell")
+              +icon-block("application-bell-filled")
+              +icon-block("application-bookmark")
+              +icon-block("application-bookmark-filled")
+              +icon-block("application-briefcase")
+              +icon-block("application-camera")
+              +icon-block("application-clone")
+              +icon-block("application-collapse")
+              +icon-block("application-comment")
+              +icon-block("application-comment-filled")
+              +icon-block("application-comments")
+              +icon-block("application-comments-filled")
+              +icon-block("application-comments-inactive")
+              +icon-block("application-crop")
+              +icon-block("application-download")
+              +icon-block("application-ellipsis")
+              +icon-block("application-envelope")
+              +icon-block("application-exclamation-circle")
+              +icon-block("application-exclamation-circle-filled")
+              +icon-block("application-expand")
+              +icon-block("application-export")
+              +icon-block("application-eye")
+              +icon-block("application-filter")
+              +icon-block("application-folder")
+              +icon-block("application-folder-filled")
+              +icon-block("application-folder-shared")
+              +icon-block("application-folder-shared-filled")
+              +icon-block("application-fullscreen")
+              +icon-block("application-grid-sm")
+              +icon-block("application-grid-md")
+              +icon-block("application-grid-lg")
+              +icon-block("application-grid-details")
+              +icon-block("application-help-circle")
+              +icon-block("application-help-circle-filled")
+              +icon-block("application-inbox")
+              +icon-block("application-info-circle")
+              +icon-block("application-info-circle-filled")
+              +icon-block("application-link")
+              +icon-block("application-list")
+              +icon-block("application-map")
+              +icon-block("application-map-filled")
+              +icon-block("application-map-marker")
+              +icon-block("application-map-marker-filled")
+              +icon-block("application-minimise")
+              +icon-block("application-mobile")
+              +icon-block("application-move")
+              +icon-block("application-paper-plane")
+              +icon-block("application-pencil")
+              +icon-block("application-pencil-square")
+              +icon-block("application-plane")
+              +icon-block("application-plane-filled")
+              +icon-block("application-print")
+              +icon-block("application-reset")
+              +icon-block("application-related")
+              +icon-block("application-save-to-folder")
+              +icon-block("application-search")
+              +icon-block("application-settings")
+              +icon-block("application-share-left")
+              +icon-block("application-share-right")
+              +icon-block("application-sliders")
+              +icon-block("application-star")
+              +icon-block("application-star-half-filled")
+              +icon-block("application-star-filled")
+              +icon-block("application-trash")
+              +icon-block("application-upload")
+              +icon-block("application-user")
+              +icon-block("application-user-filled")
+              +icon-block("application-zoom-in")
+              +icon-block("application-zoom-out")
 
         hr
 
@@ -156,17 +161,17 @@ block content
 
           .card
             .row
-              +icon-block("icon-image")
-              +icon-block("icon-film")
-              +icon-block("icon-book")
-              +icon-block("icon-file-pdf")
-              +icon-block("icon-file-doc")
-              +icon-block("icon-file-xls")
-              +icon-block("icon-file-ppt")
-              +icon-block("icon-file-key")
-              +icon-block("icon-file-ai")
-              +icon-block("icon-file-psd")
-              +icon-block("icon-file-indd")
+              +icon-block("file-types-image")
+              +icon-block("file-types-film")
+              +icon-block("file-types-book")
+              +icon-block("file-types-file-pdf")
+              +icon-block("file-types-file-doc")
+              +icon-block("file-types-file-xls")
+              +icon-block("file-types-file-ppt")
+              +icon-block("file-types-file-key")
+              +icon-block("file-types-file-ai")
+              +icon-block("file-types-file-psd")
+              +icon-block("file-types-file-indd")
 
         hr
 
@@ -175,34 +180,34 @@ block content
 
           .card
             .row
-              +icon-block("icon-instock-in-stock")
-              +icon-block("icon-instock-out-of-stock-all-skus")
-              +icon-block("icon-instock-out-of-stock-some-skus")
-              +icon-block("icon-instock-restocked")
-              +icon-block("icon-instock-markdown-all-skus")
-              +icon-block("icon-instock-markdown-some-skus")
-              +icon-block("icon-instock-markup-all-skus")
-              +icon-block("icon-instock-markup-some-skus")
+              +icon-block("instock-in-stock")
+              +icon-block("instock-out-of-stock-all-skus")
+              +icon-block("instock-out-of-stock-some-skus")
+              +icon-block("instock-restocked")
+              +icon-block("instock-markdown-all-skus")
+              +icon-block("instock-markdown-some-skus")
+              +icon-block("instock-markup-all-skus")
+              +icon-block("instock-markup-some-skus")
             
-            hr
+            .block-ver-sm: hr
 
             .row
-              +icon-block("icon-instock-kpi")
-              +icon-block("icon-instock-date")
-              +icon-block("icon-instock-country")
-              +icon-block("icon-instock-retailer")
-              +icon-block("icon-instock-product")
-              +icon-block("icon-instock-age-range")
-              +icon-block("icon-instock-price")
-              +icon-block("icon-instock-colour")
-              +icon-block("icon-instock-print")
-              +icon-block("icon-instock-material")
+              +icon-block("instock-kpi")
+              +icon-block("instock-date")
+              +icon-block("instock-country")
+              +icon-block("instock-retailer")
+              +icon-block("instock-product")
+              +icon-block("instock-age-range")
+              +icon-block("instock-price")
+              +icon-block("instock-colour")
+              +icon-block("instock-print")
+              +icon-block("instock-material")
 
-            hr
+            .block-ver-sm: hr
 
             .row
-              +icon-block("icon-instock-download-xls")
-              +icon-block("icon-instock-download-pdf")
+              +icon-block("instock-download-xls")
+              +icon-block("instock-download-pdf")
 
         hr
 
@@ -211,12 +216,12 @@ block content
 
           .card
             .row
-              +icon-block("icon-lang-en")
-              +icon-block("icon-lang-es")
-              +icon-block("icon-lang-pt")
-              +icon-block("icon-lang-cs")
-              +icon-block("icon-lang-jp")
-              +icon-block("icon-lang-ko")
+              +icon-block("lang-en")
+              +icon-block("lang-es")
+              +icon-block("lang-pt")
+              +icon-block("lang-cs")
+              +icon-block("lang-jp")
+              +icon-block("lang-ko")
 
         hr
 
@@ -225,16 +230,18 @@ block content
 
           .card
             .row
-              +icon-block("icon-facebook")
-              +icon-block("icon-twitter")
-              +icon-block("icon-instagram")
-              +icon-block("icon-google-plus")
-              +icon-block("icon-tumblr")
-              +icon-block("icon-pinterest")
-              +icon-block("icon-youtube")
-              +icon-block("icon-youtube-alt")
-              +icon-block("icon-vimeo")
-              +icon-block("icon-linkedin")
+              +icon-block("social-media-facebook")
+              +icon-block("social-media-twitter")
+              +icon-block("social-media-instagram")
+              +icon-block("social-media-google-plus")
+              +icon-block("social-media-tumblr")
+              +icon-block("social-media-pinterest")
+              +icon-block("social-media-youtube")
+              +icon-block("social-media-linkedin")
+              +icon-block("social-media-weibo")
+              +icon-block("social-media-youku")
+              +icon-block("social-media-kakao")
+              +icon-block("social-media-wechat")
 
         hr
 
@@ -243,20 +250,18 @@ block content
 
           .card
             .row
-              +icon-block("icon-circle")
-              +icon-block("icon-heart")
-              +icon-block("icon-heart-filled")
-              +icon-block("icon-tick")
-              +icon-block("icon-tick-circle")
-              +icon-block("icon-tick-circle-filled")
-              +icon-block("icon-cross")
-              +icon-block("icon-cross-circle")
-              +icon-block("icon-cross-circle-filled")
-              +icon-block("icon-plus")
-              +icon-block("icon-plus-circle")
-              +icon-block("icon-plus-circle-filled")
-              +icon-block("icon-minus")
-              +icon-block("icon-minus-circle")
-              +icon-block("icon-minus-circle-filled")
-              +icon-block("icon-list")
-              +icon-block("icon-eye")
+              +icon-block("symbol-circle")
+              +icon-block("symbol-heart")
+              +icon-block("symbol-heart-filled")
+              +icon-block("symbol-tick")
+              +icon-block("symbol-tick-circle")
+              +icon-block("symbol-tick-circle-filled")
+              +icon-block("symbol-cross")
+              +icon-block("symbol-cross-circle")
+              +icon-block("symbol-cross-circle-filled")
+              +icon-block("symbol-plus")
+              +icon-block("symbol-plus-circle")
+              +icon-block("symbol-plus-circle-filled")
+              +icon-block("symbol-minus")
+              +icon-block("symbol-minus-circle")
+              +icon-block("symbol-minus-circle-filled")

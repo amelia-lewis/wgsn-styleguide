@@ -82,11 +82,11 @@
   font-weight: 100;
 }
 
-.text-bold, strong, label {
+.text-bold, strong, label, h4, h5 {
   font-weight: 500;
 }
 
-.text-bolder, h1, h2, h3, h4, h5 {
+.text-bolder, h1, h2, h3 {
   font-weight: 700;
 }
 
@@ -162,7 +162,8 @@ h1, h2, h3, h4, h5 {
   margin: 1em 0 0.5em;
 }
 
-section > h1:first-child, section > h2:first-child {
+section > h1:first-child, section > h2:first-child,
+div > h1:first-child, div > h2:first-child {
   margin: 0 0 0.5em;
 }
 
@@ -284,7 +285,7 @@ a.styled {
 
 
 // TEXT COLORS
-.text-brand {
+.text-product {
   color: @wgsn-primary-color;
 
   body.insight & {

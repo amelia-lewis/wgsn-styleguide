@@ -1,190 +1,31 @@
-include partials/product-card
-include partials/font-card
-
 extends layout
 
 block append vars
-  - bodyclass = 'index products'
+  - bodyclass = 'index home'
 
 block content
   section
     .row
-      .col-xs-12.col-lg-8
-        +product-card(
-          "wgsn",
-          "",
-          "",
-          "@wgsn-primary-color",
-          "0, 0, 21",
-          "92%, 82%, 0%, 0%",
-          "0000DD",
-          "@wgsn-secondary-color",
-          "167, 169, 172",
-          "36%, 28%, 27%, 0%",
-          "A7A9AC",
-          "@wgsn-tertiary-color",
-          "228, 229, 230",
-          "9%, 6%, 6%, 0%",
-          "E4E5E6")(class="wgsn")
-      
-    .row  
-      .col-xs-12.col-md-6.col-lg-4
-        +product-card(
-          "insight",
-          "Insight",
-          "2592 U",
-          "@insight-primary-color",
-          "115, 0, 166",
-          "70%, 98%, 0%, 0%",
-          "7300a6",
-          "@insight-secondary-color",
-          "157, 77, 193",
-          "50%, 79%, 0%, 0%",
-          "9d4dc1",
-          "@insight-tertiary-color",
-          "241, 229, 246",
-          "4%, 10%, 0%, 0%",
-          "f1e5f6")(class="insight")
-      
-      .col-xs-12.col-md-6.col-lg-4
-        +product-card(
-          "fashion",
-          "Fashion",
-          "178 C",
-          "@fashion-primary-color",
-          "254, 72, 79",
-          "0%, 86%, 65%, 0%",
-          "FE484F",
-          "@fashion-secondary-color",
-          "254, 127, 132",
-          "0%, 64%, 35%, 0%",
-          "FE7F84",
-          "@fashion-tertiary-color",
-          "255, 235, 236",
-          "0%, 8%, 2%, 0%",
-          "FFEBEC")(class="fashion")
+      .col-xs-12.col-sm-9.col-md-7
+        h1 Welcome
+        p This the WGSN style guide.
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-      .col-xs-12.col-md-6.col-lg-4
-        +product-card(
-          "lifestyle-and-interiors",
-          "Lifestyle & Interiors",
-          "7548 C",
-          "@li-primary-color",
-          "255, 196, 48",
-          "0%, 24%, 90%, 0%",
-          "FFC430",
-          "@li-secondary-color",
-          "255, 214, 110",
-          "0%, 15%, 68%, 0%",
-          "FFD66E",
-          "@li-tertiary-color",
-          "255, 249, 232",
-          "0%, 1%, 9%, 0%",
-          "FFF9E8")(class="li")
-      
-      .col-xs-12.col-md-6.col-lg-4
-        +product-card(
-          "instock",
-          "Instock",
-          "2727 U",
-          "@instock-primary-color",
-          "23, 143, 255",
-          "91%, 44%, 0%, 0%",
-          "178FFF",
-          "@instock-secondary-color",
-          "93, 177, 255",
-          "64%, 31%, 0%, 0%",
-          "5DB1FF",
-          "@instock-tertiary-color",
-          "231, 244, 255",
-          "94%, 4%, 0%, 0%",
-          "E7F4FF")(class="instock")
+        h3 To-do list:
+        ul.ul-styled
+          li Write an overview...
+          li Instock graphs
+          li Content Types
+            ul
+              li Featured report
+              li Small report
+              li News article
+              li City by City listing
+              li Sites that Inspire listing
+              li Trendlink tile
+              li Video tile
+          li Logo usage and downloads
+          li Smarter button functions?
+          li Smarter color functions?
 
-      .col-xs-12.col-md-6.col-lg-4
-        +product-card(
-          "barometer",
-          "Barometer",
-          "3115 U",
-          "@barometer-primary-color",
-          "4, 194, 219",
-          "68%, 0%, 14%, 0%",
-          "04C2DB",
-          "@barometer-secondary-color",
-          "78, 212, 229",
-          "66%, 7%, 0%, 10%",
-          "4ED4E5",
-          "@barometer-tertiary-color",
-          "229, 249, 252",
-          "9%, 1%, 0%, 1%",
-          "E5F9FC")(class="barometer")
-
-      .col-xs-12.col-md-6.col-lg-4
-        +product-card(
-          "styletrial",
-          "Styletrial",
-          "2583 C",
-          "@styletrial-primary-color",
-          "0, 182, 151",
-          "76%, 0%, 54%, 0%",
-          "00B697",
-          "@styletrial-secondary-color",
-          "77, 204, 182",
-          "61%, 0%, 38%, 0%",
-          "4DCCB6",
-          "@styletrial-tertiary-color",
-          "227, 247, 244",
-          "9%, 0%, 4%, 0%",
-          "E3F7F4")(class="styletrial")
-      
-      .col-xs-12.col-md-6.col-lg-4
-        +product-card(
-          "mindset",
-          "Mindset",
-          "",
-          "@mindset-primary-color",
-          "35, 31, 32",
-          "70, 67, 64, 74",
-          "231f20",
-          "",
-          "",
-          "",
-          "",
-          "@mindset-tertiary-color",
-          "255, 255, 255",
-          "0, 0, 0, 0",
-          "ffffff")(class="mindset")
-
-  hr
-
-  section
-    .row
-      .col-xs-12.col-sm-8.col-md-6
-        .block-bot-md
-          h2 Looking for fonts?
-          p WGSN’s visual identity is rooted in one main font and typographic treatment that goes across all products, communication, audiences and formats. It is an extensive family that allows us to generate variations of the main treatment, adapting to certain contexts and needs. The visual system has a secondary font meant only for our bespoke consultancy, Mindset, and C-Level targeting.
-    
-    .row
-      .col-xs-12.col-sm-6
-        +font-card(
-          "sans-serif",
-          "Graphik",
-          "",
-          "Graphik is the primary typeface for WGSN. Its main nine different weights are used for the different voices of the brand. These react differently within one consistent identity across all services, communication and channels.",
-          "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-          "abcdefghijklmnopqrstuvwxyz",
-          "1234567980")
-      
-      .col-xs-12.col-sm-6
-        +font-card(
-          "serif",
-          "Caslon 224",
-          "",
-          "Caslon is the brand’s secondary font speci cally meant for Mindset services and C-Level targeting. Although the font consists of four different weights, Caslon Book will be the main and most used.",
-          "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-          "abcdefghijklmnopqrstuvwxyz",
-          "1234567980")
-
-    //- copy to clipboard alerts
-    .alert-container
-      .alert#alert-success: p Code copied to clipboard.
-      .alert#alert-error: p Oops... copying didn't work :/
+        svg(class="icon"): use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/icons/wgsn-icons.svg#arrows-arrow-right")

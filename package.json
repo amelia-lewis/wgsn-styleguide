@@ -1,0 +1,29 @@
+{
+  "name": "wgsn-styleguide",
+  "version": "1.0.0",
+  "description": "A utility for WGSN employees to quickly grab product logos and colors.",
+  "main": "index.js",
+  "dependencies": {
+    "clipboard": "^1.5.3",
+    "gem": "^2.0.1",
+    "grunt-svgstore": "^1.0.0",
+    "jstransformer-marked": "^1.0.1",
+    "grunt": "^1.0.1",
+    "less": "^2.7.1",
+    "proto": "^1.0.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amelia-lewis/wgsn-styleguide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amelia-lewis/wgsn-styleguide/issues"
+  },
+  "homepage": "https://github.com/amelia-lewis/wgsn-styleguide#readme"
+}

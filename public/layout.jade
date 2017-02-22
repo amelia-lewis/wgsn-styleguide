@@ -16,6 +16,7 @@ html
   
   body(class=bodyclass)
     include partials/github-link
+    img(src="/assets/icons/wgsn-icons.svg" style="display: none;")
 
     header.block-ver-sm.bg-black.transition
       .content-wrap
@@ -23,10 +24,13 @@ html
           .col-xs-6.col-sm-10
             a.header-logo.pull-left.l(href="/"): include partials/logo
             ul.pull-left.list-bare.tight.header-nav
-              li.tight.block-md.inline-block.pull-left#nav-products: a(href="/") Product Colors
-              li.tight.block-md.inline-block.pull-left#nav-style-guide: a(href="/style-guide") Style Guide
+              li.tight.block-ver-md.block-hor-sm.inline-block.pull-left#nav-home: a(href="/") Home
+              li.tight.block-ver-md.block-hor-sm.inline-block.pull-left#nav-logo: a(href="/logo") Logo
+              li.tight.block-ver-md.block-hor-sm.inline-block.pull-left#nav-products: a(href="/product-colors") Product Colors
+              li.tight.block-ver-md.block-hor-sm.inline-block.pull-left#nav-fonts: a(href="/fonts") Fonts
+              li.tight.block-ver-md.block-hor-sm.inline-block.pull-left#nav-style-guide: a(href="/style-guide") Style Guide
 
-          .col-xs-6.col-sm-2
+          .col-xs-6.col-sm-2.text-right
             label.label.label--dropdown
               select.input.input--dropdown#product-changer
                 option(value="wgsn") WGSN
@@ -39,7 +43,10 @@ html
 
     .hamburgler-menu
       ul.hamburgler-menu-list
-        li.block-xs#nav-products: a.text-bolder(href="/") Product Colors
+        li.block-xs#nav-home: a.text-bolder(href="/") Home
+        li.block-xs#nav-logo: a.text-bolder(href="/logo") Logo
+        li.block-xs#nav-products: a.text-bolder(href="/product-colors") Product Colors
+        li.block-xs#nav-fonts: a.text-bolder(href="/fonts") Fonts
         li.block-xs#nav-style-guide: a.text-bolder(href="/style-guide") Style Guide
         li.block-xs#nav-style-guide-overview: a(href="/style-guide") Overview
         li.block-xs#nav-style-guide-typography: a(href="/style-guide/typography") Typography
@@ -58,7 +65,7 @@ html
 
     hr
 
-    footer.block-ver-lg
+    footer.block-ver-md
       .content-wrap
         .block-ver-sm.text-grey
           p.tight All logos and branding owned by 
