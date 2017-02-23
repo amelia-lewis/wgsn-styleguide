@@ -8,7 +8,7 @@ block append vars
 block content
   section
     .row
-      .col-xs-12.col-lg-8
+      .col-xs-12
         +product-card(
           "wgsn",
           "",
@@ -27,7 +27,7 @@ block content
           "E4E5E6")(class="wgsn")
       
     .row  
-      .col-xs-12.col-md-6.col-lg-4
+      .col-xs-12
         +product-card(
           "insight",
           "Insight",
@@ -45,7 +45,7 @@ block content
           "4%, 10%, 0%, 0%",
           "f1e5f6")(class="insight")
       
-      .col-xs-12.col-md-6.col-lg-4
+      .col-xs-12
         +product-card(
           "fashion",
           "Fashion",
@@ -63,7 +63,7 @@ block content
           "0%, 8%, 2%, 0%",
           "FFEBEC")(class="fashion")
 
-      .col-xs-12.col-md-6.col-lg-4
+      .col-xs-12
         +product-card(
           "lifestyle-and-interiors",
           "Lifestyle & Interiors",
@@ -81,7 +81,7 @@ block content
           "0%, 1%, 9%, 0%",
           "FFF9E8")(class="li")
       
-      .col-xs-12.col-md-6.col-lg-4
+      .col-xs-12
         +product-card(
           "instock",
           "Instock",
@@ -99,7 +99,7 @@ block content
           "94%, 4%, 0%, 0%",
           "E7F4FF")(class="instock")
 
-      .col-xs-12.col-md-6.col-lg-4
+      .col-xs-12
         +product-card(
           "barometer",
           "Barometer",
@@ -117,7 +117,7 @@ block content
           "9%, 1%, 0%, 1%",
           "E5F9FC")(class="barometer")
 
-      .col-xs-12.col-md-6.col-lg-4
+      .col-xs-12
         +product-card(
           "styletrial",
           "Styletrial",
@@ -135,7 +135,7 @@ block content
           "9%, 0%, 4%, 0%",
           "E3F7F4")(class="styletrial")
       
-      .col-xs-12.col-md-6.col-lg-4
+      .col-xs-12
         +product-card(
           "mindset",
           "Mindset",
@@ -152,3 +152,8 @@ block content
           "255, 255, 255",
           "0, 0, 0, 0",
           "ffffff")(class="mindset")
+
+    //- copy to clipboard alerts
+    .alert-container
+      .alert#alert-success: p Code copied to clipboard.
+      .alert#alert-error: p Oops... copying didn't work :/

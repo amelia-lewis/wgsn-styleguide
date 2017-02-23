@@ -162,8 +162,10 @@ h1, h2, h3, h4, h5 {
   margin: 1em 0 0.5em;
 }
 
-section > h1:first-child, section > h2:first-child,
-div > h1:first-child, div > h2:first-child {
+section > h1:first-child, div > h1:first-child,
+section > h2:first-child, div > h2:first-child,
+section > h3:first-child, div > h3:first-child,
+section > h4:first-child, div > h4:first-child {
   margin: 0 0 0.5em;
 }
 
@@ -179,7 +181,11 @@ ul, ol {
 // ====================
 // Sizing
 // ====================
-h1, h2, h3, h4, h5, p, li, a, .text-smaller, small {
+h1, h2, h3, h4, h5 {
+  line-height: 120%;
+}
+
+p, li, a, .text-smaller, small {
   line-height: 140%;
 }
 
@@ -221,6 +227,10 @@ p, li, a, code {
   > * {
     line-height: 100%;
   }
+}
+
+.text-larger {
+  font-size: 18px;
 }
 
 .text-smaller, small {

@@ -7,12 +7,15 @@ block append vars
 
 block content
   section
-    .row
-      .col-xs-12.col-sm-8.col-md-6
-        .block-bot-md
-          h2 Looking for fonts?
-          p WGSN’s visual identity is rooted in one main font and typographic treatment that goes across all products, communication, audiences and formats. It is an extensive family that allows us to generate variations of the main treatment, adapting to certain contexts and needs. The visual system has a secondary font meant only for our bespoke consultancy, Mindset, and C-Level targeting.
+    h1 Graphik.
     
+    .row
+      .col-xs-12.col-md-8.col-lg-6
+        .block-bot-lg
+          p.text-larger Graphik is the primary typeface for WGSN. Its main nine diferent weights are used for the diferent voices of the brand. These react diferently within one consistent identity across all services, communication and channels.
+    
+    .block-bot-lg: hr
+
     .row
       .col-xs-12.col-sm-6
         +font-card(
@@ -29,12 +32,7 @@ block content
           "serif",
           "Caslon 224",
           "",
-          "Caslon is the brand’s secondary font speci cally meant for Mindset services and C-Level targeting. Although the font consists of four different weights, Caslon Book will be the main and most used.",
+          "Caslon is the brand’s secondary font specifcally meant for Mindset services and C-Level targeting. Although the font consists of four different weights, Caslon Book will be the main and most used.",
           "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
           "abcdefghijklmnopqrstuvwxyz",
           "1234567980")
-
-    //- copy to clipboard alerts
-    .alert-container
-      .alert#alert-success: p Code copied to clipboard.
-      .alert#alert-error: p Oops... copying didn't work :/

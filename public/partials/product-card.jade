@@ -1,9 +1,9 @@
 mixin product-card(id, name, primary_pantone, primary_variable, primary_rgb, primary_cmyk, primary_hex, secondary_variable, secondary_rgb, secondary_cmyk, secondary_hex, tertiary_variable, tertiary_rgb, tertiary_cmyk, tertiary_hex)
   .block-bot-lg
-    h2.transition.text-bold.text-truncate WGSN 
-      span.text-capitalize.text-bold= name
+    h2.transition WGSN 
+      span.text-capitalize.text-bolder= name
     
-    .product-card.overflow-auto.wow.fadeIn(class!=attributes.class)
+    .product-card.overflow-auto(class!=attributes.class)
       .info
         if primary_hex || primary_pantone || primary_rgb || primary_cmyk
           .block-bot-md.color-primary(style="background-color: #" + primary_hex)

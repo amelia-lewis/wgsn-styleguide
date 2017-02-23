@@ -5,11 +5,10 @@ button,
   padding: 0 20px;
   height: 36px;
   font-size: 14px;
-  line-height: 100%;
+  line-height: 36px;
   .text-bold;
   .text-center;
   .transition;
-  .flex-center;
   position: relative;
   transform: translate3d(0, 0, 0);
   cursor: pointer;
@@ -140,13 +139,14 @@ button,
   // LARGE
   &.btn--lg {
     height: 48px;
-    padding: 17px 20px;
+    line-height: 48px;
   }
 
   // SMALL
   &.btn--sm {
     height: 26px;
-    padding: 5px 10px 7px;
+    line-height: 26px;
+    padding: 0 10px;
   }
 }
 
