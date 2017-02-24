@@ -1,77 +1,56 @@
 // ====================
 // Fonts
 // ====================
-@font-face {
-  font-family: "Graphik";
-  src: url("../assets/fonts/Graphik-Regular.otf");
-  font-weight: 100;
-  font-style: normal;
-}
+@import url(https://www.wgsn.com/assets/common/css/fonts/licensed/all_en.css);
 
 @font-face {
-  font-family: "Graphik";
-  src: url("../assets/fonts/Graphik-RegularItalic.otf");
-  font-weight: 100;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Graphik";
-  src: url("../assets/fonts/Graphik-Semibold.otf");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Graphik";
-  src: url("../assets/fonts/Graphik-SemiboldItalic.otf");
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Graphik";
-  src: url("../assets/fonts/Graphik-Bold.otf");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Graphik";
-  src: url("../assets/fonts/Graphik-BoldItalic.otf");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Caslon 224";
+  font-family: "ITC Caslon 224";
   src: url("../assets/fonts/Caslon224Std-Book.otf");
-  font-weight: 100;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Caslon 224";
+  font-family: "ITC Caslon 224";
   src: url("../assets/fonts/Caslon224Std-BookItalic.otf");
-  font-weight: 100;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ITC Caslon 224";
+  src: url("../assets/fonts/Caslon224Std-Medium.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ITC Caslon 224";
+  src: url("../assets/fonts/Caslon224Std-MediumItalic.otf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ITC Caslon 224";
+  src: url("../assets/fonts/Caslon224Std-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ITC Caslon 224";
+  src: url("../assets/fonts/Caslon224Std-BoldItalic.otf");
+  font-weight: 700;
   font-style: italic;
 }
 
 .serif {
-  font-family: "Caslon 224", "Georgia", serif;
+  font-family: "ITC Caslon 224", "Georgia", serif;
 }
 
 .sans-serif {
   font-family: "Graphik", sans-serif;
-}
-
-// p {
-//   line-height: 1.4em;
-// }
-
-.wgsn-font {
-  font-family: "WGSN Headline", "Futura", sans-serif;
-  font-weight: normal;
 }
 
 
@@ -79,11 +58,11 @@
 // Weight
 // ====================
 .text-normal, p, span, li {
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .text-bold, strong, label, h4, h5 {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .text-bolder, h1, h2, h3 {
@@ -258,11 +237,10 @@ a.styled {
   position: relative;
   display: inline-block;
   background-image: linear-gradient(to right, @wgsn-primary-color 50%, fade(@wgsn-primary-color, 30%) 0%);
-  background-size: 200% 2px;
+  background-size: 200% 1px;
   background-repeat: no-repeat;
   background-position: 100% bottom;
   display: inline;
-  padding-bottom: 3px;
   
   body.insight & {
     background-image: linear-gradient(to right, @insight-primary-color 50%, fade(@insight-primary-color, 30%) 0%);

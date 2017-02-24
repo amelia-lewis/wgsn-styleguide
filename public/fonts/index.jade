@@ -7,32 +7,53 @@ block append vars
 
 block content
   section
-    h1 Graphik.
-    
     .row
-      .col-xs-12.col-md-8.col-lg-6
-        .block-bot-lg
-          p.text-larger Graphik is the primary typeface for WGSN. Its main nine diferent weights are used for the diferent voices of the brand. These react diferently within one consistent identity across all services, communication and channels.
-    
-    .block-bot-lg: hr
-
-    .row
-      .col-xs-12.col-sm-6
-        +font-card(
-          "sans-serif",
-          "Graphik",
-          "",
-          "Graphik is the primary typeface for WGSN. Its main nine different weights are used for the different voices of the brand. These react differently within one consistent identity across all services, communication and channels.",
-          "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-          "abcdefghijklmnopqrstuvwxyz",
-          "1234567980")
+      .col-xs-12.col-md-8
+        p.text-larger.block-bot-md WGSN’s visual identity is rooted in one main font and typographic treatment that goes across all products, communication, audiences and formats.
       
-      .col-xs-12.col-sm-6
-        +font-card(
-          "serif",
-          "Caslon 224",
-          "",
-          "Caslon is the brand’s secondary font specifcally meant for Mindset services and C-Level targeting. Although the font consists of four different weights, Caslon Book will be the main and most used.",
-          "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-          "abcdefghijklmnopqrstuvwxyz",
-          "1234567980")
+    .row
+      .col-xs-12
+        p It is an extensive family that allows us to generate variations of the main treatment, adapting to certain contexts and needs. The visual system has a secondary font meant only for our bespoke consultancy, Mindset, and C-Level targeting.
+  
+  hr
+
+  section
+    .row
+      .col-xs-12
+        h1 Graphik
+
+        .row
+          .col-xs-12.col-md-8
+            p Inspired by the elegant plainness seen in many of the less common 20th century European sans serifs and in handlettering on classic Swiss Modern posters.
+            p Designed by Christian Schwartz. Licensing: 
+              a.styled(href="https://commercialtype.com/catalog/graphik" target="_blank") Commercial Type
+              | .
+            p Graphik is the primary typeface for WGSN. Its main nine different weights are used for the different voices of the brand. These react differently within one consistent identity across all services, communication and channels.
+
+          .col-xs-12.col-md-4
+            .card
+              ul.list-bare
+                li: a.styled(href="/downloads/graphik.zip" download="graphik.zip") Download .otf files
+                li To use Graphik on your website, include 
+                  code @import url(https://www.wgsn.com/assets/common/css/fonts/licensed/all_en.css);
+                  |  at the top of your CSS.
+
+  hr
+  
+  section
+    .row
+      .col-xs-12
+        h1.serif ITC Caslon 224
+
+        .row
+          .col-xs-12.col-md-8
+            p.serif A classic advertising and display typeface. Smooth weight transitions and careful structuring of hairline strokes. Benguiat chose the number 224 because it was the address of the building where he did most of his work.
+            p.serif Designed by Edward Benguiat in 1982. Published by Adobe. Originally designed by William Caslon in 1725. Licensing: 
+              a.styled.serif(href="https://www.fontshop.com/families/adobe-itc-caslon-no-224" target="_blank") Fontshop
+              | .
+            p.serif Caslon is the brand’s secondary font specifcally meant for Mindset services and C-Level targeting. Although the font consists of four different weights, Caslon Book will be the main and most used.
+
+          .col-xs-12.col-md-4
+            .card
+              ul.list-bare
+                li: a.styled(href="/downloads/itc-caslon-224.zip" download="itc-caslon-224.zip") Download .otf files
