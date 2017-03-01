@@ -37,11 +37,10 @@
   -webkit-appearance: none;
   background: white;
   border: none;
-  border-bottom: 1px solid @md-grey;
+  border-bottom: 1px solid black;
   height: 36px;
   width: 100%;
   padding: 10px 0;
-  color: @dk-grey;
   .sans-serif;
   .text-normal;
   font-size: 14px;
@@ -111,7 +110,7 @@
 .input--dropdown {
   background: white url('../assets/img/dropdown-arrow-1.png') no-repeat right center / 36px;
   padding: 2px 36px 0 10px;
-  border: 1px solid @md-grey;
+  border: 1px solid black;
 }
 
 .label--dropdown-bare {
@@ -167,7 +166,7 @@ label.label--checkbox-radio {
     right: 0;
     bottom: 0;
     background: white;
-    border: 1px solid @md-grey;
+    border: 1px solid black;
     .transition;
   }
 
@@ -185,7 +184,8 @@ label.label--checkbox-radio {
 
   &:disabled {
     &:before {
-      background: @xlt-grey;
+      background: @lt-grey;
+      border-color: @md-grey;
     }
   }
 }
@@ -196,7 +196,7 @@ label.label--checkbox-radio {
     left: 1px;
     right: 1px;
     bottom: 1px;
-    background: url('../assets/img/icon-font_tick-white.svg') no-repeat center center / 16px 16px;
+    background: url('../assets/icons/symbols/symbol-tick-white.svg') no-repeat center center / 16px 16px;
   }
 
   &:checked {
@@ -311,7 +311,7 @@ label.label--checkbox-radio {
     left: -2px;
     width: 18px;
     height: 18px;
-    .border;
+    border: 1px solid black;
     transform: translate3d(0, 0, 0);
     .transition;
   }

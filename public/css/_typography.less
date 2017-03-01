@@ -236,35 +236,17 @@ a {
 a.styled {
   position: relative;
   display: inline-block;
-  background-image: linear-gradient(to right, @wgsn-primary-color 50%, fade(@wgsn-primary-color, 30%) 0%);
+  background-image: linear-gradient(to right, @wgsn-primary-color 50%, fade(@wgsn-primary-color, 50%) 0%);
   background-size: 200% 1px;
   background-repeat: no-repeat;
   background-position: 100% bottom;
   display: inline;
-  
-  body.insight & {
-    background-image: linear-gradient(to right, @insight-primary-color 50%, fade(@insight-primary-color, 30%) 0%);
-  }
-
-  body.fashion & {
-    background-image: linear-gradient(to right, @fashion-primary-color 50%, fade(@fashion-primary-color, 30%) 0%);
-  }
-
-  body.li & {
-    background-image: linear-gradient(to right, @li-primary-color 50%, fade(@li-primary-color, 30%) 0%);
-  }
-
-  body.instock & {
-    background-image: linear-gradient(to right, @instock-primary-color 50%, fade(@instock-primary-color, 30%) 0%);
-  }
-
-  body.barometer & {
-    background-image: linear-gradient(to right, @barometer-primary-color 50%, fade(@barometer-primary-color, 30%) 0%);
-  }
-
-  body.styletrial & {
-    background-image: linear-gradient(to right, @styletrial-primary-color 50%, fade(@styletrial-primary-color, 30%) 0%);
-  }
+  body.insight & { background-image: linear-gradient(to right, @insight-primary-color 50%, fade(@insight-primary-color, 50%) 0%); }
+  body.fashion & { background-image: linear-gradient(to right, @fashion-primary-color 50%, fade(@fashion-primary-color, 50%) 0%); }
+  body.li & { background-image: linear-gradient(to right, @li-primary-color 50%, fade(@li-primary-color, 50%) 0%); }
+  body.instock & { background-image: linear-gradient(to right, @instock-primary-color 50%, fade(@instock-primary-color, 50%) 0%); }
+  body.barometer & { background-image: linear-gradient(to right, @barometer-primary-color 50%, fade(@barometer-primary-color, 50%) 0%); }
+  body.styletrial & { background-image: linear-gradient(to right, @styletrial-primary-color 50%, fade(@styletrial-primary-color, 50%) 0%); }
 
   &:hover {
     background-position: 0 bottom;
@@ -275,30 +257,12 @@ a.styled {
 // TEXT COLORS
 .text-product {
   color: @wgsn-primary-color;
-
-  body.insight & {
-    color: @insight-primary-color;
-  }
-
-  body.fashion & {
-    color: @fashion-primary-color;
-  }
-
-  body.li & {
-    color: @li-primary-color;
-  }
-
-  body.instock & {
-    color: @instock-primary-color;
-  }
-
-  body.barometer & {
-    color: @barometer-primary-color;
-  }
-
-  body.styletrial & {
-    color: @styletrial-primary-color;
-  }
+  body.insight & { color: @insight-primary-color; }
+  body.fashion & { color: @fashion-primary-color; }
+  body.li & { color: @li-primary-color; }
+  body.instock & { color: @instock-primary-color; }
+  body.barometer & { color: @barometer-primary-color; }
+  body.styletrial & { color: @styletrial-primary-color; }
 }
 
 .text-white {
@@ -335,30 +299,12 @@ a.styled {
       left: -20px;
       top: 6px;
       background: fade(@wgsn-primary-color, 50%);
-
-      body.insight & {
-        background: fade(@insight-primary-color, 50%);
-      }
-
-      body.fashion & {
-        background: fade(@fashion-primary-color, 50%);
-      }
-
-      body.li & {
-        background: fade(@li-primary-color, 50%);
-      }
-
-      body.instock & {
-        background: fade(@instock-primary-color, 50%);
-      }
-
-      body.barometer & {
-        background: fade(@barometer-primary-color, 50%);
-      }
-
-      body.styletrial & {
-        background: fade(@styletrial-primary-color, 50%);
-      }
+      body.insight & { background: fade(@insight-primary-color, 50%); }
+      body.fashion & { background: fade(@fashion-primary-color, 50%); }
+      body.li & { background: fade(@li-primary-color, 50%); }
+      body.instock & { background: fade(@instock-primary-color, 50%); }
+      body.barometer & { background: fade(@barometer-primary-color, 50%); }
+      body.styletrial & { background: fade(@styletrial-primary-color, 50%); }
     }
   }
 
@@ -385,30 +331,12 @@ a.styled {
       color: fade(@wgsn-primary-color, 50%);
       text-align: center;
       .text-bolder;
-
-      body.insight & {
-        color: fade(@insight-primary-color, 50%);
-      }
-
-      body.fashion & {
-        color: fade(@fashion-primary-color, 50%);
-      }
-
-      body.li & {
-        color: fade(@li-primary-color, 50%);
-      }
-
-      body.instock & {
-        color: fade(@instock-primary-color, 50%);
-      }
-
-      body.barometer & {
-        color: fade(@barometer-primary-color, 50%);
-      }
-
-      body.styletrial & {
-        color: fade(@styletrial-primary-color, 50%);
-      }
+      body.insight & { color: fade(@insight-primary-color, 50%); }
+      body.fashion & { color: fade(@fashion-primary-color, 50%); }
+      body.li & { color: fade(@li-primary-color, 50%); }
+      body.instock & { color: fade(@instock-primary-color, 50%); }
+      body.barometer & { color: fade(@barometer-primary-color, 50%); }
+      body.styletrial & { color: fade(@styletrial-primary-color, 50%); }
     }
   }
 
@@ -425,28 +353,10 @@ a.styled {
   background-image: linear-gradient(transparent 50%, fade(@wgsn-primary-color, 30%) 0%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-
-  body.insight & {
-    background-image: linear-gradient(transparent 50%, fade(@insight-primary-color, 30%) 0%);
-  }
-
-  body.fashion & {
-    background-image: linear-gradient(transparent 50%, fade(@fashion-primary-color, 30%) 0%);
-  }
-
-  body.li & {
-    background-image: linear-gradient(transparent 50%, fade(@li-primary-color, 30%) 0%);
-  }
-
-  body.instock & {
-    background-image: linear-gradient(transparent 50%, fade(@instock-primary-color, 30%) 0%);
-  }
-
-  body.barometer & {
-    background-image: linear-gradient(transparent 50%, fade(@barometer-primary-color, 30%) 0%);
-  }
-
-  body.styletrial & {
-    background-image: linear-gradient(transparent 50%, fade(@styletrial-primary-color, 30%) 0%);
-  }
+  body.insight & { background-image: linear-gradient(transparent 50%, fade(@insight-primary-color, 30%) 0%); }
+  body.fashion & { background-image: linear-gradient(transparent 50%, fade(@fashion-primary-color, 30%) 0%); }
+  body.li & { background-image: linear-gradient(transparent 50%, fade(@li-primary-color, 30%) 0%); }
+  body.instock & { background-image: linear-gradient(transparent 50%, fade(@instock-primary-color, 30%) 0%); }
+  body.barometer & { background-image: linear-gradient(transparent 50%, fade(@barometer-primary-color, 30%) 0%); }
+  body.styletrial & { background-image: linear-gradient(transparent 50%, fade(@styletrial-primary-color, 30%) 0%); }
 }

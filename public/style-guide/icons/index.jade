@@ -8,8 +8,7 @@ mixin icon-block(name)
     .icon-block.block-sm
       .row
         .col-xs-2
-          //- i.icon(class=name)
-          svg(class="icon"): use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../assets/icons/wgsn-icons.svg#" + name)
+          svg.icon: use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../assets/icons/wgsn-icons.svg#" + name)
         .col-xs-10
           code.pull-left= name
 

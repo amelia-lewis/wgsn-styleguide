@@ -16,7 +16,7 @@
   .modal--header {
     background: @xdk-grey;
     color: white;
-    .block-md;
+    padding: 15px 20px;
     overflow: auto;
     position: relative;
 
@@ -31,14 +31,13 @@
       opacity: 0.5;
     }
 
-    .icon-cross {
+    .close-modal {
       position: absolute;
-      top: calc(~"50% - 6px");
+      top: calc(~"50% - 8px");
       right: 20px;
+      fill: white;
       .hoverable;
       opacity: 0.6;
-      width: 12px;
-      height: 12px;
       cursor: pointer;
       .transition;
 
