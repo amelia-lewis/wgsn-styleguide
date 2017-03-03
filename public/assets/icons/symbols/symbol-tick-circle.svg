@@ -1,1 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>symbol-tick-circle</title><path d="M16,0A16,16,0,1,0,32,16,16,16,0,0,0,16,0Zm0,30A14,14,0,1,1,30,16,14,14,0,0,1,16,30Z"/><polygon points="13 19.27 9.63 15.84 7.67 17.83 13 23.16 24.33 11.83 22.37 9.84 13 19.27"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><title>symbol-tick-circle</title><path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,15a7,7,0,1,1,7-7A7,7,0,0,1,8,15Z"/><polygon points="6.5 9.63 4.81 7.92 3.83 8.91 6.5 11.58 12.16 5.92 11.18 4.92 6.5 9.63"/></svg>
